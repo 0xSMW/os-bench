@@ -8,7 +8,7 @@
     "qemu_config_sha256": "0f3a41c898b2a980f65098d79b31e1bf71d8876dcee2aff23ea1fd6039c65971",
     "raw_probe_source_tree_sha256": "f0a36fd3c7ca41c900afa74273521ec4d8dbd8ff7e123f784cf500604b73500d",
     "reference_builder_source_tree_sha256": "c01aa25e57280fdb2a63963e1521c6635c29edcc23ca8e4b439eea63d5f70a86",
-    "test_source_tree_sha256": "5e65ec5f2fb41dbadce18934b33c7a7172a96bcc78fb0ed6ce4a6f94e37f8ffc",
+    "test_source_tree_sha256": "1bb565dda9cf7b577d7d91391da8ec59a7ab266a230576a66d63b915e1ce1347",
     "workload_source_tree_sha256": "6dd4ae43705c70d09017f4dec6773de3bd5c2fdeb0148461c10f5194384ee454"
   },
   "benchmark_sources": {
