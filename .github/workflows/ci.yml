@@ -39,6 +39,9 @@ jobs:
           docker compose run --rm -e OSBENCH_REFERENCE_MODE=local osbench oracle full-selftest
           --shard-count 16 --jobs 8 --worker-max-cases 1 --progress-every 25
           --output results/full-local-selftest.json
+      - name: Make evaluator artifacts readable by the runner
+        if: always()
+        run: sudo chown -R "$(id -u):$(id -g)" results artifacts/oracle
       - name: Upload local full-selftest result
         if: always()
         uses: actions/upload-artifact@v4
