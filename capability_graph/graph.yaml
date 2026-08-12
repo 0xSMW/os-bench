@@ -1,0 +1,3321 @@
+schema_version: osbench.capability_graph.v1
+nodes:
+  boot.clean.shutdown:
+    level: boot
+    domain: boot
+    title: Boot Clean Shutdown
+    transport: guest_agent
+    workloads: []
+  boot.firmware.uefi_entry:
+    level: boot
+    domain: boot
+    title: Boot Firmware Uefi Entry
+    transport: serial
+    workloads: []
+  boot.init.start:
+    level: boot
+    domain: boot
+    title: Boot Init Start
+    transport: host
+    workloads: []
+  boot.kernel.entry:
+    level: boot
+    domain: boot
+    title: Boot Kernel Entry
+    transport: serial
+    workloads: []
+  boot.reboot:
+    level: boot
+    domain: boot
+    title: Boot Reboot
+    transport: guest_agent
+    workloads: []
+  boot.rootfs.mount:
+    level: boot
+    domain: boot
+    title: Boot Rootfs Mount
+    transport: serial
+    workloads: []
+  boot.serial.output:
+    level: boot
+    domain: boot
+    title: Boot Serial Output
+    transport: host
+    workloads: []
+  devfs.nodes:
+    level: linux_process_environment
+    domain: devfs
+    title: Devfs Nodes
+    transport: host
+    workloads: []
+  devfs.random:
+    level: linux_process_environment
+    domain: devfs
+    title: Devfs Random
+    transport: host
+    workloads: []
+  devfs.tty:
+    level: linux_process_environment
+    domain: devfs
+    title: Devfs TTY
+    transport: host
+    workloads: []
+  distro.accounts.root:
+    level: distro
+    domain: distro
+    title: Distro Accounts Root
+    transport: host
+    workloads: []
+  distro.boot.target:
+    level: distro
+    domain: distro
+    title: Distro Boot Target
+    transport: host
+    workloads: []
+  distro.dns.configuration:
+    level: distro
+    domain: distro
+    title: Distro DNS Configuration
+    transport: host
+    workloads: []
+  distro.filesystem_hierarchy:
+    level: distro
+    domain: distro
+    title: Distro Filesystem Hierarchy
+    transport: host
+    workloads: []
+  distro.hostname:
+    level: distro
+    domain: distro
+    title: Distro Hostname
+    transport: host
+    workloads: []
+  distro.locale:
+    level: distro
+    domain: distro
+    title: Distro Locale
+    transport: host
+    workloads: []
+  distro.logging.journal:
+    level: distro
+    domain: distro
+    title: Distro Logging Journal
+    transport: host
+    workloads: []
+  distro.network.defaults:
+    level: distro
+    domain: distro
+    title: Distro Network Defaults
+    transport: host
+    workloads: []
+  distro.os_release:
+    level: distro
+    domain: distro
+    title: Distro Os Release
+    transport: host
+    workloads: []
+  distro.timezone:
+    level: distro
+    domain: distro
+    title: Distro Timezone
+    transport: host
+    workloads: []
+  elf.argv_env:
+    level: linux_primitives
+    domain: elf
+    title: ELF Argv Env
+    transport: host
+    workloads: []
+  elf.auxv:
+    level: linux_process_environment
+    domain: elf
+    title: ELF Auxv
+    transport: host
+    workloads: []
+  elf.dynamic_loader.basic:
+    level: linux_process_environment
+    domain: elf
+    title: ELF Dynamic Loader Basic
+    transport: host
+    workloads: []
+  elf.interpreter.error:
+    level: linux_process_environment
+    domain: elf
+    title: ELF Interpreter Error
+    transport: host
+    workloads: []
+  elf.static.load:
+    level: linux_primitives
+    domain: elf
+    title: ELF Static Load
+    transport: host
+    workloads: []
+  elf.tls:
+    level: linux_process_environment
+    domain: elf
+    title: ELF Tls
+    transport: host
+    workloads: []
+  exhaustion.disk.cleanup:
+    level: kernel_subsystems
+    domain: exhaustion
+    title: Exhaustion Disk Cleanup
+    transport: host
+    workloads: []
+  exhaustion.fd.cleanup:
+    level: kernel_subsystems
+    domain: exhaustion
+    title: Exhaustion Fd Cleanup
+    transport: host
+    workloads: []
+  exhaustion.memory.cleanup:
+    level: kernel_subsystems
+    domain: exhaustion
+    title: Exhaustion Memory Cleanup
+    transport: host
+    workloads: []
+  exhaustion.process.cleanup:
+    level: kernel_subsystems
+    domain: exhaustion
+    title: Exhaustion Process Cleanup
+    transport: host
+    workloads: []
+  exhaustion.socket.cleanup:
+    level: kernel_subsystems
+    domain: exhaustion
+    title: Exhaustion Socket Cleanup
+    transport: host
+    workloads: []
+  exhaustion.thread.cleanup:
+    level: kernel_subsystems
+    domain: exhaustion
+    title: Exhaustion Thread Cleanup
+    transport: host
+    workloads: []
+  failure.interrupted_operation:
+    level: kernel_subsystems
+    domain: failure
+    title: Failure Interrupted Operation
+    transport: host
+    workloads: []
+  failure.invalid_fd:
+    level: linux_primitives
+    domain: failure
+    title: Failure Invalid Fd
+    transport: host
+    workloads: []
+  failure.invalid_pointer:
+    level: kernel_subsystems
+    domain: failure
+    title: Failure Invalid Pointer
+    transport: host
+    workloads: []
+  failure.rollback:
+    level: kernel_subsystems
+    domain: failure
+    title: Failure Rollback
+    transport: host
+    workloads: []
+  fd.close:
+    level: linux_primitives
+    domain: fd
+    title: Fd Close
+    transport: host
+    workloads:
+    - coreutils_pipeline
+    - shell_script
+  fd.close_on_exec:
+    level: kernel_subsystems
+    domain: fd
+    title: Fd Close On Exec
+    transport: host
+    workloads:
+    - coreutils_pipeline
+    - shell_script
+  fd.dup:
+    level: linux_primitives
+    domain: fd
+    title: Fd Dup
+    transport: host
+    workloads:
+    - coreutils_pipeline
+    - shell_script
+  fd.dup2.redirection:
+    level: kernel_subsystems
+    domain: fd
+    title: Fd Dup2 Redirection
+    transport: host
+    workloads:
+    - coreutils_pipeline
+    - shell_script
+  fd.exhaustion_cleanup:
+    level: kernel_subsystems
+    domain: fd
+    title: Fd Exhaustion Cleanup
+    transport: host
+    workloads:
+    - coreutils_pipeline
+    - shell_script
+  fd.inherit_fork:
+    level: kernel_subsystems
+    domain: fd
+    title: Fd Inherit Fork
+    transport: host
+    workloads:
+    - coreutils_pipeline
+    - shell_script
+  fd.lowest_available:
+    level: linux_primitives
+    domain: fd
+    title: Fd Lowest Available
+    transport: host
+    workloads:
+    - coreutils_pipeline
+    - shell_script
+  fd.shared_offset:
+    level: kernel_subsystems
+    domain: fd
+    title: Fd Shared Offset
+    transport: host
+    workloads:
+    - coreutils_pipeline
+    - shell_script
+  fd.table:
+    level: linux_primitives
+    domain: fd
+    title: Fd Table
+    transport: host
+    workloads:
+    - coreutils_pipeline
+    - shell_script
+  fs.directory.create_remove:
+    level: linux_primitives
+    domain: filesystem
+    title: Fs Directory Create Remove
+    transport: host
+    workloads:
+    - coreutils_pipeline
+    - shell_script
+  fs.directory.iteration:
+    level: kernel_subsystems
+    domain: filesystem
+    title: Fs Directory Iteration
+    transport: host
+    workloads:
+    - coreutils_pipeline
+    - shell_script
+  fs.ext4.persistence:
+    level: distro
+    domain: filesystem
+    title: Fs Ext4 Persistence
+    transport: guest_agent
+    workloads:
+    - coreutils_pipeline
+    - shell_script
+  fs.file.append.atomicity:
+    level: kernel_subsystems
+    domain: filesystem
+    title: Fs File Append Atomicity
+    transport: host
+    workloads:
+    - coreutils_pipeline
+    - shell_script
+  fs.file.create:
+    level: linux_primitives
+    domain: filesystem
+    title: Fs File Create
+    transport: host
+    workloads:
+    - coreutils_pipeline
+    - shell_script
+  fs.file.fsync:
+    level: kernel_subsystems
+    domain: filesystem
+    title: Fs File Fsync
+    transport: host
+    workloads:
+    - coreutils_pipeline
+    - shell_script
+  fs.file.hardlink:
+    level: kernel_subsystems
+    domain: filesystem
+    title: Fs File Hardlink
+    transport: host
+    workloads:
+    - coreutils_pipeline
+    - shell_script
+  fs.file.open:
+    level: linux_primitives
+    domain: filesystem
+    title: Fs File Open
+    transport: host
+    workloads:
+    - coreutils_pipeline
+    - shell_script
+  fs.file.read.partial_eof:
+    level: linux_primitives
+    domain: filesystem
+    title: Fs File Read Partial Eof
+    transport: host
+    workloads:
+    - coreutils_pipeline
+    - shell_script
+  fs.file.rename.atomicity:
+    level: kernel_subsystems
+    domain: filesystem
+    title: Fs File Rename Atomicity
+    transport: host
+    workloads:
+    - coreutils_pipeline
+    - shell_script
+  fs.file.seek:
+    level: linux_primitives
+    domain: filesystem
+    title: Fs File Seek
+    transport: host
+    workloads:
+    - coreutils_pipeline
+    - shell_script
+  fs.file.stat:
+    level: linux_primitives
+    domain: filesystem
+    title: Fs File Stat
+    transport: host
+    workloads:
+    - coreutils_pipeline
+    - shell_script
+  fs.file.symlink:
+    level: kernel_subsystems
+    domain: filesystem
+    title: Fs File Symlink
+    transport: host
+    workloads:
+    - coreutils_pipeline
+    - shell_script
+  fs.file.truncate:
+    level: kernel_subsystems
+    domain: filesystem
+    title: Fs File Truncate
+    transport: host
+    workloads:
+    - coreutils_pipeline
+    - shell_script
+  fs.file.unlink_open:
+    level: kernel_subsystems
+    domain: filesystem
+    title: Fs File Unlink Open
+    transport: host
+    workloads:
+    - coreutils_pipeline
+    - shell_script
+  fs.file.write.basic:
+    level: linux_primitives
+    domain: filesystem
+    title: Fs File Write Basic
+    transport: host
+    workloads:
+    - coreutils_pipeline
+    - shell_script
+  fs.inode.exhaustion:
+    level: linux_system
+    domain: filesystem
+    title: Fs Inode Exhaustion
+    transport: guest_agent
+    workloads:
+    - coreutils_pipeline
+    - shell_script
+  fs.mount.basic:
+    level: linux_system
+    domain: filesystem
+    title: Fs Mount Basic
+    transport: guest_agent
+    workloads:
+    - coreutils_pipeline
+    - shell_script
+  fs.mount.covering:
+    level: linux_system
+    domain: filesystem
+    title: Fs Mount Covering
+    transport: guest_agent
+    workloads:
+    - coreutils_pipeline
+    - shell_script
+  fs.path.absolute_relative:
+    level: linux_primitives
+    domain: filesystem
+    title: Fs Path Absolute Relative
+    transport: host
+    workloads:
+    - coreutils_pipeline
+    - shell_script
+  fs.path.dotdot:
+    level: kernel_subsystems
+    domain: filesystem
+    title: Fs Path Dotdot
+    transport: host
+    workloads:
+    - coreutils_pipeline
+    - shell_script
+  fs.storage.full:
+    level: kernel_subsystems
+    domain: filesystem
+    title: Fs Storage Full
+    transport: host
+    workloads:
+    - coreutils_pipeline
+    - shell_script
+  fs.vfs.cross_filesystem:
+    level: linux_system
+    domain: filesystem
+    title: Fs VFS Cross Filesystem
+    transport: guest_agent
+    workloads:
+    - coreutils_pipeline
+    - shell_script
+  full.boot_login_shell:
+    level: full_reconstruction
+    domain: full
+    title: Full Boot Login Shell
+    transport: guest_agent
+    workloads:
+    - full_workflow
+  full.database_crash_recovery:
+    level: full_reconstruction
+    domain: full
+    title: Full Database Crash Recovery
+    transport: guest_agent
+    workloads:
+    - full_workflow
+  full.install_serve_reboot:
+    level: full_reconstruction
+    domain: full
+    title: Full Install Serve Reboot
+    transport: guest_agent
+    workloads:
+    - full_workflow
+  full.user_build_run:
+    level: full_reconstruction
+    domain: full
+    title: Full User Build Run
+    transport: guest_agent
+    workloads:
+    - full_workflow
+  identity.credential_inheritance:
+    level: kernel_subsystems
+    domain: identity
+    title: Identity Credential Inheritance
+    transport: host
+    workloads: []
+  identity.group_lookup:
+    level: posix_userspace
+    domain: identity
+    title: Identity Group Lookup
+    transport: host
+    workloads: []
+  identity.groups:
+    level: kernel_subsystems
+    domain: identity
+    title: Identity Groups
+    transport: host
+    workloads: []
+  identity.uid_gid:
+    level: kernel_subsystems
+    domain: identity
+    title: Identity Uid Gid
+    transport: host
+    workloads: []
+  identity.user_lookup:
+    level: posix_userspace
+    domain: identity
+    title: Identity User Lookup
+    transport: host
+    workloads: []
+  io.block_device:
+    level: linux_system
+    domain: io
+    title: Io Block Device
+    transport: guest_agent
+    workloads: []
+  io.dev_null_zero:
+    level: linux_process_environment
+    domain: io
+    title: Io Dev Null Zero
+    transport: host
+    workloads: []
+  io.device_hotplug:
+    level: linux_system
+    domain: io
+    title: Io Device Hotplug
+    transport: guest_agent
+    workloads: []
+  io.interrupt_completion:
+    level: kernel_subsystems
+    domain: io
+    title: Io Interrupt Completion
+    transport: host
+    workloads: []
+  io.ioctl:
+    level: linux_system
+    domain: io
+    title: Io Ioctl
+    transport: host
+    workloads: []
+  io.nonblocking:
+    level: kernel_subsystems
+    domain: io
+    title: Io Nonblocking
+    transport: host
+    workloads: []
+  io.random:
+    level: linux_system
+    domain: io
+    title: Io Random
+    transport: host
+    workloads: []
+  ipc.message_queue:
+    level: linux_system
+    domain: ipc
+    title: IPC Message Queue
+    transport: host
+    workloads: []
+  ipc.semaphore:
+    level: kernel_subsystems
+    domain: ipc
+    title: IPC Semaphore
+    transport: host
+    workloads: []
+  ipc.shared_memory:
+    level: kernel_subsystems
+    domain: ipc
+    title: IPC Shared Memory
+    transport: host
+    workloads: []
+  ipc.unix_socket:
+    level: kernel_subsystems
+    domain: ipc
+    title: IPC Unix Socket
+    transport: host
+    workloads: []
+  pipe.atomic_write:
+    level: kernel_subsystems
+    domain: ipc
+    title: Pipe Atomic Write
+    transport: host
+    workloads: []
+  pipe.basic:
+    level: kernel_subsystems
+    domain: ipc
+    title: Pipe Basic
+    transport: host
+    workloads: []
+  pipe.blocking:
+    level: kernel_subsystems
+    domain: ipc
+    title: Pipe Blocking
+    transport: host
+    workloads: []
+  pipe.eof:
+    level: kernel_subsystems
+    domain: ipc
+    title: Pipe Eof
+    transport: host
+    workloads: []
+  linux.boot_parameters:
+    level: linux_system
+    domain: linux
+    title: Linux Boot Parameters
+    transport: host
+    workloads: []
+  linux.capability.basic:
+    level: linux_system
+    domain: linux
+    title: Linux Capability Basic
+    transport: host
+    workloads: []
+  linux.cgroup.basic:
+    level: linux_system
+    domain: linux
+    title: Linux Cgroup Basic
+    transport: host
+    workloads: []
+  linux.hostname:
+    level: linux_system
+    domain: linux
+    title: Linux Hostname
+    transport: host
+    workloads: []
+  linux.module.inventory:
+    level: linux_system
+    domain: linux
+    title: Linux Module Inventory
+    transport: host
+    workloads: []
+  linux.namespace.mount:
+    level: linux_system
+    domain: linux
+    title: Linux Namespace Mount
+    transport: host
+    workloads: []
+  linux.sysctl:
+    level: linux_system
+    domain: linux
+    title: Linux Sysctl
+    transport: host
+    workloads: []
+  linux.uname:
+    level: linux_system
+    domain: linux
+    title: Linux Uname
+    transport: host
+    workloads: []
+  machine.block.read_write:
+    level: machine
+    domain: machine
+    title: Machine Block Read Write
+    transport: host
+    workloads: []
+  machine.clock.monotonic:
+    level: machine
+    domain: machine
+    title: Machine Clock Monotonic
+    transport: host
+    workloads: []
+  machine.cpu.mode_transition:
+    level: machine
+    domain: machine
+    title: Machine Cpu Mode Transition
+    transport: host
+    workloads: []
+  machine.exception.divide_zero:
+    level: machine
+    domain: machine
+    title: Machine Exception Divide Zero
+    transport: host
+    workloads: []
+  machine.interrupt.timer:
+    level: machine
+    domain: machine
+    title: Machine Interrupt Timer
+    transport: host
+    workloads: []
+  machine.memory.page_tables:
+    level: machine
+    domain: machine
+    title: Machine Memory Page Tables
+    transport: host
+    workloads: []
+  machine.rng.read:
+    level: machine
+    domain: machine
+    title: Machine Rng Read
+    transport: host
+    workloads: []
+  machine.serial.rx_tx:
+    level: machine
+    domain: machine
+    title: Machine Serial Rx Tx
+    transport: host
+    workloads: []
+  machine.smp.start:
+    level: machine
+    domain: machine
+    title: Machine Smp Start
+    transport: host
+    workloads: []
+  machine.syscall.trap:
+    level: machine
+    domain: machine
+    title: Machine Syscall Trap
+    transport: host
+    workloads: []
+  memory.address_space.isolation:
+    level: kernel_subsystems
+    domain: memory
+    title: Memory Address Space Isolation
+    transport: host
+    workloads: []
+  memory.brk:
+    level: kernel_subsystems
+    domain: memory
+    title: Memory Brk
+    transport: host
+    workloads: []
+  memory.copy_on_write:
+    level: kernel_subsystems
+    domain: memory
+    title: Memory Copy On Write
+    transport: host
+    workloads: []
+  memory.mlock:
+    level: linux_system
+    domain: memory
+    title: Memory Mlock
+    transport: host
+    workloads: []
+  memory.mmap.anonymous:
+    level: kernel_subsystems
+    domain: memory
+    title: Memory Mmap Anonymous
+    transport: host
+    workloads: []
+  memory.mmap.file:
+    level: kernel_subsystems
+    domain: memory
+    title: Memory Mmap File
+    transport: host
+    workloads: []
+  memory.mprotect:
+    level: kernel_subsystems
+    domain: memory
+    title: Memory Mprotect
+    transport: host
+    workloads: []
+  memory.munmap:
+    level: kernel_subsystems
+    domain: memory
+    title: Memory Munmap
+    transport: host
+    workloads: []
+  memory.overcommit_failure:
+    level: kernel_subsystems
+    domain: memory
+    title: Memory Overcommit Failure
+    transport: host
+    workloads: []
+  memory.page_fault:
+    level: kernel_subsystems
+    domain: memory
+    title: Memory Page Fault
+    transport: host
+    workloads: []
+  memory.shared_mapping:
+    level: kernel_subsystems
+    domain: memory
+    title: Memory Shared Mapping
+    transport: host
+    workloads: []
+  memory.stack_growth:
+    level: kernel_subsystems
+    domain: memory
+    title: Memory Stack Growth
+    transport: host
+    workloads: []
+  network.dns.resolve:
+    level: distro
+    domain: network
+    title: Network DNS Resolve
+    transport: host
+    workloads:
+    - http
+    - tcp
+  network.interface.enumeration:
+    level: linux_system
+    domain: network
+    title: Network Interface Enumeration
+    transport: host
+    workloads:
+    - http
+    - tcp
+  network.loopback:
+    level: kernel_subsystems
+    domain: network
+    title: Network Loopback
+    transport: host
+    workloads:
+    - http
+    - tcp
+  network.route.local:
+    level: linux_system
+    domain: network
+    title: Network Route Local
+    transport: host
+    workloads:
+    - http
+    - tcp
+  package.conffile:
+    level: package_ecosystem
+    domain: package
+    title: Package Conffile
+    transport: guest_agent
+    workloads:
+    - package_install
+  package.database.query:
+    level: package_ecosystem
+    domain: package
+    title: Package Database Query
+    transport: host
+    workloads:
+    - package_install
+  package.deb.install:
+    level: package_ecosystem
+    domain: package
+    title: Package Deb Install
+    transport: guest_agent
+    workloads:
+    - package_install
+  package.deb.remove:
+    level: package_ecosystem
+    domain: package
+    title: Package Deb Remove
+    transport: guest_agent
+    workloads:
+    - package_install
+  package.deb.upgrade:
+    level: package_ecosystem
+    domain: package
+    title: Package Deb Upgrade
+    transport: guest_agent
+    workloads:
+    - package_install
+  package.dependency:
+    level: package_ecosystem
+    domain: package
+    title: Package Dependency
+    transport: guest_agent
+    workloads:
+    - package_install
+  package.dpkg.status:
+    level: package_ecosystem
+    domain: package
+    title: Package Dpkg Status
+    transport: host
+    workloads:
+    - package_install
+  package.maintainer.postinst:
+    level: package_ecosystem
+    domain: package
+    title: Package Maintainer Postinst
+    transport: guest_agent
+    workloads:
+    - package_install
+  package.maintainer.preinst:
+    level: package_ecosystem
+    domain: package
+    title: Package Maintainer Preinst
+    transport: guest_agent
+    workloads:
+    - package_install
+  package.offline.apt:
+    level: package_ecosystem
+    domain: package
+    title: Package Offline Apt
+    transport: guest_agent
+    workloads:
+    - package_install
+  package.rollback_failure:
+    level: package_ecosystem
+    domain: package
+    title: Package Rollback Failure
+    transport: guest_agent
+    workloads:
+    - package_install
+  package.service.install:
+    level: package_ecosystem
+    domain: package
+    title: Package Service Install
+    transport: guest_agent
+    workloads:
+    - package_install
+  package.shared_library:
+    level: package_ecosystem
+    domain: package
+    title: Package Shared Library
+    transport: host
+    workloads:
+    - package_install
+  permission.device_access:
+    level: linux_system
+    domain: permission
+    title: Permission Device Access
+    transport: host
+    workloads: []
+  permission.directory.search:
+    level: kernel_subsystems
+    domain: permission
+    title: Permission Directory Search
+    transport: host
+    workloads: []
+  permission.mode.rwx:
+    level: kernel_subsystems
+    domain: permission
+    title: Permission Mode Rwx
+    transport: host
+    workloads: []
+  permission.owner_group:
+    level: kernel_subsystems
+    domain: permission
+    title: Permission Owner Group
+    transport: host
+    workloads: []
+  permission.root_override:
+    level: kernel_subsystems
+    domain: permission
+    title: Permission Root Override
+    transport: host
+    workloads: []
+  permission.setuid_transition:
+    level: linux_system
+    domain: permission
+    title: Permission Setuid Transition
+    transport: host
+    workloads: []
+  permission.signal_authorization:
+    level: kernel_subsystems
+    domain: permission
+    title: Permission Signal Authorization
+    transport: host
+    workloads: []
+  permission.umask:
+    level: kernel_subsystems
+    domain: permission
+    title: Permission Umask
+    transport: host
+    workloads: []
+  persistence.configuration.reboot:
+    level: distro
+    domain: persistence
+    title: Persistence Configuration Reboot
+    transport: guest_agent
+    workloads:
+    - reboot_persistent
+  persistence.crash.synced:
+    level: full_reconstruction
+    domain: persistence
+    title: Persistence Crash Synced
+    transport: guest_agent
+    workloads:
+    - reboot_persistent
+  persistence.crash.unsynced_bounds:
+    level: full_reconstruction
+    domain: persistence
+    title: Persistence Crash Unsynced Bounds
+    transport: guest_agent
+    workloads:
+    - reboot_persistent
+  persistence.file.reboot:
+    level: distro
+    domain: persistence
+    title: Persistence File Reboot
+    transport: guest_agent
+    workloads:
+    - reboot_persistent
+  persistence.metadata.reboot:
+    level: distro
+    domain: persistence
+    title: Persistence Metadata Reboot
+    transport: guest_agent
+    workloads:
+    - reboot_persistent
+  persistence.package.reboot:
+    level: distro
+    domain: persistence
+    title: Persistence Package Reboot
+    transport: guest_agent
+    workloads:
+    - reboot_persistent
+  persistence.service.reboot:
+    level: distro
+    domain: persistence
+    title: Persistence Service Reboot
+    transport: guest_agent
+    workloads:
+    - reboot_persistent
+  persistence.user.reboot:
+    level: distro
+    domain: persistence
+    title: Persistence User Reboot
+    transport: guest_agent
+    workloads:
+    - reboot_persistent
+  epoll.edge_triggered:
+    level: linux_system
+    domain: poll
+    title: Epoll Edge Triggered
+    transport: host
+    workloads:
+    - http
+    - tcp
+  epoll.fd_lifecycle:
+    level: linux_system
+    domain: poll
+    title: Epoll Fd Lifecycle
+    transport: host
+    workloads:
+    - http
+    - tcp
+  poll.pipe.readiness:
+    level: kernel_subsystems
+    domain: poll
+    title: Poll Pipe Readiness
+    transport: host
+    workloads:
+    - http
+    - tcp
+  poll.socket.readiness:
+    level: kernel_subsystems
+    domain: poll
+    title: Poll Socket Readiness
+    transport: host
+    workloads:
+    - http
+    - tcp
+  poll.timeout:
+    level: kernel_subsystems
+    domain: poll
+    title: Poll Timeout
+    transport: host
+    workloads:
+    - http
+    - tcp
+  posix.utility.cat:
+    level: posix_userspace
+    domain: posix
+    title: Posix Utility Cat
+    transport: host
+    workloads:
+    - coreutils_pipeline
+    - shell_script
+  posix.utility.find:
+    level: posix_userspace
+    domain: posix
+    title: Posix Utility Find
+    transport: host
+    workloads:
+    - coreutils_pipeline
+    - shell_script
+  posix.utility.grep:
+    level: posix_userspace
+    domain: posix
+    title: Posix Utility Grep
+    transport: host
+    workloads:
+    - coreutils_pipeline
+    - shell_script
+  posix.utility.sort:
+    level: posix_userspace
+    domain: posix
+    title: Posix Utility Sort
+    transport: host
+    workloads:
+    - coreutils_pipeline
+    - shell_script
+  process.clone.sharing:
+    level: linux_system
+    domain: process
+    title: Process Clone Sharing
+    transport: host
+    workloads:
+    - coreutils_pipeline
+    - shell_script
+  process.environment:
+    level: linux_primitives
+    domain: process
+    title: Process Environment
+    transport: host
+    workloads:
+    - coreutils_pipeline
+    - shell_script
+  process.execution:
+    level: linux_primitives
+    domain: process
+    title: Process Execution
+    transport: host
+    workloads:
+    - coreutils_pipeline
+    - shell_script
+  process.execve.basic:
+    level: kernel_subsystems
+    domain: process
+    title: Process Execve Basic
+    transport: host
+    workloads:
+    - coreutils_pipeline
+    - shell_script
+  process.exit.status:
+    level: kernel_subsystems
+    domain: process
+    title: Process Exit Status
+    transport: host
+    workloads:
+    - coreutils_pipeline
+    - shell_script
+  process.fork.basic:
+    level: kernel_subsystems
+    domain: process
+    title: Process Fork Basic
+    transport: host
+    workloads:
+    - coreutils_pipeline
+    - shell_script
+  process.parent_child:
+    level: kernel_subsystems
+    domain: process
+    title: Process Parent Child
+    transport: host
+    workloads:
+    - coreutils_pipeline
+    - shell_script
+  process.process_group:
+    level: kernel_subsystems
+    domain: process
+    title: Process Process Group
+    transport: host
+    workloads:
+    - coreutils_pipeline
+    - shell_script
+  process.resource_limits:
+    level: kernel_subsystems
+    domain: process
+    title: Process Resource Limits
+    transport: host
+    workloads:
+    - coreutils_pipeline
+    - shell_script
+  process.session:
+    level: kernel_subsystems
+    domain: process
+    title: Process Session
+    transport: host
+    workloads:
+    - coreutils_pipeline
+    - shell_script
+  process.wait.basic:
+    level: kernel_subsystems
+    domain: process
+    title: Process Wait Basic
+    transport: host
+    workloads:
+    - coreutils_pipeline
+    - shell_script
+  process.zombie.reap:
+    level: kernel_subsystems
+    domain: process
+    title: Process Zombie Reap
+    transport: host
+    workloads:
+    - coreutils_pipeline
+    - shell_script
+  procfs.fd.links:
+    level: linux_process_environment
+    domain: procfs
+    title: Procfs Fd Links
+    transport: host
+    workloads: []
+  procfs.mount:
+    level: linux_process_environment
+    domain: procfs
+    title: Procfs Mount
+    transport: host
+    workloads: []
+  procfs.process.cmdline:
+    level: linux_process_environment
+    domain: procfs
+    title: Procfs Process Cmdline
+    transport: host
+    workloads: []
+  procfs.self.status:
+    level: linux_process_environment
+    domain: procfs
+    title: Procfs Self Status
+    transport: host
+    workloads: []
+  procfs.sysctl.read_write:
+    level: linux_system
+    domain: procfs
+    title: Procfs Sysctl Read Write
+    transport: host
+    workloads: []
+  scheduling.affinity:
+    level: linux_system
+    domain: scheduling
+    title: Scheduling Affinity
+    transport: host
+    workloads:
+    - pthread
+  scheduling.block_wakeup:
+    level: kernel_subsystems
+    domain: scheduling
+    title: Scheduling Block Wakeup
+    transport: host
+    workloads:
+    - pthread
+  scheduling.fair_progress:
+    level: kernel_subsystems
+    domain: scheduling
+    title: Scheduling Fair Progress
+    transport: host
+    workloads:
+    - pthread
+  scheduling.preemption:
+    level: kernel_subsystems
+    domain: scheduling
+    title: Scheduling Preemption
+    transport: host
+    workloads:
+    - pthread
+  scheduling.priority:
+    level: linux_system
+    domain: scheduling
+    title: Scheduling Priority
+    transport: host
+    workloads:
+    - pthread
+  scheduling.starvation_resistance:
+    level: kernel_subsystems
+    domain: scheduling
+    title: Scheduling Starvation Resistance
+    transport: host
+    workloads:
+    - pthread
+  security.failure_containment:
+    level: full_reconstruction
+    domain: security
+    title: Security Failure Containment
+    transport: host
+    workloads: []
+  security.file_isolation:
+    level: linux_system
+    domain: security
+    title: Security File Isolation
+    transport: host
+    workloads: []
+  security.privileged_operation:
+    level: linux_system
+    domain: security
+    title: Security Privileged Operation
+    transport: host
+    workloads: []
+  security.process_memory_isolation:
+    level: linux_system
+    domain: security
+    title: Security Process Memory Isolation
+    transport: host
+    workloads: []
+  service.dependencies:
+    level: distro
+    domain: service
+    title: Service Dependencies
+    transport: guest_agent
+    workloads:
+    - service_start
+  service.enable.start:
+    level: distro
+    domain: service
+    title: Service Enable Start
+    transport: guest_agent
+    workloads:
+    - service_start
+  service.environment:
+    level: distro
+    domain: service
+    title: Service Environment
+    transport: guest_agent
+    workloads:
+    - service_start
+  service.failure_state:
+    level: distro
+    domain: service
+    title: Service Failure State
+    transport: guest_agent
+    workloads:
+    - service_start
+  service.lifecycle.start_stop:
+    level: distro
+    domain: service
+    title: Service Lifecycle Start Stop
+    transport: guest_agent
+    workloads:
+    - service_start
+  service.logging:
+    level: distro
+    domain: service
+    title: Service Logging
+    transport: guest_agent
+    workloads:
+    - service_start
+  service.manager.ready:
+    level: distro
+    domain: service
+    title: Service Manager Ready
+    transport: guest_agent
+    workloads:
+    - service_start
+  service.restart:
+    level: distro
+    domain: service
+    title: Service Restart
+    transport: guest_agent
+    workloads:
+    - service_start
+  shell.background_job:
+    level: posix_userspace
+    domain: shell
+    title: Shell Background Job
+    transport: host
+    workloads:
+    - coreutils_pipeline
+    - shell_script
+  shell.command.exec:
+    level: posix_userspace
+    domain: shell
+    title: Shell Command Exec
+    transport: host
+    workloads:
+    - coreutils_pipeline
+    - shell_script
+  shell.environment:
+    level: posix_userspace
+    domain: shell
+    title: Shell Environment
+    transport: host
+    workloads:
+    - coreutils_pipeline
+    - shell_script
+  shell.exit_status:
+    level: posix_userspace
+    domain: shell
+    title: Shell Exit Status
+    transport: host
+    workloads:
+    - coreutils_pipeline
+    - shell_script
+  shell.pipeline.basic:
+    level: posix_userspace
+    domain: shell
+    title: Shell Pipeline Basic
+    transport: host
+    workloads:
+    - coreutils_pipeline
+    - shell_script
+  shell.quoting:
+    level: posix_userspace
+    domain: shell
+    title: Shell Quoting
+    transport: host
+    workloads:
+    - coreutils_pipeline
+    - shell_script
+  shell.redirection:
+    level: posix_userspace
+    domain: shell
+    title: Shell Redirection
+    transport: host
+    workloads:
+    - coreutils_pipeline
+    - shell_script
+  shell.working_directory:
+    level: posix_userspace
+    domain: shell
+    title: Shell Working Directory
+    transport: host
+    workloads:
+    - coreutils_pipeline
+    - shell_script
+  signal.default_action:
+    level: kernel_subsystems
+    domain: signal
+    title: Signal Default Action
+    transport: host
+    workloads: []
+  signal.delivery:
+    level: kernel_subsystems
+    domain: signal
+    title: Signal Delivery
+    transport: host
+    workloads: []
+  signal.handler.return:
+    level: kernel_subsystems
+    domain: signal
+    title: Signal Handler Return
+    transport: host
+    workloads: []
+  signal.interrupt_syscall:
+    level: kernel_subsystems
+    domain: signal
+    title: Signal Interrupt Syscall
+    transport: host
+    workloads: []
+  signal.mask:
+    level: kernel_subsystems
+    domain: signal
+    title: Signal Mask
+    transport: host
+    workloads: []
+  signal.pending:
+    level: kernel_subsystems
+    domain: signal
+    title: Signal Pending
+    transport: host
+    workloads: []
+  signal.process_group:
+    level: kernel_subsystems
+    domain: signal
+    title: Signal Process Group
+    transport: host
+    workloads: []
+  signal.timer:
+    level: kernel_subsystems
+    domain: signal
+    title: Signal Timer
+    transport: host
+    workloads: []
+  socket.error:
+    level: kernel_subsystems
+    domain: socket
+    title: Socket Error
+    transport: host
+    workloads:
+    - http
+    - tcp
+  socket.shutdown:
+    level: kernel_subsystems
+    domain: socket
+    title: Socket Shutdown
+    transport: host
+    workloads:
+    - http
+    - tcp
+  socket.tcp.listen_accept:
+    level: kernel_subsystems
+    domain: socket
+    title: Socket TCP Listen Accept
+    transport: host
+    workloads:
+    - http
+    - tcp
+  socket.tcp.loopback:
+    level: kernel_subsystems
+    domain: socket
+    title: Socket TCP Loopback
+    transport: host
+    workloads:
+    - http
+    - tcp
+  socket.tcp.stream_semantics:
+    level: kernel_subsystems
+    domain: socket
+    title: Socket TCP Stream Semantics
+    transport: host
+    workloads:
+    - http
+    - tcp
+  socket.udp.loopback:
+    level: kernel_subsystems
+    domain: socket
+    title: Socket UDP Loopback
+    transport: host
+    workloads:
+    - http
+    - tcp
+  socket.unix.stream:
+    level: kernel_subsystems
+    domain: socket
+    title: Socket Unix Stream
+    transport: host
+    workloads:
+    - http
+    - tcp
+  sync.atomic.basic:
+    level: kernel_subsystems
+    domain: sync
+    title: Sync Atomic Basic
+    transport: host
+    workloads:
+    - pthread
+  sync.barrier:
+    level: linux_process_environment
+    domain: sync
+    title: Sync Barrier
+    transport: host
+    workloads:
+    - pthread
+  sync.condition:
+    level: linux_process_environment
+    domain: sync
+    title: Sync Condition
+    transport: host
+    workloads:
+    - pthread
+  sync.futex.wait_wake:
+    level: linux_system
+    domain: sync
+    title: Sync Futex Wait Wake
+    transport: host
+    workloads:
+    - pthread
+  sync.mutex.exclusion:
+    level: kernel_subsystems
+    domain: sync
+    title: Sync Mutex Exclusion
+    transport: host
+    workloads:
+    - pthread
+  sync.priority_inversion:
+    level: kernel_subsystems
+    domain: sync
+    title: Sync Priority Inversion
+    transport: guest_agent
+    workloads:
+    - pthread
+  sync.rwlock:
+    level: linux_process_environment
+    domain: sync
+    title: Sync Rwlock
+    transport: host
+    workloads:
+    - pthread
+  sync.semaphore:
+    level: kernel_subsystems
+    domain: sync
+    title: Sync Semaphore
+    transport: host
+    workloads:
+    - pthread
+  sysfs.device_tree:
+    level: linux_system
+    domain: sysfs
+    title: Sysfs Device Tree
+    transport: host
+    workloads: []
+  sysfs.mount:
+    level: linux_process_environment
+    domain: sysfs
+    title: Sysfs Mount
+    transport: host
+    workloads: []
+  thread.blocking_isolation:
+    level: kernel_subsystems
+    domain: thread
+    title: Thread Blocking Isolation
+    transport: host
+    workloads:
+    - pthread
+  thread.create_join:
+    level: kernel_subsystems
+    domain: thread
+    title: Thread Create Join
+    transport: host
+    workloads:
+    - pthread
+  thread.exit:
+    level: kernel_subsystems
+    domain: thread
+    title: Thread Exit
+    transport: host
+    workloads:
+    - pthread
+  thread.fork_semantics:
+    level: linux_process_environment
+    domain: thread
+    title: Thread Fork Semantics
+    transport: host
+    workloads:
+    - pthread
+  thread.shared_fd:
+    level: kernel_subsystems
+    domain: thread
+    title: Thread Shared Fd
+    transport: host
+    workloads:
+    - pthread
+  thread.tls:
+    level: linux_process_environment
+    domain: thread
+    title: Thread Tls
+    transport: host
+    workloads:
+    - pthread
+  time.clock.monotonic:
+    level: kernel_subsystems
+    domain: time
+    title: Time Clock Monotonic
+    transport: host
+    workloads: []
+  time.clock.realtime:
+    level: kernel_subsystems
+    domain: time
+    title: Time Clock Realtime
+    transport: host
+    workloads: []
+  time.interval_timer:
+    level: kernel_subsystems
+    domain: time
+    title: Time Interval Timer
+    transport: host
+    workloads: []
+  time.nanosleep:
+    level: kernel_subsystems
+    domain: time
+    title: Time Nanosleep
+    transport: host
+    workloads: []
+  time.timeout.poll:
+    level: kernel_subsystems
+    domain: time
+    title: Time Timeout Poll
+    transport: host
+    workloads: []
+  time.timerfd:
+    level: linux_system
+    domain: time
+    title: Time Timerfd
+    transport: host
+    workloads: []
+  tty.basic_io:
+    level: kernel_subsystems
+    domain: tty
+    title: TTY Basic Io
+    transport: host
+    workloads: []
+  tty.canonical_mode:
+    level: linux_process_environment
+    domain: tty
+    title: TTY Canonical Mode
+    transport: host
+    workloads: []
+  tty.echo:
+    level: linux_process_environment
+    domain: tty
+    title: TTY Echo
+    transport: host
+    workloads: []
+  tty.job_control:
+    level: posix_userspace
+    domain: tty
+    title: TTY Job Control
+    transport: host
+    workloads: []
+  tty.pty:
+    level: linux_process_environment
+    domain: tty
+    title: TTY Pty
+    transport: host
+    workloads: []
+  tty.signal_control_chars:
+    level: linux_process_environment
+    domain: tty
+    title: TTY Signal Control Chars
+    transport: host
+    workloads: []
+  workload.c.compile_link_run:
+    level: real_workloads
+    domain: workload
+    title: Workload C Compile Link Run
+    transport: host
+    workloads:
+    - compiler
+  workload.compression.roundtrip:
+    level: real_workloads
+    domain: workload
+    title: Workload Compression Roundtrip
+    transport: host
+    workloads:
+    - compression
+  workload.coreutils.pipeline:
+    level: real_workloads
+    domain: workload
+    title: Workload Coreutils Pipeline
+    transport: host
+    workloads:
+    - coreutils_pipeline
+  workload.dns.lookup:
+    level: real_workloads
+    domain: workload
+    title: Workload DNS Lookup
+    transport: host
+    workloads:
+    - dns
+  workload.dynamic_elf:
+    level: real_workloads
+    domain: workload
+    title: Workload Dynamic Elf
+    transport: host
+    workloads:
+    - dynamic_elf
+  workload.git.repository:
+    level: real_workloads
+    domain: workload
+    title: Workload Git Repository
+    transport: host
+    workloads:
+    - git
+  workload.http.server_client:
+    level: real_workloads
+    domain: workload
+    title: Workload Http Server Client
+    transport: host
+    workloads:
+    - http
+  workload.package.install:
+    level: real_workloads
+    domain: workload
+    title: Workload Package Install
+    transport: guest_agent
+    workloads:
+    - package_install
+  workload.pthread.program:
+    level: real_workloads
+    domain: workload
+    title: Workload Pthread Program
+    transport: host
+    workloads:
+    - pthread
+  workload.python.basic:
+    level: real_workloads
+    domain: workload
+    title: Workload Python Basic
+    transport: host
+    workloads:
+    - python
+  workload.service.start:
+    level: real_workloads
+    domain: workload
+    title: Workload Service Start
+    transport: guest_agent
+    workloads:
+    - service_start
+  workload.shell.script:
+    level: real_workloads
+    domain: workload
+    title: Workload Shell Script
+    transport: host
+    workloads:
+    - shell_script
+  workload.sqlite.transaction:
+    level: real_workloads
+    domain: workload
+    title: Workload Sqlite Transaction
+    transport: host
+    workloads:
+    - sqlite
+  workload.ssh.loopback:
+    level: real_workloads
+    domain: workload
+    title: Workload Ssh Loopback
+    transport: guest_agent
+    workloads:
+    - ssh
+  workload.static_elf:
+    level: real_workloads
+    domain: workload
+    title: Workload Static Elf
+    transport: host
+    workloads:
+    - static_elf
+  workload.tcp.client_server:
+    level: real_workloads
+    domain: workload
+    title: Workload TCP Client Server
+    transport: host
+    workloads:
+    - tcp
+edges:
+- from: boot.clean.shutdown
+  to: boot.init.start
+  type: prerequisite
+- from: boot.clean.shutdown
+  to: boot.kernel.entry
+  type: prerequisite
+- from: boot.clean.shutdown
+  to: boot.reboot
+  type: prerequisite
+- from: boot.clean.shutdown
+  to: boot.rootfs.mount
+  type: prerequisite
+- from: boot.firmware.uefi_entry
+  to: boot.clean.shutdown
+  type: prerequisite
+- from: boot.firmware.uefi_entry
+  to: boot.init.start
+  type: prerequisite
+- from: boot.firmware.uefi_entry
+  to: boot.kernel.entry
+  type: prerequisite
+- from: boot.firmware.uefi_entry
+  to: boot.reboot
+  type: prerequisite
+- from: boot.firmware.uefi_entry
+  to: boot.rootfs.mount
+  type: prerequisite
+- from: boot.firmware.uefi_entry
+  to: boot.serial.output
+  type: prerequisite
+- from: boot.firmware.uefi_entry
+  to: machine.block.read_write
+  type: prerequisite
+- from: boot.firmware.uefi_entry
+  to: machine.clock.monotonic
+  type: prerequisite
+- from: boot.firmware.uefi_entry
+  to: machine.cpu.mode_transition
+  type: prerequisite
+- from: boot.firmware.uefi_entry
+  to: machine.exception.divide_zero
+  type: prerequisite
+- from: boot.firmware.uefi_entry
+  to: machine.interrupt.timer
+  type: prerequisite
+- from: boot.firmware.uefi_entry
+  to: machine.memory.page_tables
+  type: prerequisite
+- from: boot.firmware.uefi_entry
+  to: machine.rng.read
+  type: prerequisite
+- from: boot.firmware.uefi_entry
+  to: machine.serial.rx_tx
+  type: prerequisite
+- from: boot.firmware.uefi_entry
+  to: machine.smp.start
+  type: prerequisite
+- from: boot.firmware.uefi_entry
+  to: machine.syscall.trap
+  type: prerequisite
+- from: boot.init.start
+  to: boot.kernel.entry
+  type: prerequisite
+- from: boot.init.start
+  to: boot.reboot
+  type: prerequisite
+- from: boot.init.start
+  to: boot.rootfs.mount
+  type: prerequisite
+- from: boot.init.start
+  to: boot.serial.output
+  type: prerequisite
+- from: boot.init.start
+  to: machine.block.read_write
+  type: prerequisite
+- from: boot.kernel.entry
+  to: boot.reboot
+  type: prerequisite
+- from: boot.kernel.entry
+  to: boot.serial.output
+  type: prerequisite
+- from: boot.reboot
+  to: boot.rootfs.mount
+  type: prerequisite
+- from: boot.rootfs.mount
+  to: boot.serial.output
+  type: prerequisite
+- from: devfs.nodes
+  to: devfs.random
+  type: prerequisite
+- from: devfs.nodes
+  to: identity.group_lookup
+  type: prerequisite
+- from: devfs.nodes
+  to: identity.user_lookup
+  type: prerequisite
+- from: devfs.nodes
+  to: posix.utility.cat
+  type: prerequisite
+- from: devfs.nodes
+  to: posix.utility.find
+  type: prerequisite
+- from: devfs.nodes
+  to: posix.utility.grep
+  type: prerequisite
+- from: devfs.nodes
+  to: posix.utility.sort
+  type: prerequisite
+- from: devfs.nodes
+  to: shell.background_job
+  type: prerequisite
+- from: devfs.nodes
+  to: shell.command.exec
+  type: prerequisite
+- from: devfs.nodes
+  to: shell.environment
+  type: prerequisite
+- from: devfs.nodes
+  to: shell.exit_status
+  type: prerequisite
+- from: devfs.nodes
+  to: shell.pipeline.basic
+  type: prerequisite
+- from: devfs.nodes
+  to: shell.quoting
+  type: prerequisite
+- from: devfs.nodes
+  to: shell.redirection
+  type: prerequisite
+- from: devfs.nodes
+  to: shell.working_directory
+  type: prerequisite
+- from: devfs.nodes
+  to: tty.job_control
+  type: prerequisite
+- from: devfs.random
+  to: devfs.tty
+  type: prerequisite
+- from: distro.accounts.root
+  to: distro.boot.target
+  type: prerequisite
+- from: distro.accounts.root
+  to: package.conffile
+  type: prerequisite
+- from: distro.accounts.root
+  to: package.database.query
+  type: prerequisite
+- from: distro.accounts.root
+  to: package.deb.install
+  type: prerequisite
+- from: distro.accounts.root
+  to: package.deb.remove
+  type: prerequisite
+- from: distro.accounts.root
+  to: package.deb.upgrade
+  type: prerequisite
+- from: distro.accounts.root
+  to: package.dependency
+  type: prerequisite
+- from: distro.accounts.root
+  to: package.dpkg.status
+  type: prerequisite
+- from: distro.accounts.root
+  to: package.maintainer.postinst
+  type: prerequisite
+- from: distro.accounts.root
+  to: package.maintainer.preinst
+  type: prerequisite
+- from: distro.accounts.root
+  to: package.offline.apt
+  type: prerequisite
+- from: distro.accounts.root
+  to: package.rollback_failure
+  type: prerequisite
+- from: distro.accounts.root
+  to: package.service.install
+  type: prerequisite
+- from: distro.accounts.root
+  to: package.shared_library
+  type: prerequisite
+- from: distro.boot.target
+  to: distro.dns.configuration
+  type: prerequisite
+- from: distro.dns.configuration
+  to: distro.filesystem_hierarchy
+  type: prerequisite
+- from: distro.filesystem_hierarchy
+  to: distro.hostname
+  type: prerequisite
+- from: distro.hostname
+  to: distro.locale
+  type: prerequisite
+- from: distro.locale
+  to: distro.logging.journal
+  type: prerequisite
+- from: distro.logging.journal
+  to: distro.network.defaults
+  type: prerequisite
+- from: distro.network.defaults
+  to: distro.os_release
+  type: prerequisite
+- from: distro.os_release
+  to: distro.timezone
+  type: prerequisite
+- from: elf.argv_env
+  to: elf.static.load
+  type: prerequisite
+- from: elf.argv_env
+  to: exhaustion.disk.cleanup
+  type: prerequisite
+- from: elf.argv_env
+  to: exhaustion.fd.cleanup
+  type: prerequisite
+- from: elf.argv_env
+  to: exhaustion.memory.cleanup
+  type: prerequisite
+- from: elf.argv_env
+  to: exhaustion.process.cleanup
+  type: prerequisite
+- from: elf.argv_env
+  to: exhaustion.socket.cleanup
+  type: prerequisite
+- from: elf.argv_env
+  to: exhaustion.thread.cleanup
+  type: prerequisite
+- from: elf.argv_env
+  to: failure.interrupted_operation
+  type: prerequisite
+- from: elf.argv_env
+  to: failure.invalid_pointer
+  type: prerequisite
+- from: elf.argv_env
+  to: failure.rollback
+  type: prerequisite
+- from: elf.argv_env
+  to: fd.close_on_exec
+  type: prerequisite
+- from: elf.argv_env
+  to: fd.dup2.redirection
+  type: prerequisite
+- from: elf.argv_env
+  to: fd.exhaustion_cleanup
+  type: prerequisite
+- from: elf.argv_env
+  to: fd.inherit_fork
+  type: prerequisite
+- from: elf.argv_env
+  to: fd.shared_offset
+  type: prerequisite
+- from: elf.argv_env
+  to: fs.directory.iteration
+  type: prerequisite
+- from: elf.argv_env
+  to: fs.file.append.atomicity
+  type: prerequisite
+- from: elf.argv_env
+  to: fs.file.fsync
+  type: prerequisite
+- from: elf.argv_env
+  to: fs.file.hardlink
+  type: prerequisite
+- from: elf.argv_env
+  to: fs.file.rename.atomicity
+  type: prerequisite
+- from: elf.argv_env
+  to: fs.file.symlink
+  type: prerequisite
+- from: elf.argv_env
+  to: fs.file.truncate
+  type: prerequisite
+- from: elf.argv_env
+  to: fs.file.unlink_open
+  type: prerequisite
+- from: elf.argv_env
+  to: fs.path.dotdot
+  type: prerequisite
+- from: elf.argv_env
+  to: fs.storage.full
+  type: prerequisite
+- from: elf.argv_env
+  to: identity.credential_inheritance
+  type: prerequisite
+- from: elf.argv_env
+  to: identity.groups
+  type: prerequisite
+- from: elf.argv_env
+  to: identity.uid_gid
+  type: prerequisite
+- from: elf.argv_env
+  to: io.interrupt_completion
+  type: prerequisite
+- from: elf.argv_env
+  to: io.nonblocking
+  type: prerequisite
+- from: elf.argv_env
+  to: ipc.semaphore
+  type: prerequisite
+- from: elf.argv_env
+  to: ipc.shared_memory
+  type: prerequisite
+- from: elf.argv_env
+  to: ipc.unix_socket
+  type: prerequisite
+- from: elf.argv_env
+  to: memory.address_space.isolation
+  type: prerequisite
+- from: elf.argv_env
+  to: memory.brk
+  type: prerequisite
+- from: elf.argv_env
+  to: memory.copy_on_write
+  type: prerequisite
+- from: elf.argv_env
+  to: memory.mmap.anonymous
+  type: prerequisite
+- from: elf.argv_env
+  to: memory.mmap.file
+  type: prerequisite
+- from: elf.argv_env
+  to: memory.mprotect
+  type: prerequisite
+- from: elf.argv_env
+  to: memory.munmap
+  type: prerequisite
+- from: elf.argv_env
+  to: memory.overcommit_failure
+  type: prerequisite
+- from: elf.argv_env
+  to: memory.page_fault
+  type: prerequisite
+- from: elf.argv_env
+  to: memory.shared_mapping
+  type: prerequisite
+- from: elf.argv_env
+  to: memory.stack_growth
+  type: prerequisite
+- from: elf.argv_env
+  to: network.loopback
+  type: prerequisite
+- from: elf.argv_env
+  to: permission.directory.search
+  type: prerequisite
+- from: elf.argv_env
+  to: permission.mode.rwx
+  type: prerequisite
+- from: elf.argv_env
+  to: permission.owner_group
+  type: prerequisite
+- from: elf.argv_env
+  to: permission.root_override
+  type: prerequisite
+- from: elf.argv_env
+  to: permission.signal_authorization
+  type: prerequisite
+- from: elf.argv_env
+  to: permission.umask
+  type: prerequisite
+- from: elf.argv_env
+  to: pipe.atomic_write
+  type: prerequisite
+- from: elf.argv_env
+  to: pipe.basic
+  type: prerequisite
+- from: elf.argv_env
+  to: pipe.blocking
+  type: prerequisite
+- from: elf.argv_env
+  to: pipe.eof
+  type: prerequisite
+- from: elf.argv_env
+  to: poll.pipe.readiness
+  type: prerequisite
+- from: elf.argv_env
+  to: poll.socket.readiness
+  type: prerequisite
+- from: elf.argv_env
+  to: poll.timeout
+  type: prerequisite
+- from: elf.argv_env
+  to: process.execve.basic
+  type: prerequisite
+- from: elf.argv_env
+  to: process.exit.status
+  type: prerequisite
+- from: elf.argv_env
+  to: process.fork.basic
+  type: prerequisite
+- from: elf.argv_env
+  to: process.parent_child
+  type: prerequisite
+- from: elf.argv_env
+  to: process.process_group
+  type: prerequisite
+- from: elf.argv_env
+  to: process.resource_limits
+  type: prerequisite
+- from: elf.argv_env
+  to: process.session
+  type: prerequisite
+- from: elf.argv_env
+  to: process.wait.basic
+  type: prerequisite
+- from: elf.argv_env
+  to: process.zombie.reap
+  type: prerequisite
+- from: elf.argv_env
+  to: scheduling.block_wakeup
+  type: prerequisite
+- from: elf.argv_env
+  to: scheduling.fair_progress
+  type: prerequisite
+- from: elf.argv_env
+  to: scheduling.preemption
+  type: prerequisite
+- from: elf.argv_env
+  to: scheduling.starvation_resistance
+  type: prerequisite
+- from: elf.argv_env
+  to: signal.default_action
+  type: prerequisite
+- from: elf.argv_env
+  to: signal.delivery
+  type: prerequisite
+- from: elf.argv_env
+  to: signal.handler.return
+  type: prerequisite
+- from: elf.argv_env
+  to: signal.interrupt_syscall
+  type: prerequisite
+- from: elf.argv_env
+  to: signal.mask
+  type: prerequisite
+- from: elf.argv_env
+  to: signal.pending
+  type: prerequisite
+- from: elf.argv_env
+  to: signal.process_group
+  type: prerequisite
+- from: elf.argv_env
+  to: signal.timer
+  type: prerequisite
+- from: elf.argv_env
+  to: socket.error
+  type: prerequisite
+- from: elf.argv_env
+  to: socket.shutdown
+  type: prerequisite
+- from: elf.argv_env
+  to: socket.tcp.listen_accept
+  type: prerequisite
+- from: elf.argv_env
+  to: socket.tcp.loopback
+  type: prerequisite
+- from: elf.argv_env
+  to: socket.tcp.stream_semantics
+  type: prerequisite
+- from: elf.argv_env
+  to: socket.udp.loopback
+  type: prerequisite
+- from: elf.argv_env
+  to: socket.unix.stream
+  type: prerequisite
+- from: elf.argv_env
+  to: sync.atomic.basic
+  type: prerequisite
+- from: elf.argv_env
+  to: sync.mutex.exclusion
+  type: prerequisite
+- from: elf.argv_env
+  to: sync.priority_inversion
+  type: prerequisite
+- from: elf.argv_env
+  to: sync.semaphore
+  type: prerequisite
+- from: elf.argv_env
+  to: thread.blocking_isolation
+  type: prerequisite
+- from: elf.argv_env
+  to: thread.create_join
+  type: prerequisite
+- from: elf.argv_env
+  to: thread.exit
+  type: prerequisite
+- from: elf.argv_env
+  to: thread.shared_fd
+  type: prerequisite
+- from: elf.argv_env
+  to: time.clock.monotonic
+  type: prerequisite
+- from: elf.argv_env
+  to: time.clock.realtime
+  type: prerequisite
+- from: elf.argv_env
+  to: time.interval_timer
+  type: prerequisite
+- from: elf.argv_env
+  to: time.nanosleep
+  type: prerequisite
+- from: elf.argv_env
+  to: time.timeout.poll
+  type: prerequisite
+- from: elf.argv_env
+  to: tty.basic_io
+  type: prerequisite
+- from: elf.auxv
+  to: elf.dynamic_loader.basic
+  type: prerequisite
+- from: elf.dynamic_loader.basic
+  to: elf.interpreter.error
+  type: prerequisite
+- from: elf.interpreter.error
+  to: elf.tls
+  type: prerequisite
+- from: elf.static.load
+  to: elf.auxv
+  type: prerequisite
+- from: epoll.edge_triggered
+  to: distro.accounts.root
+  type: prerequisite
+- from: epoll.edge_triggered
+  to: distro.boot.target
+  type: prerequisite
+- from: epoll.edge_triggered
+  to: distro.dns.configuration
+  type: prerequisite
+- from: epoll.edge_triggered
+  to: distro.filesystem_hierarchy
+  type: prerequisite
+- from: epoll.edge_triggered
+  to: distro.hostname
+  type: prerequisite
+- from: epoll.edge_triggered
+  to: distro.locale
+  type: prerequisite
+- from: epoll.edge_triggered
+  to: distro.logging.journal
+  type: prerequisite
+- from: epoll.edge_triggered
+  to: distro.network.defaults
+  type: prerequisite
+- from: epoll.edge_triggered
+  to: distro.os_release
+  type: prerequisite
+- from: epoll.edge_triggered
+  to: distro.timezone
+  type: prerequisite
+- from: epoll.edge_triggered
+  to: epoll.fd_lifecycle
+  type: prerequisite
+- from: epoll.edge_triggered
+  to: fs.ext4.persistence
+  type: prerequisite
+- from: epoll.edge_triggered
+  to: network.dns.resolve
+  type: prerequisite
+- from: epoll.edge_triggered
+  to: persistence.configuration.reboot
+  type: prerequisite
+- from: epoll.edge_triggered
+  to: persistence.file.reboot
+  type: prerequisite
+- from: epoll.edge_triggered
+  to: persistence.metadata.reboot
+  type: prerequisite
+- from: epoll.edge_triggered
+  to: persistence.package.reboot
+  type: prerequisite
+- from: epoll.edge_triggered
+  to: persistence.service.reboot
+  type: prerequisite
+- from: epoll.edge_triggered
+  to: persistence.user.reboot
+  type: prerequisite
+- from: epoll.edge_triggered
+  to: service.dependencies
+  type: prerequisite
+- from: epoll.edge_triggered
+  to: service.enable.start
+  type: prerequisite
+- from: epoll.edge_triggered
+  to: service.environment
+  type: prerequisite
+- from: epoll.edge_triggered
+  to: service.failure_state
+  type: prerequisite
+- from: epoll.edge_triggered
+  to: service.lifecycle.start_stop
+  type: prerequisite
+- from: epoll.edge_triggered
+  to: service.logging
+  type: prerequisite
+- from: epoll.edge_triggered
+  to: service.manager.ready
+  type: prerequisite
+- from: epoll.edge_triggered
+  to: service.restart
+  type: prerequisite
+- from: exhaustion.disk.cleanup
+  to: devfs.nodes
+  type: prerequisite
+- from: exhaustion.disk.cleanup
+  to: devfs.random
+  type: prerequisite
+- from: exhaustion.disk.cleanup
+  to: devfs.tty
+  type: prerequisite
+- from: exhaustion.disk.cleanup
+  to: elf.auxv
+  type: prerequisite
+- from: exhaustion.disk.cleanup
+  to: elf.dynamic_loader.basic
+  type: prerequisite
+- from: exhaustion.disk.cleanup
+  to: elf.interpreter.error
+  type: prerequisite
+- from: exhaustion.disk.cleanup
+  to: elf.tls
+  type: prerequisite
+- from: exhaustion.disk.cleanup
+  to: exhaustion.fd.cleanup
+  type: prerequisite
+- from: exhaustion.disk.cleanup
+  to: io.dev_null_zero
+  type: prerequisite
+- from: exhaustion.disk.cleanup
+  to: procfs.fd.links
+  type: prerequisite
+- from: exhaustion.disk.cleanup
+  to: procfs.mount
+  type: prerequisite
+- from: exhaustion.disk.cleanup
+  to: procfs.process.cmdline
+  type: prerequisite
+- from: exhaustion.disk.cleanup
+  to: procfs.self.status
+  type: prerequisite
+- from: exhaustion.disk.cleanup
+  to: sync.barrier
+  type: prerequisite
+- from: exhaustion.disk.cleanup
+  to: sync.condition
+  type: prerequisite
+- from: exhaustion.disk.cleanup
+  to: sync.rwlock
+  type: prerequisite
+- from: exhaustion.disk.cleanup
+  to: sysfs.mount
+  type: prerequisite
+- from: exhaustion.disk.cleanup
+  to: thread.fork_semantics
+  type: prerequisite
+- from: exhaustion.disk.cleanup
+  to: thread.tls
+  type: prerequisite
+- from: exhaustion.disk.cleanup
+  to: tty.canonical_mode
+  type: prerequisite
+- from: exhaustion.disk.cleanup
+  to: tty.echo
+  type: prerequisite
+- from: exhaustion.disk.cleanup
+  to: tty.pty
+  type: prerequisite
+- from: exhaustion.disk.cleanup
+  to: tty.signal_control_chars
+  type: prerequisite
+- from: exhaustion.fd.cleanup
+  to: exhaustion.memory.cleanup
+  type: prerequisite
+- from: exhaustion.memory.cleanup
+  to: exhaustion.process.cleanup
+  type: prerequisite
+- from: exhaustion.process.cleanup
+  to: exhaustion.socket.cleanup
+  type: prerequisite
+- from: exhaustion.socket.cleanup
+  to: exhaustion.thread.cleanup
+  type: prerequisite
+- from: failure.interrupted_operation
+  to: failure.invalid_pointer
+  type: prerequisite
+- from: failure.invalid_fd
+  to: failure.interrupted_operation
+  type: prerequisite
+- from: failure.invalid_pointer
+  to: failure.rollback
+  type: prerequisite
+- from: fd.close
+  to: fd.dup
+  type: prerequisite
+- from: fd.close_on_exec
+  to: fd.dup2.redirection
+  type: prerequisite
+- from: fd.dup
+  to: fd.lowest_available
+  type: prerequisite
+- from: fd.dup2.redirection
+  to: fd.exhaustion_cleanup
+  type: prerequisite
+- from: fd.exhaustion_cleanup
+  to: fd.inherit_fork
+  type: prerequisite
+- from: fd.inherit_fork
+  to: fd.shared_offset
+  type: prerequisite
+- from: fd.lowest_available
+  to: fd.table
+  type: prerequisite
+- from: fd.table
+  to: fd.close_on_exec
+  type: prerequisite
+- from: fs.directory.create_remove
+  to: fs.file.create
+  type: prerequisite
+- from: fs.directory.iteration
+  to: fs.file.append.atomicity
+  type: prerequisite
+- from: fs.file.append.atomicity
+  to: fs.file.fsync
+  type: prerequisite
+- from: fs.file.create
+  to: fs.file.open
+  type: prerequisite
+- from: fs.file.fsync
+  to: fs.file.hardlink
+  type: prerequisite
+- from: fs.file.hardlink
+  to: fs.file.rename.atomicity
+  type: prerequisite
+- from: fs.file.open
+  to: fs.file.read.partial_eof
+  type: prerequisite
+- from: fs.file.read.partial_eof
+  to: fs.file.seek
+  type: prerequisite
+- from: fs.file.rename.atomicity
+  to: fs.file.symlink
+  type: prerequisite
+- from: fs.file.seek
+  to: fs.file.stat
+  type: prerequisite
+- from: fs.file.stat
+  to: fs.file.write.basic
+  type: prerequisite
+- from: fs.file.symlink
+  to: fs.file.truncate
+  type: prerequisite
+- from: fs.file.truncate
+  to: fs.file.unlink_open
+  type: prerequisite
+- from: fs.file.unlink_open
+  to: fs.path.dotdot
+  type: prerequisite
+- from: fs.file.write.basic
+  to: fs.path.absolute_relative
+  type: prerequisite
+- from: fs.inode.exhaustion
+  to: fs.mount.basic
+  type: prerequisite
+- from: fs.mount.basic
+  to: fs.mount.covering
+  type: prerequisite
+- from: fs.mount.covering
+  to: fs.vfs.cross_filesystem
+  type: prerequisite
+- from: fs.path.absolute_relative
+  to: fs.directory.iteration
+  type: prerequisite
+- from: fs.path.dotdot
+  to: fs.storage.full
+  type: prerequisite
+- from: fs.storage.full
+  to: fs.inode.exhaustion
+  type: prerequisite
+- from: fs.vfs.cross_filesystem
+  to: fs.ext4.persistence
+  type: prerequisite
+- from: full.boot_login_shell
+  to: full.database_crash_recovery
+  type: prerequisite
+- from: full.database_crash_recovery
+  to: full.install_serve_reboot
+  type: prerequisite
+- from: full.install_serve_reboot
+  to: full.user_build_run
+  type: prerequisite
+- from: identity.credential_inheritance
+  to: identity.groups
+  type: prerequisite
+- from: identity.group_lookup
+  to: epoll.edge_triggered
+  type: prerequisite
+- from: identity.group_lookup
+  to: epoll.fd_lifecycle
+  type: prerequisite
+- from: identity.group_lookup
+  to: fs.inode.exhaustion
+  type: prerequisite
+- from: identity.group_lookup
+  to: fs.mount.basic
+  type: prerequisite
+- from: identity.group_lookup
+  to: fs.mount.covering
+  type: prerequisite
+- from: identity.group_lookup
+  to: fs.vfs.cross_filesystem
+  type: prerequisite
+- from: identity.group_lookup
+  to: identity.user_lookup
+  type: prerequisite
+- from: identity.group_lookup
+  to: io.block_device
+  type: prerequisite
+- from: identity.group_lookup
+  to: io.device_hotplug
+  type: prerequisite
+- from: identity.group_lookup
+  to: io.ioctl
+  type: prerequisite
+- from: identity.group_lookup
+  to: io.random
+  type: prerequisite
+- from: identity.group_lookup
+  to: ipc.message_queue
+  type: prerequisite
+- from: identity.group_lookup
+  to: linux.boot_parameters
+  type: prerequisite
+- from: identity.group_lookup
+  to: linux.capability.basic
+  type: prerequisite
+- from: identity.group_lookup
+  to: linux.cgroup.basic
+  type: prerequisite
+- from: identity.group_lookup
+  to: linux.hostname
+  type: prerequisite
+- from: identity.group_lookup
+  to: linux.module.inventory
+  type: prerequisite
+- from: identity.group_lookup
+  to: linux.namespace.mount
+  type: prerequisite
+- from: identity.group_lookup
+  to: linux.sysctl
+  type: prerequisite
+- from: identity.group_lookup
+  to: linux.uname
+  type: prerequisite
+- from: identity.group_lookup
+  to: memory.mlock
+  type: prerequisite
+- from: identity.group_lookup
+  to: network.interface.enumeration
+  type: prerequisite
+- from: identity.group_lookup
+  to: network.route.local
+  type: prerequisite
+- from: identity.group_lookup
+  to: permission.device_access
+  type: prerequisite
+- from: identity.group_lookup
+  to: permission.setuid_transition
+  type: prerequisite
+- from: identity.group_lookup
+  to: process.clone.sharing
+  type: prerequisite
+- from: identity.group_lookup
+  to: procfs.sysctl.read_write
+  type: prerequisite
+- from: identity.group_lookup
+  to: scheduling.affinity
+  type: prerequisite
+- from: identity.group_lookup
+  to: scheduling.priority
+  type: prerequisite
+- from: identity.group_lookup
+  to: security.file_isolation
+  type: prerequisite
+- from: identity.group_lookup
+  to: security.privileged_operation
+  type: prerequisite
+- from: identity.group_lookup
+  to: security.process_memory_isolation
+  type: prerequisite
+- from: identity.group_lookup
+  to: sync.futex.wait_wake
+  type: prerequisite
+- from: identity.group_lookup
+  to: sysfs.device_tree
+  type: prerequisite
+- from: identity.group_lookup
+  to: time.timerfd
+  type: prerequisite
+- from: identity.groups
+  to: identity.uid_gid
+  type: prerequisite
+- from: identity.uid_gid
+  to: identity.group_lookup
+  type: prerequisite
+- from: io.block_device
+  to: io.device_hotplug
+  type: prerequisite
+- from: io.dev_null_zero
+  to: io.block_device
+  type: prerequisite
+- from: io.device_hotplug
+  to: io.ioctl
+  type: prerequisite
+- from: io.interrupt_completion
+  to: io.nonblocking
+  type: prerequisite
+- from: io.ioctl
+  to: io.random
+  type: prerequisite
+- from: io.nonblocking
+  to: io.dev_null_zero
+  type: prerequisite
+- from: ipc.semaphore
+  to: ipc.shared_memory
+  type: prerequisite
+- from: ipc.shared_memory
+  to: ipc.unix_socket
+  type: prerequisite
+- from: ipc.unix_socket
+  to: pipe.atomic_write
+  type: prerequisite
+- from: linux.boot_parameters
+  to: linux.capability.basic
+  type: prerequisite
+- from: linux.capability.basic
+  to: linux.cgroup.basic
+  type: prerequisite
+- from: linux.cgroup.basic
+  to: linux.hostname
+  type: prerequisite
+- from: linux.hostname
+  to: linux.module.inventory
+  type: prerequisite
+- from: linux.module.inventory
+  to: linux.namespace.mount
+  type: prerequisite
+- from: linux.namespace.mount
+  to: linux.sysctl
+  type: prerequisite
+- from: linux.sysctl
+  to: linux.uname
+  type: prerequisite
+- from: machine.block.read_write
+  to: elf.argv_env
+  type: prerequisite
+- from: machine.block.read_write
+  to: elf.static.load
+  type: prerequisite
+- from: machine.block.read_write
+  to: failure.invalid_fd
+  type: prerequisite
+- from: machine.block.read_write
+  to: fd.close
+  type: prerequisite
+- from: machine.block.read_write
+  to: fd.dup
+  type: prerequisite
+- from: machine.block.read_write
+  to: fd.lowest_available
+  type: prerequisite
+- from: machine.block.read_write
+  to: fd.table
+  type: prerequisite
+- from: machine.block.read_write
+  to: fs.directory.create_remove
+  type: prerequisite
+- from: machine.block.read_write
+  to: fs.file.create
+  type: prerequisite
+- from: machine.block.read_write
+  to: fs.file.open
+  type: prerequisite
+- from: machine.block.read_write
+  to: fs.file.read.partial_eof
+  type: prerequisite
+- from: machine.block.read_write
+  to: fs.file.seek
+  type: prerequisite
+- from: machine.block.read_write
+  to: fs.file.stat
+  type: prerequisite
+- from: machine.block.read_write
+  to: fs.file.write.basic
+  type: prerequisite
+- from: machine.block.read_write
+  to: fs.path.absolute_relative
+  type: prerequisite
+- from: machine.block.read_write
+  to: machine.clock.monotonic
+  type: prerequisite
+- from: machine.block.read_write
+  to: process.environment
+  type: prerequisite
+- from: machine.block.read_write
+  to: process.execution
+  type: prerequisite
+- from: machine.clock.monotonic
+  to: machine.cpu.mode_transition
+  type: prerequisite
+- from: machine.cpu.mode_transition
+  to: machine.exception.divide_zero
+  type: prerequisite
+- from: machine.exception.divide_zero
+  to: machine.interrupt.timer
+  type: prerequisite
+- from: machine.interrupt.timer
+  to: machine.memory.page_tables
+  type: prerequisite
+- from: machine.memory.page_tables
+  to: machine.rng.read
+  type: prerequisite
+- from: machine.rng.read
+  to: machine.serial.rx_tx
+  type: prerequisite
+- from: machine.serial.rx_tx
+  to: machine.smp.start
+  type: prerequisite
+- from: machine.smp.start
+  to: machine.syscall.trap
+  type: prerequisite
+- from: memory.address_space.isolation
+  to: memory.brk
+  type: prerequisite
+- from: memory.brk
+  to: memory.copy_on_write
+  type: prerequisite
+- from: memory.copy_on_write
+  to: memory.mmap.anonymous
+  type: prerequisite
+- from: memory.mmap.anonymous
+  to: memory.mmap.file
+  type: prerequisite
+- from: memory.mmap.file
+  to: memory.mprotect
+  type: prerequisite
+- from: memory.mprotect
+  to: memory.munmap
+  type: prerequisite
+- from: memory.munmap
+  to: memory.overcommit_failure
+  type: prerequisite
+- from: memory.overcommit_failure
+  to: memory.page_fault
+  type: prerequisite
+- from: memory.page_fault
+  to: memory.shared_mapping
+  type: prerequisite
+- from: memory.shared_mapping
+  to: memory.stack_growth
+  type: prerequisite
+- from: memory.stack_growth
+  to: memory.mlock
+  type: prerequisite
+- from: network.interface.enumeration
+  to: network.route.local
+  type: prerequisite
+- from: network.loopback
+  to: network.interface.enumeration
+  type: prerequisite
+- from: network.route.local
+  to: network.dns.resolve
+  type: prerequisite
+- from: package.conffile
+  to: package.database.query
+  type: prerequisite
+- from: package.conffile
+  to: workload.c.compile_link_run
+  type: prerequisite
+- from: package.conffile
+  to: workload.compression.roundtrip
+  type: prerequisite
+- from: package.conffile
+  to: workload.coreutils.pipeline
+  type: prerequisite
+- from: package.conffile
+  to: workload.dns.lookup
+  type: prerequisite
+- from: package.conffile
+  to: workload.dynamic_elf
+  type: prerequisite
+- from: package.conffile
+  to: workload.git.repository
+  type: prerequisite
+- from: package.conffile
+  to: workload.http.server_client
+  type: prerequisite
+- from: package.conffile
+  to: workload.package.install
+  type: prerequisite
+- from: package.conffile
+  to: workload.pthread.program
+  type: prerequisite
+- from: package.conffile
+  to: workload.python.basic
+  type: prerequisite
+- from: package.conffile
+  to: workload.service.start
+  type: prerequisite
+- from: package.conffile
+  to: workload.shell.script
+  type: prerequisite
+- from: package.conffile
+  to: workload.sqlite.transaction
+  type: prerequisite
+- from: package.conffile
+  to: workload.ssh.loopback
+  type: prerequisite
+- from: package.conffile
+  to: workload.static_elf
+  type: prerequisite
+- from: package.conffile
+  to: workload.tcp.client_server
+  type: prerequisite
+- from: package.database.query
+  to: package.deb.install
+  type: prerequisite
+- from: package.deb.install
+  to: package.deb.remove
+  type: prerequisite
+- from: package.deb.remove
+  to: package.deb.upgrade
+  type: prerequisite
+- from: package.deb.upgrade
+  to: package.dependency
+  type: prerequisite
+- from: package.dependency
+  to: package.dpkg.status
+  type: prerequisite
+- from: package.dpkg.status
+  to: package.maintainer.postinst
+  type: prerequisite
+- from: package.maintainer.postinst
+  to: package.maintainer.preinst
+  type: prerequisite
+- from: package.maintainer.preinst
+  to: package.offline.apt
+  type: prerequisite
+- from: package.offline.apt
+  to: package.rollback_failure
+  type: prerequisite
+- from: package.rollback_failure
+  to: package.service.install
+  type: prerequisite
+- from: package.service.install
+  to: package.shared_library
+  type: prerequisite
+- from: permission.device_access
+  to: permission.setuid_transition
+  type: prerequisite
+- from: permission.directory.search
+  to: permission.mode.rwx
+  type: prerequisite
+- from: permission.mode.rwx
+  to: permission.owner_group
+  type: prerequisite
+- from: permission.owner_group
+  to: permission.root_override
+  type: prerequisite
+- from: permission.root_override
+  to: permission.signal_authorization
+  type: prerequisite
+- from: permission.signal_authorization
+  to: permission.umask
+  type: prerequisite
+- from: permission.umask
+  to: permission.device_access
+  type: prerequisite
+- from: persistence.configuration.reboot
+  to: persistence.file.reboot
+  type: prerequisite
+- from: persistence.crash.synced
+  to: persistence.crash.unsynced_bounds
+  type: prerequisite
+- from: persistence.file.reboot
+  to: persistence.metadata.reboot
+  type: prerequisite
+- from: persistence.metadata.reboot
+  to: persistence.package.reboot
+  type: prerequisite
+- from: persistence.package.reboot
+  to: persistence.service.reboot
+  type: prerequisite
+- from: persistence.service.reboot
+  to: persistence.user.reboot
+  type: prerequisite
+- from: persistence.user.reboot
+  to: persistence.crash.synced
+  type: prerequisite
+- from: pipe.atomic_write
+  to: pipe.basic
+  type: prerequisite
+- from: pipe.basic
+  to: pipe.blocking
+  type: prerequisite
+- from: pipe.blocking
+  to: pipe.eof
+  type: prerequisite
+- from: pipe.eof
+  to: ipc.message_queue
+  type: prerequisite
+- from: poll.pipe.readiness
+  to: poll.socket.readiness
+  type: prerequisite
+- from: poll.socket.readiness
+  to: poll.timeout
+  type: prerequisite
+- from: poll.timeout
+  to: epoll.edge_triggered
+  type: prerequisite
+- from: posix.utility.cat
+  to: posix.utility.find
+  type: prerequisite
+- from: posix.utility.find
+  to: posix.utility.grep
+  type: prerequisite
+- from: posix.utility.grep
+  to: posix.utility.sort
+  type: prerequisite
+- from: process.environment
+  to: process.execution
+  type: prerequisite
+- from: process.execution
+  to: process.execve.basic
+  type: prerequisite
+- from: process.execve.basic
+  to: process.exit.status
+  type: prerequisite
+- from: process.exit.status
+  to: process.fork.basic
+  type: prerequisite
+- from: process.fork.basic
+  to: process.parent_child
+  type: prerequisite
+- from: process.parent_child
+  to: process.process_group
+  type: prerequisite
+- from: process.process_group
+  to: process.resource_limits
+  type: prerequisite
+- from: process.resource_limits
+  to: process.session
+  type: prerequisite
+- from: process.session
+  to: process.wait.basic
+  type: prerequisite
+- from: process.wait.basic
+  to: process.zombie.reap
+  type: prerequisite
+- from: process.zombie.reap
+  to: process.clone.sharing
+  type: prerequisite
+- from: procfs.fd.links
+  to: procfs.mount
+  type: prerequisite
+- from: procfs.mount
+  to: procfs.process.cmdline
+  type: prerequisite
+- from: procfs.process.cmdline
+  to: procfs.self.status
+  type: prerequisite
+- from: procfs.self.status
+  to: procfs.sysctl.read_write
+  type: prerequisite
+- from: scheduling.affinity
+  to: scheduling.priority
+  type: prerequisite
+- from: scheduling.block_wakeup
+  to: scheduling.fair_progress
+  type: prerequisite
+- from: scheduling.fair_progress
+  to: scheduling.preemption
+  type: prerequisite
+- from: scheduling.preemption
+  to: scheduling.starvation_resistance
+  type: prerequisite
+- from: scheduling.starvation_resistance
+  to: scheduling.affinity
+  type: prerequisite
+- from: security.file_isolation
+  to: security.privileged_operation
+  type: prerequisite
+- from: security.privileged_operation
+  to: security.process_memory_isolation
+  type: prerequisite
+- from: security.process_memory_isolation
+  to: security.failure_containment
+  type: prerequisite
+- from: service.dependencies
+  to: service.enable.start
+  type: prerequisite
+- from: service.enable.start
+  to: service.environment
+  type: prerequisite
+- from: service.environment
+  to: service.failure_state
+  type: prerequisite
+- from: service.failure_state
+  to: service.lifecycle.start_stop
+  type: prerequisite
+- from: service.lifecycle.start_stop
+  to: service.logging
+  type: prerequisite
+- from: service.logging
+  to: service.manager.ready
+  type: prerequisite
+- from: service.manager.ready
+  to: service.restart
+  type: prerequisite
+- from: shell.background_job
+  to: shell.command.exec
+  type: prerequisite
+- from: shell.command.exec
+  to: shell.environment
+  type: prerequisite
+- from: shell.environment
+  to: shell.exit_status
+  type: prerequisite
+- from: shell.exit_status
+  to: shell.pipeline.basic
+  type: prerequisite
+- from: shell.pipeline.basic
+  to: shell.quoting
+  type: prerequisite
+- from: shell.quoting
+  to: shell.redirection
+  type: prerequisite
+- from: shell.redirection
+  to: shell.working_directory
+  type: prerequisite
+- from: signal.default_action
+  to: signal.delivery
+  type: prerequisite
+- from: signal.delivery
+  to: signal.handler.return
+  type: prerequisite
+- from: signal.handler.return
+  to: signal.interrupt_syscall
+  type: prerequisite
+- from: signal.interrupt_syscall
+  to: signal.mask
+  type: prerequisite
+- from: signal.mask
+  to: signal.pending
+  type: prerequisite
+- from: signal.pending
+  to: signal.process_group
+  type: prerequisite
+- from: signal.process_group
+  to: signal.timer
+  type: prerequisite
+- from: socket.error
+  to: socket.shutdown
+  type: prerequisite
+- from: socket.shutdown
+  to: socket.tcp.listen_accept
+  type: prerequisite
+- from: socket.tcp.listen_accept
+  to: socket.tcp.loopback
+  type: prerequisite
+- from: socket.tcp.loopback
+  to: socket.tcp.stream_semantics
+  type: prerequisite
+- from: socket.tcp.stream_semantics
+  to: socket.udp.loopback
+  type: prerequisite
+- from: socket.udp.loopback
+  to: socket.unix.stream
+  type: prerequisite
+- from: sync.atomic.basic
+  to: sync.mutex.exclusion
+  type: prerequisite
+- from: sync.barrier
+  to: sync.condition
+  type: prerequisite
+- from: sync.condition
+  to: sync.rwlock
+  type: prerequisite
+- from: sync.mutex.exclusion
+  to: sync.priority_inversion
+  type: prerequisite
+- from: sync.priority_inversion
+  to: sync.semaphore
+  type: prerequisite
+- from: sync.rwlock
+  to: sync.futex.wait_wake
+  type: prerequisite
+- from: sync.semaphore
+  to: sync.barrier
+  type: prerequisite
+- from: sysfs.mount
+  to: sysfs.device_tree
+  type: prerequisite
+- from: thread.blocking_isolation
+  to: thread.create_join
+  type: prerequisite
+- from: thread.create_join
+  to: thread.exit
+  type: prerequisite
+- from: thread.exit
+  to: thread.shared_fd
+  type: prerequisite
+- from: thread.fork_semantics
+  to: thread.tls
+  type: prerequisite
+- from: thread.shared_fd
+  to: thread.fork_semantics
+  type: prerequisite
+- from: time.clock.monotonic
+  to: time.clock.realtime
+  type: prerequisite
+- from: time.clock.realtime
+  to: time.interval_timer
+  type: prerequisite
+- from: time.interval_timer
+  to: time.nanosleep
+  type: prerequisite
+- from: time.nanosleep
+  to: time.timeout.poll
+  type: prerequisite
+- from: time.timeout.poll
+  to: time.timerfd
+  type: prerequisite
+- from: tty.basic_io
+  to: tty.canonical_mode
+  type: prerequisite
+- from: tty.canonical_mode
+  to: tty.echo
+  type: prerequisite
+- from: tty.echo
+  to: tty.pty
+  type: prerequisite
+- from: tty.pty
+  to: tty.signal_control_chars
+  type: prerequisite
+- from: tty.signal_control_chars
+  to: tty.job_control
+  type: prerequisite
+- from: workload.c.compile_link_run
+  to: full.boot_login_shell
+  type: prerequisite
+- from: workload.c.compile_link_run
+  to: full.database_crash_recovery
+  type: prerequisite
+- from: workload.c.compile_link_run
+  to: full.install_serve_reboot
+  type: prerequisite
+- from: workload.c.compile_link_run
+  to: full.user_build_run
+  type: prerequisite
+- from: workload.c.compile_link_run
+  to: persistence.crash.synced
+  type: prerequisite
+- from: workload.c.compile_link_run
+  to: persistence.crash.unsynced_bounds
+  type: prerequisite
+- from: workload.c.compile_link_run
+  to: security.failure_containment
+  type: prerequisite
+- from: workload.c.compile_link_run
+  to: workload.compression.roundtrip
+  type: prerequisite
+- from: workload.compression.roundtrip
+  to: workload.coreutils.pipeline
+  type: prerequisite
+- from: workload.coreutils.pipeline
+  to: workload.dns.lookup
+  type: prerequisite
+- from: workload.dns.lookup
+  to: workload.dynamic_elf
+  type: prerequisite
+- from: workload.dynamic_elf
+  to: workload.git.repository
+  type: prerequisite
+- from: workload.git.repository
+  to: workload.http.server_client
+  type: prerequisite
+- from: workload.http.server_client
+  to: workload.package.install
+  type: prerequisite
+- from: workload.package.install
+  to: workload.pthread.program
+  type: prerequisite
+- from: workload.pthread.program
+  to: workload.python.basic
+  type: prerequisite
+- from: workload.python.basic
+  to: workload.service.start
+  type: prerequisite
+- from: workload.service.start
+  to: workload.shell.script
+  type: prerequisite
+- from: workload.shell.script
+  to: workload.sqlite.transaction
+  type: prerequisite
+- from: workload.sqlite.transaction
+  to: workload.ssh.loopback
+  type: prerequisite
+- from: workload.ssh.loopback
+  to: workload.static_elf
+  type: prerequisite
+- from: workload.static_elf
+  to: workload.tcp.client_server
+  type: prerequisite

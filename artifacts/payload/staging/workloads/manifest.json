@@ -1,0 +1,726 @@
+{
+  "count": 144,
+  "files": [
+    {
+      "path": "bin/dynamic-elf",
+      "sha256": "0f475f75e179339bbb1d1693bf283e1e2accff211ff4c3c6712abd46b6015398",
+      "size": 14544
+    },
+    {
+      "path": "bin/pthread",
+      "sha256": "830c1499778c93a44155dc3ce939ac3880209f847f32210e12e0420226f28122",
+      "size": 14576
+    },
+    {
+      "path": "bin/static-elf",
+      "sha256": "4af5cdf6bc1c2a5ced9d41d253019fecec237a8e4a897e0eefb99cf4de1e2f64",
+      "size": 672280
+    },
+    {
+      "path": "dynamic-elf",
+      "sha256": "0f475f75e179339bbb1d1693bf283e1e2accff211ff4c3c6712abd46b6015398",
+      "size": 14544
+    },
+    {
+      "path": "fixtures/http_loopback.py",
+      "sha256": "c67f005b959fbd468cd20a46ef5fe6b6dd884438906e0f4fb1c1314a2998fd30",
+      "size": 457
+    },
+    {
+      "path": "fixtures/python_basic.py",
+      "sha256": "5952cd75873a8093dc6f4f22f52a7b503ed71eb0ca26e17eaeb9e357289692e0",
+      "size": 191
+    },
+    {
+      "path": "fixtures/shell_script.sh",
+      "sha256": "18e5577174c10cc9efd5e6256df74c764b8215ed9dcce9bd8e68affb783be450",
+      "size": 108
+    },
+    {
+      "path": "fixtures/ssh_loopback.sh",
+      "sha256": "68e124faa9f043f80a2f7a4eba8cba7aeb44cee875ecefdf6f9d3ce0e6d8555d",
+      "size": 128
+    },
+    {
+      "path": "fixtures/tcp_loopback.py",
+      "sha256": "90bb47e18ddc39b9a549ddbe6b18278c8cee2e5cc99954df632111bff1982c31",
+      "size": 501
+    },
+    {
+      "path": "fixtures/tree/workloads/build.sh",
+      "sha256": "e522bb879ddfb385efd9d2f89f185f37d0221b883eee54729da23f27d1ef9d61",
+      "size": 2362
+    },
+    {
+      "path": "fixtures/tree/workloads/compiler/run.sh",
+      "sha256": "015744e0d9ff1b5b37b5e519ace36030aadb98fe64a6d41046a0d9a753b46d8c",
+      "size": 208
+    },
+    {
+      "path": "fixtures/tree/workloads/compiler/workload.sh",
+      "sha256": "a0dbf79371f21e8ed4be0c9688776f19a1abd573fef7fdf8c738c1668539903f",
+      "size": 217
+    },
+    {
+      "path": "fixtures/tree/workloads/compression/run.sh",
+      "sha256": "7e1db0b2ac2d74da71e4bc95f89ee8dd565e74706c3bbe2249127f0a99927933",
+      "size": 216
+    },
+    {
+      "path": "fixtures/tree/workloads/compression/workload.sh",
+      "sha256": "7057507348ba40988b570cf85e9df1ab96f84978cba95873d1cc7373a1401806",
+      "size": 260
+    },
+    {
+      "path": "fixtures/tree/workloads/dns/run.sh",
+      "sha256": "8d4f25a8b953dd200866a568894f98688a25ff34bf78eabfab38411b2c1992c3",
+      "size": 66
+    },
+    {
+      "path": "fixtures/tree/workloads/dns/workload.py",
+      "sha256": "682ce87dfbc3f716c6d13ad5b5f486c3862339dd739aa330da4dff8015b32476",
+      "size": 178
+    },
+    {
+      "path": "fixtures/tree/workloads/fixtures/http_loopback.py",
+      "sha256": "c67f005b959fbd468cd20a46ef5fe6b6dd884438906e0f4fb1c1314a2998fd30",
+      "size": 457
+    },
+    {
+      "path": "fixtures/tree/workloads/fixtures/python_basic.py",
+      "sha256": "5952cd75873a8093dc6f4f22f52a7b503ed71eb0ca26e17eaeb9e357289692e0",
+      "size": 191
+    },
+    {
+      "path": "fixtures/tree/workloads/fixtures/shell_script.sh",
+      "sha256": "18e5577174c10cc9efd5e6256df74c764b8215ed9dcce9bd8e68affb783be450",
+      "size": 108
+    },
+    {
+      "path": "fixtures/tree/workloads/fixtures/ssh_loopback.sh",
+      "sha256": "68e124faa9f043f80a2f7a4eba8cba7aeb44cee875ecefdf6f9d3ce0e6d8555d",
+      "size": 128
+    },
+    {
+      "path": "fixtures/tree/workloads/fixtures/tcp_loopback.py",
+      "sha256": "90bb47e18ddc39b9a549ddbe6b18278c8cee2e5cc99954df632111bff1982c31",
+      "size": 501
+    },
+    {
+      "path": "fixtures/tree/workloads/git/run.sh",
+      "sha256": "441c2cbccd6f3c067fea120574914d43ee96246f944b1f190bd27390e81e86a7",
+      "size": 297
+    },
+    {
+      "path": "fixtures/tree/workloads/git/workload.sh",
+      "sha256": "e73e30d47ed2fb1231758d36fdd2d934c64b7bd6fdd61af2bf03459613f3a751",
+      "size": 301
+    },
+    {
+      "path": "fixtures/tree/workloads/http/run.py",
+      "sha256": "d44ec7d770217fa9b1fbf276cc072c5b75ebf2d2a6d732bb31cc0fc086bea341",
+      "size": 104
+    },
+    {
+      "path": "fixtures/tree/workloads/http/workload.py",
+      "sha256": "2652051c3494b84d8ad4459acedc61c9abc83f5e6cf986cd7e2d9cc20eac5c3a",
+      "size": 558
+    },
+    {
+      "path": "fixtures/tree/workloads/packages/build.sh",
+      "sha256": "c16683a613fac6302bb98179d9b0ccca163678414aecf75e4af220f0b4738db1",
+      "size": 3053
+    },
+    {
+      "path": "fixtures/tree/workloads/packages/make_packages_index.py",
+      "sha256": "1e4231d024ffe7a3a9e4c288e5b990c64fc3f52542d709059cf4778767ef2747",
+      "size": 609
+    },
+    {
+      "path": "fixtures/tree/workloads/packages/osbench-hello.service",
+      "sha256": "55ac6fe59b750698ff3a16b425b5c056c0a775465519767dc0f5afe00ba7de59",
+      "size": 119
+    },
+    {
+      "path": "fixtures/tree/workloads/packages/osbench-hello.sh",
+      "sha256": "914d701c8dfd16cc4680ed88fad7366020636b6942d4845e93bdd82be16277c2",
+      "size": 99
+    },
+    {
+      "path": "fixtures/tree/workloads/packages/src/v0.1.0/lib/systemd/system/osbench-hello.service",
+      "sha256": "e913c46f2596bb1291c2a9a3e4f531d88735021cf6c472c3115b7e78d402d287",
+      "size": 202
+    },
+    {
+      "path": "fixtures/tree/workloads/packages/src/v0.2.0/lib/systemd/system/osbench-hello.service",
+      "sha256": "e913c46f2596bb1291c2a9a3e4f531d88735021cf6c472c3115b7e78d402d287",
+      "size": 202
+    },
+    {
+      "path": "fixtures/tree/workloads/packages/v1/lib/systemd/system/osbench-hello.service",
+      "sha256": "78019df46420d97dd34aa7d6b865486672a7d2a83f0285d1d60f8a99e605dfe2",
+      "size": 194
+    },
+    {
+      "path": "fixtures/tree/workloads/packages/v2/lib/systemd/system/osbench-hello.service",
+      "sha256": "78019df46420d97dd34aa7d6b865486672a7d2a83f0285d1d60f8a99e605dfe2",
+      "size": 194
+    },
+    {
+      "path": "fixtures/tree/workloads/python/basic.py",
+      "sha256": "9e281d7df529b1b8f407bdbde14bf9c547414d95e35e40d2bd124056d1db6988",
+      "size": 192
+    },
+    {
+      "path": "fixtures/tree/workloads/python/workload.py",
+      "sha256": "4762c21d8335a41d429121352d9498563c63bda963a97d7c80556ae1bfa60609",
+      "size": 253
+    },
+    {
+      "path": "fixtures/tree/workloads/service/osbench-workload.service",
+      "sha256": "8984aa27bfd32093f8d5db6113fb1671db9c674c67a62bb56fe00d9907c3e863",
+      "size": 209
+    },
+    {
+      "path": "fixtures/tree/workloads/service/workload.sh",
+      "sha256": "a9bfaddfd09b22f02a922bc50c57034e41a2dc4568664db5cf09c73924151cb4",
+      "size": 164
+    },
+    {
+      "path": "fixtures/tree/workloads/shell/run.sh",
+      "sha256": "04968c0141d7dd40a8f5c4bbc7d121b6069bacaf5ccd30c615d939a8e1794e38",
+      "size": 143
+    },
+    {
+      "path": "fixtures/tree/workloads/shell/workload.sh",
+      "sha256": "ecf1618d57f278650ad8c5f385b7ead2d3ac0187e88a6f9970e5365adbea8850",
+      "size": 230
+    },
+    {
+      "path": "fixtures/tree/workloads/sqlite/run.py",
+      "sha256": "98b25e18842168725f5c20a1267fa4fc9e743be42f67e00a7dbf6d0a52437177",
+      "size": 333
+    },
+    {
+      "path": "fixtures/tree/workloads/sqlite/workload.py",
+      "sha256": "cfd1186675ab7634f6a6c7db692fb1d8342d0076d3b53b25e3fb7cb9fc5a8b15",
+      "size": 441
+    },
+    {
+      "path": "fixtures/tree/workloads/ssh/run.sh",
+      "sha256": "cae22bae271084daf1246559c7709f7b37b05958b53ee4882fc3d0c5c5c0a0f1",
+      "size": 41
+    },
+    {
+      "path": "fixtures/tree/workloads/ssh/workload.sh",
+      "sha256": "dd34836c7eeeb55756673f37f8368096a3b07ff21b3e547b0f3a2f5fc63364dd",
+      "size": 206
+    },
+    {
+      "path": "fixtures/tree/workloads/tcp/run.py",
+      "sha256": "2b732e70719fbdc0290b5f814403292cfb157484bb0f715d2044b6d57281bd75",
+      "size": 102
+    },
+    {
+      "path": "fixtures/tree/workloads/tcp/workload.py",
+      "sha256": "144bd062ce8f70da4ad6b33ed56f456321d3df07c1c4c2cc6db663926c005102",
+      "size": 453
+    },
+    {
+      "path": "pthread",
+      "sha256": "830c1499778c93a44155dc3ce939ac3880209f847f32210e12e0420226f28122",
+      "size": 14576
+    },
+    {
+      "path": "source/build.sh",
+      "sha256": "e522bb879ddfb385efd9d2f89f185f37d0221b883eee54729da23f27d1ef9d61",
+      "size": 2362
+    },
+    {
+      "path": "source/compiler/hello.c",
+      "sha256": "0243a22d34e74050a86f4c950f8dc0f29dc30c82b8b89cc628dff01ddf75bc0d",
+      "size": 73
+    },
+    {
+      "path": "source/compiler/run.sh",
+      "sha256": "015744e0d9ff1b5b37b5e519ace36030aadb98fe64a6d41046a0d9a753b46d8c",
+      "size": 208
+    },
+    {
+      "path": "source/compiler/workload.sh",
+      "sha256": "a0dbf79371f21e8ed4be0c9688776f19a1abd573fef7fdf8c738c1668539903f",
+      "size": 217
+    },
+    {
+      "path": "source/compression/run.sh",
+      "sha256": "7e1db0b2ac2d74da71e4bc95f89ee8dd565e74706c3bbe2249127f0a99927933",
+      "size": 216
+    },
+    {
+      "path": "source/compression/workload.sh",
+      "sha256": "7057507348ba40988b570cf85e9df1ab96f84978cba95873d1cc7373a1401806",
+      "size": 260
+    },
+    {
+      "path": "source/dns/run.sh",
+      "sha256": "8d4f25a8b953dd200866a568894f98688a25ff34bf78eabfab38411b2c1992c3",
+      "size": 66
+    },
+    {
+      "path": "source/dns/workload.py",
+      "sha256": "682ce87dfbc3f716c6d13ad5b5f486c3862339dd739aa330da4dff8015b32476",
+      "size": 178
+    },
+    {
+      "path": "source/dynamic_elf/README.md",
+      "sha256": "0737a3f2ad38b5379c84c3753c186f985e575f94d5ba163e95418efed4ff055b",
+      "size": 114
+    },
+    {
+      "path": "source/dynamic_elf/main.c",
+      "sha256": "e290f013f65af71ab3ad5c7df401e7cc6db345c476cabba87ea33985f60da625",
+      "size": 164
+    },
+    {
+      "path": "source/fixtures/http_loopback.py",
+      "sha256": "c67f005b959fbd468cd20a46ef5fe6b6dd884438906e0f4fb1c1314a2998fd30",
+      "size": 457
+    },
+    {
+      "path": "source/fixtures/python_basic.py",
+      "sha256": "5952cd75873a8093dc6f4f22f52a7b503ed71eb0ca26e17eaeb9e357289692e0",
+      "size": 191
+    },
+    {
+      "path": "source/fixtures/shell_script.sh",
+      "sha256": "18e5577174c10cc9efd5e6256df74c764b8215ed9dcce9bd8e68affb783be450",
+      "size": 108
+    },
+    {
+      "path": "source/fixtures/ssh_loopback.sh",
+      "sha256": "68e124faa9f043f80a2f7a4eba8cba7aeb44cee875ecefdf6f9d3ce0e6d8555d",
+      "size": 128
+    },
+    {
+      "path": "source/fixtures/tcp_loopback.py",
+      "sha256": "90bb47e18ddc39b9a549ddbe6b18278c8cee2e5cc99954df632111bff1982c31",
+      "size": 501
+    },
+    {
+      "path": "source/git/run.sh",
+      "sha256": "441c2cbccd6f3c067fea120574914d43ee96246f944b1f190bd27390e81e86a7",
+      "size": 297
+    },
+    {
+      "path": "source/git/workload.sh",
+      "sha256": "e73e30d47ed2fb1231758d36fdd2d934c64b7bd6fdd61af2bf03459613f3a751",
+      "size": 301
+    },
+    {
+      "path": "source/http/run.py",
+      "sha256": "d44ec7d770217fa9b1fbf276cc072c5b75ebf2d2a6d732bb31cc0fc086bea341",
+      "size": 104
+    },
+    {
+      "path": "source/http/workload.py",
+      "sha256": "2652051c3494b84d8ad4459acedc61c9abc83f5e6cf986cd7e2d9cc20eac5c3a",
+      "size": 558
+    },
+    {
+      "path": "source/manifests/compiler.yaml",
+      "sha256": "3a03758abba70816cd5ad9b025f638a58c294b003943f08ff50abbbbbc3bfc8b",
+      "size": 446
+    },
+    {
+      "path": "source/manifests/compression.yaml",
+      "sha256": "e809a33c48af32fa17ea97a347ecac92d374a4dc75fc735ac0b455003c7881f1",
+      "size": 488
+    },
+    {
+      "path": "source/manifests/coreutils_pipeline.yaml",
+      "sha256": "dd2bbf020b309ff1f070fe3021550fd03e91839b2a5056c5accef45ff38f3f2c",
+      "size": 407
+    },
+    {
+      "path": "source/manifests/dns.yaml",
+      "sha256": "c59d9b09a2d2487520bded4be2913c95b625635ea12af504cbc6ad26fd62ce81",
+      "size": 273
+    },
+    {
+      "path": "source/manifests/dynamic_elf.yaml",
+      "sha256": "8929defd95798b2ac5032ec67a751e696c7309e73a7f25f6e51276db22dccd0b",
+      "size": 318
+    },
+    {
+      "path": "source/manifests/git.yaml",
+      "sha256": "36a7fb90bd033a8d70822117f81f22604bb9f41fd73279d666b1eea1784eb6b9",
+      "size": 407
+    },
+    {
+      "path": "source/manifests/http.yaml",
+      "sha256": "f528b4ed27be58f375117a168ad2107d4eb741bdee603cf9a2c9d6393f5e8f3b",
+      "size": 336
+    },
+    {
+      "path": "source/manifests/package.yaml",
+      "sha256": "f4cac5a92cb92f3f1eeff5a4f2d654a701276725e194c12ac733d412d6db027a",
+      "size": 259
+    },
+    {
+      "path": "source/manifests/package_install.yaml",
+      "sha256": "c236bdc5358b802fba182135c84aa39d9f721d667762f2b15939d23a60e12be2",
+      "size": 409
+    },
+    {
+      "path": "source/manifests/pthread.yaml",
+      "sha256": "458e070c13688fc6e1701882852411faad8fc2f543e6dc1b7cc47f89fadfad5a",
+      "size": 326
+    },
+    {
+      "path": "source/manifests/python.yaml",
+      "sha256": "1f6874bcad344b7fecf39608afa030d6c95452b1f99d235acf47c890d0c74724",
+      "size": 408
+    },
+    {
+      "path": "source/manifests/reboot_service.yaml",
+      "sha256": "a64bded5ed37ac4e92b6112a7f3fc9aac9758cbc8e8f4cab41684d2de67e9247",
+      "size": 322
+    },
+    {
+      "path": "source/manifests/service.yaml",
+      "sha256": "cc584f8d06239608de5809ac865ac1c395f57a0bece8f12ba5607183a1083e4c",
+      "size": 332
+    },
+    {
+      "path": "source/manifests/shell.yaml",
+      "sha256": "6eb4355729d4a3cde48b1bc229edbb105bbf4996793cdd4679a280b068d2bb56",
+      "size": 355
+    },
+    {
+      "path": "source/manifests/sqlite.yaml",
+      "sha256": "0219efe0a2cb5f3680154da0efd9e8fde31fccfe0f95c06b0b5f2fbc65cf61b8",
+      "size": 551
+    },
+    {
+      "path": "source/manifests/ssh.yaml",
+      "sha256": "dd7ff4b2a202044cc1fa3687d9d31aa764c728f20b08aecffab4a5c55e9fc78f",
+      "size": 361
+    },
+    {
+      "path": "source/manifests/static_elf.yaml",
+      "sha256": "2ac2afc9e85b773a96672d634a0462197dcdd68ea32a04649789f45b9d585351",
+      "size": 310
+    },
+    {
+      "path": "source/manifests/tcp.yaml",
+      "sha256": "a0d7e7e75fb7b9889ef13eedd20d9b4fc9c9d477fd418322e157354643369b40",
+      "size": 340
+    },
+    {
+      "path": "source/packages/README.md",
+      "sha256": "d29166dde43c284b4723d0eafd2f881e7e34247c5639afca53890fdbcfdde319",
+      "size": 314
+    },
+    {
+      "path": "source/packages/build.sh",
+      "sha256": "c16683a613fac6302bb98179d9b0ccca163678414aecf75e4af220f0b4738db1",
+      "size": 3053
+    },
+    {
+      "path": "source/packages/lock.json",
+      "sha256": "5b7a7e3434edcfbc90f443ae10d86253ef807f163ffed3ea183ed26df728f93c",
+      "size": 617
+    },
+    {
+      "path": "source/packages/make_packages_index.py",
+      "sha256": "1e4231d024ffe7a3a9e4c288e5b990c64fc3f52542d709059cf4778767ef2747",
+      "size": 609
+    },
+    {
+      "path": "source/packages/osbench-hello.service",
+      "sha256": "55ac6fe59b750698ff3a16b425b5c056c0a775465519767dc0f5afe00ba7de59",
+      "size": 119
+    },
+    {
+      "path": "source/packages/osbench-hello.sh",
+      "sha256": "914d701c8dfd16cc4680ed88fad7366020636b6942d4845e93bdd82be16277c2",
+      "size": 99
+    },
+    {
+      "path": "source/packages/src/v0.1.0/DEBIAN/conffiles",
+      "sha256": "71255c0fafedab7b607bc784e36d42064f66d3a94bff15546f729ecb405ae410",
+      "size": 24
+    },
+    {
+      "path": "source/packages/src/v0.1.0/DEBIAN/control",
+      "sha256": "b25f4fbee204c617105b477712732374eee7d3e7f44d0ac1945c07ff246617b6",
+      "size": 359
+    },
+    {
+      "path": "source/packages/src/v0.1.0/DEBIAN/postinst",
+      "sha256": "3c97fb04e6453f73aea6a65d68458b9f828665fe20cc6273d382e21ad2853556",
+      "size": 227
+    },
+    {
+      "path": "source/packages/src/v0.1.0/DEBIAN/postrm",
+      "sha256": "6792ab99bb41d3dc0d61115aee755a1b3e7718fb0bd2cd6f299e5e9d9ac38308",
+      "size": 225
+    },
+    {
+      "path": "source/packages/src/v0.1.0/DEBIAN/preinst",
+      "sha256": "9071f70f1608c8433d268cf3c3d33fe9e657213171c5639313089458a8a364ec",
+      "size": 125
+    },
+    {
+      "path": "source/packages/src/v0.1.0/DEBIAN/prerm",
+      "sha256": "3e496e5efa42f106672e7b819aefbf6246d5929720bd012648b7409163952596",
+      "size": 123
+    },
+    {
+      "path": "source/packages/src/v0.1.0/etc/osbench-hello.conf",
+      "sha256": "eac8a7ea957394d2de4e7f98a6467a91cd58fedf2fe5708c424f3d97b81f854b",
+      "size": 41
+    },
+    {
+      "path": "source/packages/src/v0.1.0/lib/systemd/system/osbench-hello.service",
+      "sha256": "e913c46f2596bb1291c2a9a3e4f531d88735021cf6c472c3115b7e78d402d287",
+      "size": 202
+    },
+    {
+      "path": "source/packages/src/v0.1.0/usr/bin/osbench-hello",
+      "sha256": "4c125f56f4a73e2f845fd9641f9a65167183c5bc0582e90f3b511cbf3d852f1f",
+      "size": 54
+    },
+    {
+      "path": "source/packages/src/v0.1.0/usr/share/doc/osbench-hello/copyright",
+      "sha256": "91f0f17496ad049c9935de9ac5bacfb25a61ad9ff9c1fd80819911041b8acfe5",
+      "size": 283
+    },
+    {
+      "path": "source/packages/src/v0.2.0/DEBIAN/conffiles",
+      "sha256": "71255c0fafedab7b607bc784e36d42064f66d3a94bff15546f729ecb405ae410",
+      "size": 24
+    },
+    {
+      "path": "source/packages/src/v0.2.0/DEBIAN/control",
+      "sha256": "8a9be6bac09038f237c57e451c6f5dd312e0d5a36dcd50cee3ea90c3568f14e9",
+      "size": 359
+    },
+    {
+      "path": "source/packages/src/v0.2.0/DEBIAN/postinst",
+      "sha256": "3c97fb04e6453f73aea6a65d68458b9f828665fe20cc6273d382e21ad2853556",
+      "size": 227
+    },
+    {
+      "path": "source/packages/src/v0.2.0/DEBIAN/postrm",
+      "sha256": "6792ab99bb41d3dc0d61115aee755a1b3e7718fb0bd2cd6f299e5e9d9ac38308",
+      "size": 225
+    },
+    {
+      "path": "source/packages/src/v0.2.0/DEBIAN/preinst",
+      "sha256": "9071f70f1608c8433d268cf3c3d33fe9e657213171c5639313089458a8a364ec",
+      "size": 125
+    },
+    {
+      "path": "source/packages/src/v0.2.0/DEBIAN/prerm",
+      "sha256": "3e496e5efa42f106672e7b819aefbf6246d5929720bd012648b7409163952596",
+      "size": 123
+    },
+    {
+      "path": "source/packages/src/v0.2.0/etc/osbench-hello.conf",
+      "sha256": "ea6c879d36b427a60e9ce37ed93a9f67e2508055dcb1ace1e042b06fd63a3156",
+      "size": 41
+    },
+    {
+      "path": "source/packages/src/v0.2.0/lib/systemd/system/osbench-hello.service",
+      "sha256": "e913c46f2596bb1291c2a9a3e4f531d88735021cf6c472c3115b7e78d402d287",
+      "size": 202
+    },
+    {
+      "path": "source/packages/src/v0.2.0/usr/bin/osbench-hello",
+      "sha256": "cf1d5369cbbfbb3629f5f749620868117adf0791e90f37ad376db716c999bcd6",
+      "size": 54
+    },
+    {
+      "path": "source/packages/src/v0.2.0/usr/share/doc/osbench-hello/copyright",
+      "sha256": "91f0f17496ad049c9935de9ac5bacfb25a61ad9ff9c1fd80819911041b8acfe5",
+      "size": 283
+    },
+    {
+      "path": "source/packages/v1/DEBIAN/conffiles",
+      "sha256": "0c5f7bbf1e985492086dbf22f433839e9ce9366c9583cee30829958cd14dfc67",
+      "size": 23
+    },
+    {
+      "path": "source/packages/v1/DEBIAN/control",
+      "sha256": "b6c1eb9b0da2b2cd34ca582a508454f043fb43b7f0fce6efe8d6d5b696b5d461",
+      "size": 193
+    },
+    {
+      "path": "source/packages/v1/DEBIAN/postinst",
+      "sha256": "3f7e2f37b426b6c174cd3f7ac39e3138bb367e46fe6741a3c30b347581a64974",
+      "size": 181
+    },
+    {
+      "path": "source/packages/v1/DEBIAN/postrm",
+      "sha256": "cda69f729e30a0b1a25953f5cda0fbc825768b634ddc50f5e74d24862827ea95",
+      "size": 179
+    },
+    {
+      "path": "source/packages/v1/DEBIAN/preinst",
+      "sha256": "7cf1719bb628f13ac81179539c7b558083ff49be2a2be2e02189658ba472298d",
+      "size": 82
+    },
+    {
+      "path": "source/packages/v1/DEBIAN/prerm",
+      "sha256": "d77db84ba41a0d3569ab64adb6afa99ab0e5c7a9505f42fb4c03d606cf675ded",
+      "size": 80
+    },
+    {
+      "path": "source/packages/v1/etc/osbench-hello.conf",
+      "sha256": "780fffc78f84df993781a0e94d1808e6bdde2f8d32db315763fb1008dff746cd",
+      "size": 30
+    },
+    {
+      "path": "source/packages/v1/lib/systemd/system/osbench-hello.service",
+      "sha256": "78019df46420d97dd34aa7d6b865486672a7d2a83f0285d1d60f8a99e605dfe2",
+      "size": 194
+    },
+    {
+      "path": "source/packages/v1/usr/bin/osbench-hello",
+      "sha256": "4bc7a4486dab4ef5d62954f62f9acefa829c8cae98dbbc97c7cd03c50665df9b",
+      "size": 41
+    },
+    {
+      "path": "source/packages/v2/DEBIAN/conffiles",
+      "sha256": "0c5f7bbf1e985492086dbf22f433839e9ce9366c9583cee30829958cd14dfc67",
+      "size": 23
+    },
+    {
+      "path": "source/packages/v2/DEBIAN/control",
+      "sha256": "367a2c5aa12f910350bbc61764da5f897fc42cd559838d1c8b575094e10f7380",
+      "size": 193
+    },
+    {
+      "path": "source/packages/v2/DEBIAN/postinst",
+      "sha256": "cef867eb7ec40b204a7cdd6f42d26785eb6424fecd4371458f647a71ef451a60",
+      "size": 181
+    },
+    {
+      "path": "source/packages/v2/DEBIAN/postrm",
+      "sha256": "a9f476093cf67785cbeb2aaa6c7c5230562f4ae65bf543e6ab22e8872fb1f24c",
+      "size": 179
+    },
+    {
+      "path": "source/packages/v2/DEBIAN/preinst",
+      "sha256": "a71837bc8f38f40aeb76928b1b27dc6f8b88d26e9ef96a383fc6a992a0686b91",
+      "size": 82
+    },
+    {
+      "path": "source/packages/v2/DEBIAN/prerm",
+      "sha256": "3b65983ab422a3e8471bd6f8ec0c5c52700fddf21c2f9f4469479a4fe88652f0",
+      "size": 80
+    },
+    {
+      "path": "source/packages/v2/etc/osbench-hello.conf",
+      "sha256": "3ddda8d7d83f9cffb1fe87fa8f2cc3deec3ce30e219a4d56ed962e9202724094",
+      "size": 30
+    },
+    {
+      "path": "source/packages/v2/lib/systemd/system/osbench-hello.service",
+      "sha256": "78019df46420d97dd34aa7d6b865486672a7d2a83f0285d1d60f8a99e605dfe2",
+      "size": 194
+    },
+    {
+      "path": "source/packages/v2/usr/bin/osbench-hello",
+      "sha256": "6b26da2577a75638add2bdcde8ccb3c3cd9ff679f30bd452bb477042fb74989f",
+      "size": 41
+    },
+    {
+      "path": "source/pthread/README.md",
+      "sha256": "a6205c4c749e92f27864d5a78435a18a5d9ed5cc2a322721fe96bec8a50a8965",
+      "size": 141
+    },
+    {
+      "path": "source/pthread/main.c",
+      "sha256": "30a5a71879f07a0ee6e9991177b6ffdd12bf137bd0464bd00f15ca7cac1282e1",
+      "size": 530
+    },
+    {
+      "path": "source/python/basic.py",
+      "sha256": "9e281d7df529b1b8f407bdbde14bf9c547414d95e35e40d2bd124056d1db6988",
+      "size": 192
+    },
+    {
+      "path": "source/python/workload.py",
+      "sha256": "4762c21d8335a41d429121352d9498563c63bda963a97d7c80556ae1bfa60609",
+      "size": 253
+    },
+    {
+      "path": "source/service/osbench-workload.service",
+      "sha256": "8984aa27bfd32093f8d5db6113fb1671db9c674c67a62bb56fe00d9907c3e863",
+      "size": 209
+    },
+    {
+      "path": "source/service/workload.sh",
+      "sha256": "a9bfaddfd09b22f02a922bc50c57034e41a2dc4568664db5cf09c73924151cb4",
+      "size": 164
+    },
+    {
+      "path": "source/shell/run.sh",
+      "sha256": "04968c0141d7dd40a8f5c4bbc7d121b6069bacaf5ccd30c615d939a8e1794e38",
+      "size": 143
+    },
+    {
+      "path": "source/shell/workload.sh",
+      "sha256": "ecf1618d57f278650ad8c5f385b7ead2d3ac0187e88a6f9970e5365adbea8850",
+      "size": 230
+    },
+    {
+      "path": "source/sqlite/run.py",
+      "sha256": "98b25e18842168725f5c20a1267fa4fc9e743be42f67e00a7dbf6d0a52437177",
+      "size": 333
+    },
+    {
+      "path": "source/sqlite/workload.py",
+      "sha256": "cfd1186675ab7634f6a6c7db692fb1d8342d0076d3b53b25e3fb7cb9fc5a8b15",
+      "size": 441
+    },
+    {
+      "path": "source/ssh/run.sh",
+      "sha256": "cae22bae271084daf1246559c7709f7b37b05958b53ee4882fc3d0c5c5c0a0f1",
+      "size": 41
+    },
+    {
+      "path": "source/ssh/workload.sh",
+      "sha256": "dd34836c7eeeb55756673f37f8368096a3b07ff21b3e547b0f3a2f5fc63364dd",
+      "size": 206
+    },
+    {
+      "path": "source/static_elf/README.md",
+      "sha256": "3b6cd5c334b29ed0c33d0747bbb6c722fe069c3806118e088b2b6e4edeeb89f2",
+      "size": 188
+    },
+    {
+      "path": "source/static_elf/main.c",
+      "sha256": "d70c154fdc858af822c0f03f6a4ac2a4982ecc28561052417b8f2249a771f2e3",
+      "size": 178
+    },
+    {
+      "path": "source/tcp/run.py",
+      "sha256": "2b732e70719fbdc0290b5f814403292cfb157484bb0f715d2044b6d57281bd75",
+      "size": 102
+    },
+    {
+      "path": "source/tcp/workload.py",
+      "sha256": "144bd062ce8f70da4ad6b33ed56f456321d3df07c1c4c2cc6db663926c005102",
+      "size": 453
+    },
+    {
+      "path": "static-elf",
+      "sha256": "4af5cdf6bc1c2a5ced9d41d253019fecec237a8e4a897e0eefb99cf4de1e2f64",
+      "size": 672280
+    }
+  ],
+  "schema_version": "osbench.workloads.v1"
+}

@@ -1,0 +1,11 @@
+[Unit]
+Description=OSBench deterministic package fixture service
+After=local-fs.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/osbench-hello
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target

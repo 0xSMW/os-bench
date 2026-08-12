@@ -1,0 +1,12 @@
+schema_version: osbench.workload.v1
+name: service
+level: real_workloads
+description: Executable service compatibility workload.
+command: systemctl cat osbench-agent.service
+contracts:
+- package.service.install
+- service.enable.start
+- service.lifecycle.start_stop
+- workload.service.start
+timeout_seconds: 60
+transport: guest_agent

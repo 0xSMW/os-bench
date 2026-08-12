@@ -1,0 +1,13 @@
+schema_version: osbench.workload.v1
+name: pthread
+level: real_workloads
+description: Executable pthread compatibility workload.
+command: /var/lib/osbench/workloads/pthread
+contracts:
+- sync.futex.wait_wake
+- sync.mutex.exclusion
+- thread.create_join
+- thread.tls
+- workload.pthread.program
+timeout_seconds: 60
+transport: host

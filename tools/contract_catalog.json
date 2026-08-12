@@ -1,0 +1,1601 @@
+{
+  "contracts": [
+    {
+      "domain": "boot",
+      "host_supported": false,
+      "id": "boot.clean.shutdown",
+      "level": "boot"
+    },
+    {
+      "domain": "boot",
+      "host_supported": false,
+      "id": "boot.firmware.uefi_entry",
+      "level": "boot"
+    },
+    {
+      "domain": "boot",
+      "host_supported": true,
+      "id": "boot.init.start",
+      "level": "boot"
+    },
+    {
+      "domain": "boot",
+      "host_supported": false,
+      "id": "boot.kernel.entry",
+      "level": "boot"
+    },
+    {
+      "domain": "boot",
+      "host_supported": false,
+      "id": "boot.reboot",
+      "level": "boot"
+    },
+    {
+      "domain": "boot",
+      "host_supported": false,
+      "id": "boot.rootfs.mount",
+      "level": "boot"
+    },
+    {
+      "domain": "boot",
+      "host_supported": true,
+      "id": "boot.serial.output",
+      "level": "boot"
+    },
+    {
+      "domain": "devfs",
+      "host_supported": true,
+      "id": "devfs.nodes",
+      "level": "linux_process_environment"
+    },
+    {
+      "domain": "devfs",
+      "host_supported": true,
+      "id": "devfs.random",
+      "level": "linux_process_environment"
+    },
+    {
+      "domain": "devfs",
+      "host_supported": true,
+      "id": "devfs.tty",
+      "level": "linux_process_environment"
+    },
+    {
+      "domain": "distro",
+      "host_supported": true,
+      "id": "distro.accounts.root",
+      "level": "distro"
+    },
+    {
+      "domain": "distro",
+      "host_supported": true,
+      "id": "distro.boot.target",
+      "level": "distro"
+    },
+    {
+      "domain": "distro",
+      "host_supported": true,
+      "id": "distro.dns.configuration",
+      "level": "distro"
+    },
+    {
+      "domain": "distro",
+      "host_supported": true,
+      "id": "distro.filesystem_hierarchy",
+      "level": "distro"
+    },
+    {
+      "domain": "distro",
+      "host_supported": true,
+      "id": "distro.hostname",
+      "level": "distro"
+    },
+    {
+      "domain": "distro",
+      "host_supported": true,
+      "id": "distro.locale",
+      "level": "distro"
+    },
+    {
+      "domain": "distro",
+      "host_supported": true,
+      "id": "distro.logging.journal",
+      "level": "distro"
+    },
+    {
+      "domain": "distro",
+      "host_supported": true,
+      "id": "distro.network.defaults",
+      "level": "distro"
+    },
+    {
+      "domain": "distro",
+      "host_supported": true,
+      "id": "distro.os_release",
+      "level": "distro"
+    },
+    {
+      "domain": "distro",
+      "host_supported": true,
+      "id": "distro.timezone",
+      "level": "distro"
+    },
+    {
+      "domain": "elf",
+      "host_supported": true,
+      "id": "elf.argv_env",
+      "level": "linux_primitives"
+    },
+    {
+      "domain": "elf",
+      "host_supported": true,
+      "id": "elf.auxv",
+      "level": "linux_process_environment"
+    },
+    {
+      "domain": "elf",
+      "host_supported": true,
+      "id": "elf.dynamic_loader.basic",
+      "level": "linux_process_environment"
+    },
+    {
+      "domain": "elf",
+      "host_supported": true,
+      "id": "elf.interpreter.error",
+      "level": "linux_process_environment"
+    },
+    {
+      "domain": "elf",
+      "host_supported": true,
+      "id": "elf.static.load",
+      "level": "linux_primitives"
+    },
+    {
+      "domain": "elf",
+      "host_supported": true,
+      "id": "elf.tls",
+      "level": "linux_process_environment"
+    },
+    {
+      "domain": "poll",
+      "host_supported": true,
+      "id": "epoll.edge_triggered",
+      "level": "linux_system"
+    },
+    {
+      "domain": "poll",
+      "host_supported": true,
+      "id": "epoll.fd_lifecycle",
+      "level": "linux_system"
+    },
+    {
+      "domain": "exhaustion",
+      "host_supported": true,
+      "id": "exhaustion.disk.cleanup",
+      "level": "kernel_subsystems"
+    },
+    {
+      "domain": "exhaustion",
+      "host_supported": true,
+      "id": "exhaustion.fd.cleanup",
+      "level": "kernel_subsystems"
+    },
+    {
+      "domain": "exhaustion",
+      "host_supported": true,
+      "id": "exhaustion.memory.cleanup",
+      "level": "kernel_subsystems"
+    },
+    {
+      "domain": "exhaustion",
+      "host_supported": true,
+      "id": "exhaustion.process.cleanup",
+      "level": "kernel_subsystems"
+    },
+    {
+      "domain": "exhaustion",
+      "host_supported": true,
+      "id": "exhaustion.socket.cleanup",
+      "level": "kernel_subsystems"
+    },
+    {
+      "domain": "exhaustion",
+      "host_supported": true,
+      "id": "exhaustion.thread.cleanup",
+      "level": "kernel_subsystems"
+    },
+    {
+      "domain": "failure",
+      "host_supported": true,
+      "id": "failure.interrupted_operation",
+      "level": "kernel_subsystems"
+    },
+    {
+      "domain": "failure",
+      "host_supported": true,
+      "id": "failure.invalid_fd",
+      "level": "linux_primitives"
+    },
+    {
+      "domain": "failure",
+      "host_supported": true,
+      "id": "failure.invalid_pointer",
+      "level": "kernel_subsystems"
+    },
+    {
+      "domain": "failure",
+      "host_supported": true,
+      "id": "failure.rollback",
+      "level": "kernel_subsystems"
+    },
+    {
+      "domain": "fd",
+      "host_supported": true,
+      "id": "fd.close",
+      "level": "linux_primitives"
+    },
+    {
+      "domain": "fd",
+      "host_supported": true,
+      "id": "fd.close_on_exec",
+      "level": "kernel_subsystems"
+    },
+    {
+      "domain": "fd",
+      "host_supported": true,
+      "id": "fd.dup",
+      "level": "linux_primitives"
+    },
+    {
+      "domain": "fd",
+      "host_supported": true,
+      "id": "fd.dup2.redirection",
+      "level": "kernel_subsystems"
+    },
+    {
+      "domain": "fd",
+      "host_supported": true,
+      "id": "fd.exhaustion_cleanup",
+      "level": "kernel_subsystems"
+    },
+    {
+      "domain": "fd",
+      "host_supported": true,
+      "id": "fd.inherit_fork",
+      "level": "kernel_subsystems"
+    },
+    {
+      "domain": "fd",
+      "host_supported": true,
+      "id": "fd.lowest_available",
+      "level": "linux_primitives"
+    },
+    {
+      "domain": "fd",
+      "host_supported": true,
+      "id": "fd.shared_offset",
+      "level": "kernel_subsystems"
+    },
+    {
+      "domain": "fd",
+      "host_supported": true,
+      "id": "fd.table",
+      "level": "linux_primitives"
+    },
+    {
+      "domain": "filesystem",
+      "host_supported": true,
+      "id": "fs.directory.create_remove",
+      "level": "linux_primitives"
+    },
+    {
+      "domain": "filesystem",
+      "host_supported": true,
+      "id": "fs.directory.iteration",
+      "level": "kernel_subsystems"
+    },
+    {
+      "domain": "filesystem",
+      "host_supported": false,
+      "id": "fs.ext4.persistence",
+      "level": "distro"
+    },
+    {
+      "domain": "filesystem",
+      "host_supported": true,
+      "id": "fs.file.append.atomicity",
+      "level": "kernel_subsystems"
+    },
+    {
+      "domain": "filesystem",
+      "host_supported": true,
+      "id": "fs.file.create",
+      "level": "linux_primitives"
+    },
+    {
+      "domain": "filesystem",
+      "host_supported": true,
+      "id": "fs.file.fsync",
+      "level": "kernel_subsystems"
+    },
+    {
+      "domain": "filesystem",
+      "host_supported": true,
+      "id": "fs.file.hardlink",
+      "level": "kernel_subsystems"
+    },
+    {
+      "domain": "filesystem",
+      "host_supported": true,
+      "id": "fs.file.open",
+      "level": "linux_primitives"
+    },
+    {
+      "domain": "filesystem",
+      "host_supported": true,
+      "id": "fs.file.read.partial_eof",
+      "level": "linux_primitives"
+    },
+    {
+      "domain": "filesystem",
+      "host_supported": true,
+      "id": "fs.file.rename.atomicity",
+      "level": "kernel_subsystems"
+    },
+    {
+      "domain": "filesystem",
+      "host_supported": true,
+      "id": "fs.file.seek",
+      "level": "linux_primitives"
+    },
+    {
+      "domain": "filesystem",
+      "host_supported": true,
+      "id": "fs.file.stat",
+      "level": "linux_primitives"
+    },
+    {
+      "domain": "filesystem",
+      "host_supported": true,
+      "id": "fs.file.symlink",
+      "level": "kernel_subsystems"
+    },
+    {
+      "domain": "filesystem",
+      "host_supported": true,
+      "id": "fs.file.truncate",
+      "level": "kernel_subsystems"
+    },
+    {
+      "domain": "filesystem",
+      "host_supported": true,
+      "id": "fs.file.unlink_open",
+      "level": "kernel_subsystems"
+    },
+    {
+      "domain": "filesystem",
+      "host_supported": true,
+      "id": "fs.file.write.basic",
+      "level": "linux_primitives"
+    },
+    {
+      "domain": "filesystem",
+      "host_supported": false,
+      "id": "fs.inode.exhaustion",
+      "level": "linux_system"
+    },
+    {
+      "domain": "filesystem",
+      "host_supported": false,
+      "id": "fs.mount.basic",
+      "level": "linux_system"
+    },
+    {
+      "domain": "filesystem",
+      "host_supported": false,
+      "id": "fs.mount.covering",
+      "level": "linux_system"
+    },
+    {
+      "domain": "filesystem",
+      "host_supported": true,
+      "id": "fs.path.absolute_relative",
+      "level": "linux_primitives"
+    },
+    {
+      "domain": "filesystem",
+      "host_supported": true,
+      "id": "fs.path.dotdot",
+      "level": "kernel_subsystems"
+    },
+    {
+      "domain": "filesystem",
+      "host_supported": true,
+      "id": "fs.storage.full",
+      "level": "kernel_subsystems"
+    },
+    {
+      "domain": "filesystem",
+      "host_supported": false,
+      "id": "fs.vfs.cross_filesystem",
+      "level": "linux_system"
+    },
+    {
+      "domain": "full",
+      "host_supported": false,
+      "id": "full.boot_login_shell",
+      "level": "full_reconstruction"
+    },
+    {
+      "domain": "full",
+      "host_supported": false,
+      "id": "full.database_crash_recovery",
+      "level": "full_reconstruction"
+    },
+    {
+      "domain": "full",
+      "host_supported": false,
+      "id": "full.install_serve_reboot",
+      "level": "full_reconstruction"
+    },
+    {
+      "domain": "full",
+      "host_supported": false,
+      "id": "full.user_build_run",
+      "level": "full_reconstruction"
+    },
+    {
+      "domain": "identity",
+      "host_supported": true,
+      "id": "identity.credential_inheritance",
+      "level": "kernel_subsystems"
+    },
+    {
+      "domain": "identity",
+      "host_supported": true,
+      "id": "identity.group_lookup",
+      "level": "posix_userspace"
+    },
+    {
+      "domain": "identity",
+      "host_supported": true,
+      "id": "identity.groups",
+      "level": "kernel_subsystems"
+    },
+    {
+      "domain": "identity",
+      "host_supported": true,
+      "id": "identity.uid_gid",
+      "level": "kernel_subsystems"
+    },
+    {
+      "domain": "identity",
+      "host_supported": true,
+      "id": "identity.user_lookup",
+      "level": "posix_userspace"
+    },
+    {
+      "domain": "io",
+      "host_supported": false,
+      "id": "io.block_device",
+      "level": "linux_system"
+    },
+    {
+      "domain": "io",
+      "host_supported": true,
+      "id": "io.dev_null_zero",
+      "level": "linux_process_environment"
+    },
+    {
+      "domain": "io",
+      "host_supported": false,
+      "id": "io.device_hotplug",
+      "level": "linux_system"
+    },
+    {
+      "domain": "io",
+      "host_supported": true,
+      "id": "io.interrupt_completion",
+      "level": "kernel_subsystems"
+    },
+    {
+      "domain": "io",
+      "host_supported": true,
+      "id": "io.ioctl",
+      "level": "linux_system"
+    },
+    {
+      "domain": "io",
+      "host_supported": true,
+      "id": "io.nonblocking",
+      "level": "kernel_subsystems"
+    },
+    {
+      "domain": "io",
+      "host_supported": true,
+      "id": "io.random",
+      "level": "linux_system"
+    },
+    {
+      "domain": "ipc",
+      "host_supported": true,
+      "id": "ipc.message_queue",
+      "level": "linux_system"
+    },
+    {
+      "domain": "ipc",
+      "host_supported": true,
+      "id": "ipc.semaphore",
+      "level": "kernel_subsystems"
+    },
+    {
+      "domain": "ipc",
+      "host_supported": true,
+      "id": "ipc.shared_memory",
+      "level": "kernel_subsystems"
+    },
+    {
+      "domain": "ipc",
+      "host_supported": true,
+      "id": "ipc.unix_socket",
+      "level": "kernel_subsystems"
+    },
+    {
+      "domain": "linux",
+      "host_supported": true,
+      "id": "linux.boot_parameters",
+      "level": "linux_system"
+    },
+    {
+      "domain": "linux",
+      "host_supported": true,
+      "id": "linux.capability.basic",
+      "level": "linux_system"
+    },
+    {
+      "domain": "linux",
+      "host_supported": true,
+      "id": "linux.cgroup.basic",
+      "level": "linux_system"
+    },
+    {
+      "domain": "linux",
+      "host_supported": true,
+      "id": "linux.hostname",
+      "level": "linux_system"
+    },
+    {
+      "domain": "linux",
+      "host_supported": true,
+      "id": "linux.module.inventory",
+      "level": "linux_system"
+    },
+    {
+      "domain": "linux",
+      "host_supported": true,
+      "id": "linux.namespace.mount",
+      "level": "linux_system"
+    },
+    {
+      "domain": "linux",
+      "host_supported": true,
+      "id": "linux.sysctl",
+      "level": "linux_system"
+    },
+    {
+      "domain": "linux",
+      "host_supported": true,
+      "id": "linux.uname",
+      "level": "linux_system"
+    },
+    {
+      "domain": "machine",
+      "host_supported": true,
+      "id": "machine.block.read_write",
+      "level": "machine"
+    },
+    {
+      "domain": "machine",
+      "host_supported": true,
+      "id": "machine.clock.monotonic",
+      "level": "machine"
+    },
+    {
+      "domain": "machine",
+      "host_supported": true,
+      "id": "machine.cpu.mode_transition",
+      "level": "machine"
+    },
+    {
+      "domain": "machine",
+      "host_supported": true,
+      "id": "machine.exception.divide_zero",
+      "level": "machine"
+    },
+    {
+      "domain": "machine",
+      "host_supported": true,
+      "id": "machine.interrupt.timer",
+      "level": "machine"
+    },
+    {
+      "domain": "machine",
+      "host_supported": true,
+      "id": "machine.memory.page_tables",
+      "level": "machine"
+    },
+    {
+      "domain": "machine",
+      "host_supported": true,
+      "id": "machine.rng.read",
+      "level": "machine"
+    },
+    {
+      "domain": "machine",
+      "host_supported": true,
+      "id": "machine.serial.rx_tx",
+      "level": "machine"
+    },
+    {
+      "domain": "machine",
+      "host_supported": true,
+      "id": "machine.smp.start",
+      "level": "machine"
+    },
+    {
+      "domain": "machine",
+      "host_supported": true,
+      "id": "machine.syscall.trap",
+      "level": "machine"
+    },
+    {
+      "domain": "memory",
+      "host_supported": true,
+      "id": "memory.address_space.isolation",
+      "level": "kernel_subsystems"
+    },
+    {
+      "domain": "memory",
+      "host_supported": true,
+      "id": "memory.brk",
+      "level": "kernel_subsystems"
+    },
+    {
+      "domain": "memory",
+      "host_supported": true,
+      "id": "memory.copy_on_write",
+      "level": "kernel_subsystems"
+    },
+    {
+      "domain": "memory",
+      "host_supported": true,
+      "id": "memory.mlock",
+      "level": "linux_system"
+    },
+    {
+      "domain": "memory",
+      "host_supported": true,
+      "id": "memory.mmap.anonymous",
+      "level": "kernel_subsystems"
+    },
+    {
+      "domain": "memory",
+      "host_supported": true,
+      "id": "memory.mmap.file",
+      "level": "kernel_subsystems"
+    },
+    {
+      "domain": "memory",
+      "host_supported": true,
+      "id": "memory.mprotect",
+      "level": "kernel_subsystems"
+    },
+    {
+      "domain": "memory",
+      "host_supported": true,
+      "id": "memory.munmap",
+      "level": "kernel_subsystems"
+    },
+    {
+      "domain": "memory",
+      "host_supported": true,
+      "id": "memory.overcommit_failure",
+      "level": "kernel_subsystems"
+    },
+    {
+      "domain": "memory",
+      "host_supported": true,
+      "id": "memory.page_fault",
+      "level": "kernel_subsystems"
+    },
+    {
+      "domain": "memory",
+      "host_supported": true,
+      "id": "memory.shared_mapping",
+      "level": "kernel_subsystems"
+    },
+    {
+      "domain": "memory",
+      "host_supported": true,
+      "id": "memory.stack_growth",
+      "level": "kernel_subsystems"
+    },
+    {
+      "domain": "network",
+      "host_supported": true,
+      "id": "network.dns.resolve",
+      "level": "distro"
+    },
+    {
+      "domain": "network",
+      "host_supported": true,
+      "id": "network.interface.enumeration",
+      "level": "linux_system"
+    },
+    {
+      "domain": "network",
+      "host_supported": true,
+      "id": "network.loopback",
+      "level": "kernel_subsystems"
+    },
+    {
+      "domain": "network",
+      "host_supported": true,
+      "id": "network.route.local",
+      "level": "linux_system"
+    },
+    {
+      "domain": "package",
+      "host_supported": false,
+      "id": "package.conffile",
+      "level": "package_ecosystem"
+    },
+    {
+      "domain": "package",
+      "host_supported": true,
+      "id": "package.database.query",
+      "level": "package_ecosystem"
+    },
+    {
+      "domain": "package",
+      "host_supported": false,
+      "id": "package.deb.install",
+      "level": "package_ecosystem"
+    },
+    {
+      "domain": "package",
+      "host_supported": false,
+      "id": "package.deb.remove",
+      "level": "package_ecosystem"
+    },
+    {
+      "domain": "package",
+      "host_supported": false,
+      "id": "package.deb.upgrade",
+      "level": "package_ecosystem"
+    },
+    {
+      "domain": "package",
+      "host_supported": false,
+      "id": "package.dependency",
+      "level": "package_ecosystem"
+    },
+    {
+      "domain": "package",
+      "host_supported": true,
+      "id": "package.dpkg.status",
+      "level": "package_ecosystem"
+    },
+    {
+      "domain": "package",
+      "host_supported": false,
+      "id": "package.maintainer.postinst",
+      "level": "package_ecosystem"
+    },
+    {
+      "domain": "package",
+      "host_supported": false,
+      "id": "package.maintainer.preinst",
+      "level": "package_ecosystem"
+    },
+    {
+      "domain": "package",
+      "host_supported": false,
+      "id": "package.offline.apt",
+      "level": "package_ecosystem"
+    },
+    {
+      "domain": "package",
+      "host_supported": false,
+      "id": "package.rollback_failure",
+      "level": "package_ecosystem"
+    },
+    {
+      "domain": "package",
+      "host_supported": false,
+      "id": "package.service.install",
+      "level": "package_ecosystem"
+    },
+    {
+      "domain": "package",
+      "host_supported": true,
+      "id": "package.shared_library",
+      "level": "package_ecosystem"
+    },
+    {
+      "domain": "permission",
+      "host_supported": true,
+      "id": "permission.device_access",
+      "level": "linux_system"
+    },
+    {
+      "domain": "permission",
+      "host_supported": true,
+      "id": "permission.directory.search",
+      "level": "kernel_subsystems"
+    },
+    {
+      "domain": "permission",
+      "host_supported": true,
+      "id": "permission.mode.rwx",
+      "level": "kernel_subsystems"
+    },
+    {
+      "domain": "permission",
+      "host_supported": true,
+      "id": "permission.owner_group",
+      "level": "kernel_subsystems"
+    },
+    {
+      "domain": "permission",
+      "host_supported": true,
+      "id": "permission.root_override",
+      "level": "kernel_subsystems"
+    },
+    {
+      "domain": "permission",
+      "host_supported": true,
+      "id": "permission.setuid_transition",
+      "level": "linux_system"
+    },
+    {
+      "domain": "permission",
+      "host_supported": true,
+      "id": "permission.signal_authorization",
+      "level": "kernel_subsystems"
+    },
+    {
+      "domain": "permission",
+      "host_supported": true,
+      "id": "permission.umask",
+      "level": "kernel_subsystems"
+    },
+    {
+      "domain": "persistence",
+      "host_supported": false,
+      "id": "persistence.configuration.reboot",
+      "level": "distro"
+    },
+    {
+      "domain": "persistence",
+      "host_supported": false,
+      "id": "persistence.crash.synced",
+      "level": "full_reconstruction"
+    },
+    {
+      "domain": "persistence",
+      "host_supported": false,
+      "id": "persistence.crash.unsynced_bounds",
+      "level": "full_reconstruction"
+    },
+    {
+      "domain": "persistence",
+      "host_supported": false,
+      "id": "persistence.file.reboot",
+      "level": "distro"
+    },
+    {
+      "domain": "persistence",
+      "host_supported": false,
+      "id": "persistence.metadata.reboot",
+      "level": "distro"
+    },
+    {
+      "domain": "persistence",
+      "host_supported": false,
+      "id": "persistence.package.reboot",
+      "level": "distro"
+    },
+    {
+      "domain": "persistence",
+      "host_supported": false,
+      "id": "persistence.service.reboot",
+      "level": "distro"
+    },
+    {
+      "domain": "persistence",
+      "host_supported": false,
+      "id": "persistence.user.reboot",
+      "level": "distro"
+    },
+    {
+      "domain": "ipc",
+      "host_supported": true,
+      "id": "pipe.atomic_write",
+      "level": "kernel_subsystems"
+    },
+    {
+      "domain": "ipc",
+      "host_supported": true,
+      "id": "pipe.basic",
+      "level": "kernel_subsystems"
+    },
+    {
+      "domain": "ipc",
+      "host_supported": true,
+      "id": "pipe.blocking",
+      "level": "kernel_subsystems"
+    },
+    {
+      "domain": "ipc",
+      "host_supported": true,
+      "id": "pipe.eof",
+      "level": "kernel_subsystems"
+    },
+    {
+      "domain": "poll",
+      "host_supported": true,
+      "id": "poll.pipe.readiness",
+      "level": "kernel_subsystems"
+    },
+    {
+      "domain": "poll",
+      "host_supported": true,
+      "id": "poll.socket.readiness",
+      "level": "kernel_subsystems"
+    },
+    {
+      "domain": "poll",
+      "host_supported": true,
+      "id": "poll.timeout",
+      "level": "kernel_subsystems"
+    },
+    {
+      "domain": "posix",
+      "host_supported": true,
+      "id": "posix.utility.cat",
+      "level": "posix_userspace"
+    },
+    {
+      "domain": "posix",
+      "host_supported": true,
+      "id": "posix.utility.find",
+      "level": "posix_userspace"
+    },
+    {
+      "domain": "posix",
+      "host_supported": true,
+      "id": "posix.utility.grep",
+      "level": "posix_userspace"
+    },
+    {
+      "domain": "posix",
+      "host_supported": true,
+      "id": "posix.utility.sort",
+      "level": "posix_userspace"
+    },
+    {
+      "domain": "process",
+      "host_supported": true,
+      "id": "process.clone.sharing",
+      "level": "linux_system"
+    },
+    {
+      "domain": "process",
+      "host_supported": true,
+      "id": "process.environment",
+      "level": "linux_primitives"
+    },
+    {
+      "domain": "process",
+      "host_supported": true,
+      "id": "process.execution",
+      "level": "linux_primitives"
+    },
+    {
+      "domain": "process",
+      "host_supported": true,
+      "id": "process.execve.basic",
+      "level": "kernel_subsystems"
+    },
+    {
+      "domain": "process",
+      "host_supported": true,
+      "id": "process.exit.status",
+      "level": "kernel_subsystems"
+    },
+    {
+      "domain": "process",
+      "host_supported": true,
+      "id": "process.fork.basic",
+      "level": "kernel_subsystems"
+    },
+    {
+      "domain": "process",
+      "host_supported": true,
+      "id": "process.parent_child",
+      "level": "kernel_subsystems"
+    },
+    {
+      "domain": "process",
+      "host_supported": true,
+      "id": "process.process_group",
+      "level": "kernel_subsystems"
+    },
+    {
+      "domain": "process",
+      "host_supported": true,
+      "id": "process.resource_limits",
+      "level": "kernel_subsystems"
+    },
+    {
+      "domain": "process",
+      "host_supported": true,
+      "id": "process.session",
+      "level": "kernel_subsystems"
+    },
+    {
+      "domain": "process",
+      "host_supported": true,
+      "id": "process.wait.basic",
+      "level": "kernel_subsystems"
+    },
+    {
+      "domain": "process",
+      "host_supported": true,
+      "id": "process.zombie.reap",
+      "level": "kernel_subsystems"
+    },
+    {
+      "domain": "procfs",
+      "host_supported": true,
+      "id": "procfs.fd.links",
+      "level": "linux_process_environment"
+    },
+    {
+      "domain": "procfs",
+      "host_supported": true,
+      "id": "procfs.mount",
+      "level": "linux_process_environment"
+    },
+    {
+      "domain": "procfs",
+      "host_supported": true,
+      "id": "procfs.process.cmdline",
+      "level": "linux_process_environment"
+    },
+    {
+      "domain": "procfs",
+      "host_supported": true,
+      "id": "procfs.self.status",
+      "level": "linux_process_environment"
+    },
+    {
+      "domain": "procfs",
+      "host_supported": true,
+      "id": "procfs.sysctl.read_write",
+      "level": "linux_system"
+    },
+    {
+      "domain": "scheduling",
+      "host_supported": true,
+      "id": "scheduling.affinity",
+      "level": "linux_system"
+    },
+    {
+      "domain": "scheduling",
+      "host_supported": true,
+      "id": "scheduling.block_wakeup",
+      "level": "kernel_subsystems"
+    },
+    {
+      "domain": "scheduling",
+      "host_supported": true,
+      "id": "scheduling.fair_progress",
+      "level": "kernel_subsystems"
+    },
+    {
+      "domain": "scheduling",
+      "host_supported": true,
+      "id": "scheduling.preemption",
+      "level": "kernel_subsystems"
+    },
+    {
+      "domain": "scheduling",
+      "host_supported": true,
+      "id": "scheduling.priority",
+      "level": "linux_system"
+    },
+    {
+      "domain": "scheduling",
+      "host_supported": true,
+      "id": "scheduling.starvation_resistance",
+      "level": "kernel_subsystems"
+    },
+    {
+      "domain": "security",
+      "host_supported": true,
+      "id": "security.failure_containment",
+      "level": "full_reconstruction"
+    },
+    {
+      "domain": "security",
+      "host_supported": true,
+      "id": "security.file_isolation",
+      "level": "linux_system"
+    },
+    {
+      "domain": "security",
+      "host_supported": true,
+      "id": "security.privileged_operation",
+      "level": "linux_system"
+    },
+    {
+      "domain": "security",
+      "host_supported": true,
+      "id": "security.process_memory_isolation",
+      "level": "linux_system"
+    },
+    {
+      "domain": "service",
+      "host_supported": false,
+      "id": "service.dependencies",
+      "level": "distro"
+    },
+    {
+      "domain": "service",
+      "host_supported": false,
+      "id": "service.enable.start",
+      "level": "distro"
+    },
+    {
+      "domain": "service",
+      "host_supported": false,
+      "id": "service.environment",
+      "level": "distro"
+    },
+    {
+      "domain": "service",
+      "host_supported": false,
+      "id": "service.failure_state",
+      "level": "distro"
+    },
+    {
+      "domain": "service",
+      "host_supported": false,
+      "id": "service.lifecycle.start_stop",
+      "level": "distro"
+    },
+    {
+      "domain": "service",
+      "host_supported": false,
+      "id": "service.logging",
+      "level": "distro"
+    },
+    {
+      "domain": "service",
+      "host_supported": false,
+      "id": "service.manager.ready",
+      "level": "distro"
+    },
+    {
+      "domain": "service",
+      "host_supported": false,
+      "id": "service.restart",
+      "level": "distro"
+    },
+    {
+      "domain": "shell",
+      "host_supported": true,
+      "id": "shell.background_job",
+      "level": "posix_userspace"
+    },
+    {
+      "domain": "shell",
+      "host_supported": true,
+      "id": "shell.command.exec",
+      "level": "posix_userspace"
+    },
+    {
+      "domain": "shell",
+      "host_supported": true,
+      "id": "shell.environment",
+      "level": "posix_userspace"
+    },
+    {
+      "domain": "shell",
+      "host_supported": true,
+      "id": "shell.exit_status",
+      "level": "posix_userspace"
+    },
+    {
+      "domain": "shell",
+      "host_supported": true,
+      "id": "shell.pipeline.basic",
+      "level": "posix_userspace"
+    },
+    {
+      "domain": "shell",
+      "host_supported": true,
+      "id": "shell.quoting",
+      "level": "posix_userspace"
+    },
+    {
+      "domain": "shell",
+      "host_supported": true,
+      "id": "shell.redirection",
+      "level": "posix_userspace"
+    },
+    {
+      "domain": "shell",
+      "host_supported": true,
+      "id": "shell.working_directory",
+      "level": "posix_userspace"
+    },
+    {
+      "domain": "signal",
+      "host_supported": true,
+      "id": "signal.default_action",
+      "level": "kernel_subsystems"
+    },
+    {
+      "domain": "signal",
+      "host_supported": true,
+      "id": "signal.delivery",
+      "level": "kernel_subsystems"
+    },
+    {
+      "domain": "signal",
+      "host_supported": true,
+      "id": "signal.handler.return",
+      "level": "kernel_subsystems"
+    },
+    {
+      "domain": "signal",
+      "host_supported": true,
+      "id": "signal.interrupt_syscall",
+      "level": "kernel_subsystems"
+    },
+    {
+      "domain": "signal",
+      "host_supported": true,
+      "id": "signal.mask",
+      "level": "kernel_subsystems"
+    },
+    {
+      "domain": "signal",
+      "host_supported": true,
+      "id": "signal.pending",
+      "level": "kernel_subsystems"
+    },
+    {
+      "domain": "signal",
+      "host_supported": true,
+      "id": "signal.process_group",
+      "level": "kernel_subsystems"
+    },
+    {
+      "domain": "signal",
+      "host_supported": true,
+      "id": "signal.timer",
+      "level": "kernel_subsystems"
+    },
+    {
+      "domain": "socket",
+      "host_supported": true,
+      "id": "socket.error",
+      "level": "kernel_subsystems"
+    },
+    {
+      "domain": "socket",
+      "host_supported": true,
+      "id": "socket.shutdown",
+      "level": "kernel_subsystems"
+    },
+    {
+      "domain": "socket",
+      "host_supported": true,
+      "id": "socket.tcp.listen_accept",
+      "level": "kernel_subsystems"
+    },
+    {
+      "domain": "socket",
+      "host_supported": true,
+      "id": "socket.tcp.loopback",
+      "level": "kernel_subsystems"
+    },
+    {
+      "domain": "socket",
+      "host_supported": true,
+      "id": "socket.tcp.stream_semantics",
+      "level": "kernel_subsystems"
+    },
+    {
+      "domain": "socket",
+      "host_supported": true,
+      "id": "socket.udp.loopback",
+      "level": "kernel_subsystems"
+    },
+    {
+      "domain": "socket",
+      "host_supported": true,
+      "id": "socket.unix.stream",
+      "level": "kernel_subsystems"
+    },
+    {
+      "domain": "sync",
+      "host_supported": true,
+      "id": "sync.atomic.basic",
+      "level": "kernel_subsystems"
+    },
+    {
+      "domain": "sync",
+      "host_supported": true,
+      "id": "sync.barrier",
+      "level": "linux_process_environment"
+    },
+    {
+      "domain": "sync",
+      "host_supported": true,
+      "id": "sync.condition",
+      "level": "linux_process_environment"
+    },
+    {
+      "domain": "sync",
+      "host_supported": true,
+      "id": "sync.futex.wait_wake",
+      "level": "linux_system"
+    },
+    {
+      "domain": "sync",
+      "host_supported": true,
+      "id": "sync.mutex.exclusion",
+      "level": "kernel_subsystems"
+    },
+    {
+      "domain": "sync",
+      "host_supported": false,
+      "id": "sync.priority_inversion",
+      "level": "kernel_subsystems"
+    },
+    {
+      "domain": "sync",
+      "host_supported": true,
+      "id": "sync.rwlock",
+      "level": "linux_process_environment"
+    },
+    {
+      "domain": "sync",
+      "host_supported": true,
+      "id": "sync.semaphore",
+      "level": "kernel_subsystems"
+    },
+    {
+      "domain": "sysfs",
+      "host_supported": true,
+      "id": "sysfs.device_tree",
+      "level": "linux_system"
+    },
+    {
+      "domain": "sysfs",
+      "host_supported": true,
+      "id": "sysfs.mount",
+      "level": "linux_process_environment"
+    },
+    {
+      "domain": "thread",
+      "host_supported": true,
+      "id": "thread.blocking_isolation",
+      "level": "kernel_subsystems"
+    },
+    {
+      "domain": "thread",
+      "host_supported": true,
+      "id": "thread.create_join",
+      "level": "kernel_subsystems"
+    },
+    {
+      "domain": "thread",
+      "host_supported": true,
+      "id": "thread.exit",
+      "level": "kernel_subsystems"
+    },
+    {
+      "domain": "thread",
+      "host_supported": true,
+      "id": "thread.fork_semantics",
+      "level": "linux_process_environment"
+    },
+    {
+      "domain": "thread",
+      "host_supported": true,
+      "id": "thread.shared_fd",
+      "level": "kernel_subsystems"
+    },
+    {
+      "domain": "thread",
+      "host_supported": true,
+      "id": "thread.tls",
+      "level": "linux_process_environment"
+    },
+    {
+      "domain": "time",
+      "host_supported": true,
+      "id": "time.clock.monotonic",
+      "level": "kernel_subsystems"
+    },
+    {
+      "domain": "time",
+      "host_supported": true,
+      "id": "time.clock.realtime",
+      "level": "kernel_subsystems"
+    },
+    {
+      "domain": "time",
+      "host_supported": true,
+      "id": "time.interval_timer",
+      "level": "kernel_subsystems"
+    },
+    {
+      "domain": "time",
+      "host_supported": true,
+      "id": "time.nanosleep",
+      "level": "kernel_subsystems"
+    },
+    {
+      "domain": "time",
+      "host_supported": true,
+      "id": "time.timeout.poll",
+      "level": "kernel_subsystems"
+    },
+    {
+      "domain": "time",
+      "host_supported": true,
+      "id": "time.timerfd",
+      "level": "linux_system"
+    },
+    {
+      "domain": "tty",
+      "host_supported": true,
+      "id": "tty.basic_io",
+      "level": "kernel_subsystems"
+    },
+    {
+      "domain": "tty",
+      "host_supported": true,
+      "id": "tty.canonical_mode",
+      "level": "linux_process_environment"
+    },
+    {
+      "domain": "tty",
+      "host_supported": true,
+      "id": "tty.echo",
+      "level": "linux_process_environment"
+    },
+    {
+      "domain": "tty",
+      "host_supported": true,
+      "id": "tty.job_control",
+      "level": "posix_userspace"
+    },
+    {
+      "domain": "tty",
+      "host_supported": true,
+      "id": "tty.pty",
+      "level": "linux_process_environment"
+    },
+    {
+      "domain": "tty",
+      "host_supported": true,
+      "id": "tty.signal_control_chars",
+      "level": "linux_process_environment"
+    },
+    {
+      "domain": "workload",
+      "host_supported": true,
+      "id": "workload.c.compile_link_run",
+      "level": "real_workloads"
+    },
+    {
+      "domain": "workload",
+      "host_supported": true,
+      "id": "workload.compression.roundtrip",
+      "level": "real_workloads"
+    },
+    {
+      "domain": "workload",
+      "host_supported": true,
+      "id": "workload.coreutils.pipeline",
+      "level": "real_workloads"
+    },
+    {
+      "domain": "workload",
+      "host_supported": true,
+      "id": "workload.dns.lookup",
+      "level": "real_workloads"
+    },
+    {
+      "domain": "workload",
+      "host_supported": true,
+      "id": "workload.dynamic_elf",
+      "level": "real_workloads"
+    },
+    {
+      "domain": "workload",
+      "host_supported": true,
+      "id": "workload.git.repository",
+      "level": "real_workloads"
+    },
+    {
+      "domain": "workload",
+      "host_supported": true,
+      "id": "workload.http.server_client",
+      "level": "real_workloads"
+    },
+    {
+      "domain": "workload",
+      "host_supported": false,
+      "id": "workload.package.install",
+      "level": "real_workloads"
+    },
+    {
+      "domain": "workload",
+      "host_supported": true,
+      "id": "workload.pthread.program",
+      "level": "real_workloads"
+    },
+    {
+      "domain": "workload",
+      "host_supported": true,
+      "id": "workload.python.basic",
+      "level": "real_workloads"
+    },
+    {
+      "domain": "workload",
+      "host_supported": false,
+      "id": "workload.service.start",
+      "level": "real_workloads"
+    },
+    {
+      "domain": "workload",
+      "host_supported": true,
+      "id": "workload.shell.script",
+      "level": "real_workloads"
+    },
+    {
+      "domain": "workload",
+      "host_supported": true,
+      "id": "workload.sqlite.transaction",
+      "level": "real_workloads"
+    },
+    {
+      "domain": "workload",
+      "host_supported": false,
+      "id": "workload.ssh.loopback",
+      "level": "real_workloads"
+    },
+    {
+      "domain": "workload",
+      "host_supported": true,
+      "id": "workload.static_elf",
+      "level": "real_workloads"
+    },
+    {
+      "domain": "workload",
+      "host_supported": true,
+      "id": "workload.tcp.client_server",
+      "level": "real_workloads"
+    }
+  ],
+  "schema_version": "osbench.contract_catalog.v1"
+}

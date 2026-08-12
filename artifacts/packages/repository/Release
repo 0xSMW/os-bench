@@ -1,0 +1,7 @@
+Origin: OSBench
+Label: OSBench
+Suite: stable
+Codename: osbench
+Architectures: all
+Components: main
+Description: deterministic offline corpus

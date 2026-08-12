@@ -1,0 +1,22 @@
+{
+  "packages": [
+    {
+      "architecture": "all",
+      "filename": "osbench-hello_0.1.0_all.deb",
+      "package": "osbench-hello",
+      "sha256": "85a4f34b421b224338d24f87385a9d0f149fbfb429a79550888d6a1acbd8e4ec",
+      "size": 1264,
+      "version": "0.1.0"
+    },
+    {
+      "architecture": "all",
+      "filename": "osbench-hello_0.2.0_all.deb",
+      "package": "osbench-hello",
+      "sha256": "f9f2064aa147e4a549fa1c53b16c5c68a725d46ba846b4a6f34b0cb7e58be714",
+      "size": 1264,
+      "version": "0.2.0"
+    }
+  ],
+  "schema_version": "osbench.offline_packages.v1",
+  "source_date_epoch": 1700000000
+}

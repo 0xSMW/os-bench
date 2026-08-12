@@ -1,0 +1,12 @@
+schema_version: osbench.workload.v1
+name: compression
+level: real_workloads
+description: Executable compression compatibility workload.
+command: /bin/sh -c 'd=$(mktemp -d); dd if=/dev/urandom of="$d/in" bs=4096 count=4 status=none; gzip -c "$d/in" > "$d/in.gz"; gzip -dc "$d/in.gz" > "$d/out"; cmp "$d/in" "$d/out"; echo compression-ok; rm -rf "$d"'
+contracts:
+- fs.file.write.basic
+- pipe.basic
+- workload.compression.roundtrip
+- workload.dynamic_elf
+timeout_seconds: 60
+transport: host

@@ -1,0 +1,8 @@
+[Unit]
+Description=OSBench persistent workload service
+[Service]
+Type=oneshot
+ExecStart=/bin/sh -c 'printf service-ok > /var/lib/osbench/service-state'
+RemainAfterExit=yes
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,39 @@
+services:
+  osbench:
+    build:
+      context: .
+    working_dir: /workspace
+    volumes:
+      - .:/workspace
+      - osbench-cache:/root/.cache/osbench
+    environment:
+      OSBENCH_PROFILE: macos_tcg
+    entrypoint: ["osbench"]
+
+  osbench-kvm:
+    profiles: ["kvm"]
+    build:
+      context: .
+    working_dir: /workspace
+    volumes:
+      - .:/workspace
+      - osbench-cache:/root/.cache/osbench
+    devices:
+      - /dev/kvm:/dev/kvm
+    environment:
+      OSBENCH_PROFILE: linux_kvm
+    entrypoint: ["osbench"]
+
+  shell:
+    build:
+      context: .
+    working_dir: /workspace
+    volumes:
+      - .:/workspace
+      - osbench-cache:/root/.cache/osbench
+    environment:
+      OSBENCH_PROFILE: macos_tcg
+    entrypoint: ["/bin/bash"]
+
+volumes:
+  osbench-cache:

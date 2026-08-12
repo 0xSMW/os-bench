@@ -1,0 +1,50 @@
+name: ci
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build immutable OSBench toolchain
+        run: docker compose build
+      - name: Compile Python
+        run: docker compose run --rm --entrypoint python3 osbench -m compileall -q src tests tools
+      - name: Validate shell syntax
+        run: >-
+          docker compose run --rm --entrypoint bash osbench -lc
+          "find . -type f -name '*.sh' -print0 | xargs -0 -n1 bash -n"
+      - run: docker compose run --rm osbench reference lock-sources --check
+      - run: docker compose run --rm osbench reference preflight
+      - name: Build locked probes, workloads, packages, and payload
+        run: >-
+          docker compose run --rm --entrypoint bash osbench -lc
+          "probes/build.sh && workloads/build.sh && workloads/packages/build.sh && osbench payload build"
+      - run: docker compose run --rm osbench contracts validate
+      - run: docker compose run --rm osbench graph build
+      - run: docker compose run --rm osbench dataset build --profile public --seed 1 --check-determinism
+      - run: docker compose run --rm osbench dataset validate
+      - run: >-
+          docker compose run --rm --entrypoint python3 osbench
+          tools/coverage/build_workload_matrix.py
+      - run: docker compose run --rm --entrypoint python3 osbench -m pytest
+      - run: docker compose run --rm osbench oracle perturbation-selftest
+      - run: docker compose run --rm -e OSBENCH_REFERENCE_MODE=local osbench oracle selftest
+      - run: docker compose run --rm -e OSBENCH_REFERENCE_MODE=local osbench smoke
+      - name: Evaluate the complete public corpus through isolated local shards
+        run: >-
+          docker compose run --rm -e OSBENCH_REFERENCE_MODE=local osbench oracle full-selftest
+          --shard-count 16 --jobs 8 --worker-max-cases 1 --progress-every 25
+          --output results/full-local-selftest.json
+      - name: Upload local full-selftest result
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: full-local-selftest
+          path: |
+            results/full-local-selftest.json
+            artifacts/oracle/
+          if-no-files-found: warn

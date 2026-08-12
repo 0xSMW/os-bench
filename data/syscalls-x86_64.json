@@ -1,0 +1,1883 @@
+{
+  "architecture": "x86_64",
+  "count": 375,
+  "schema_version": "osbench.syscall_inventory.v1",
+  "source": "/usr/include/x86_64-linux-gnu/asm/unistd_64.h",
+  "syscalls": [
+    {
+      "family": "file",
+      "name": "read",
+      "number": 0
+    },
+    {
+      "family": "file",
+      "name": "write",
+      "number": 1
+    },
+    {
+      "family": "file",
+      "name": "open",
+      "number": 2
+    },
+    {
+      "family": "unclassified",
+      "name": "close",
+      "number": 3
+    },
+    {
+      "family": "file",
+      "name": "stat",
+      "number": 4
+    },
+    {
+      "family": "unclassified",
+      "name": "fstat",
+      "number": 5
+    },
+    {
+      "family": "unclassified",
+      "name": "lstat",
+      "number": 6
+    },
+    {
+      "family": "poll",
+      "name": "poll",
+      "number": 7
+    },
+    {
+      "family": "unclassified",
+      "name": "lseek",
+      "number": 8
+    },
+    {
+      "family": "memory",
+      "name": "mmap",
+      "number": 9
+    },
+    {
+      "family": "memory",
+      "name": "mprotect",
+      "number": 10
+    },
+    {
+      "family": "memory",
+      "name": "munmap",
+      "number": 11
+    },
+    {
+      "family": "memory",
+      "name": "brk",
+      "number": 12
+    },
+    {
+      "family": "unclassified",
+      "name": "rt_sigaction",
+      "number": 13
+    },
+    {
+      "family": "unclassified",
+      "name": "rt_sigprocmask",
+      "number": 14
+    },
+    {
+      "family": "unclassified",
+      "name": "rt_sigreturn",
+      "number": 15
+    },
+    {
+      "family": "unclassified",
+      "name": "ioctl",
+      "number": 16
+    },
+    {
+      "family": "unclassified",
+      "name": "pread64",
+      "number": 17
+    },
+    {
+      "family": "unclassified",
+      "name": "pwrite64",
+      "number": 18
+    },
+    {
+      "family": "file",
+      "name": "readv",
+      "number": 19
+    },
+    {
+      "family": "file",
+      "name": "writev",
+      "number": 20
+    },
+    {
+      "family": "unclassified",
+      "name": "access",
+      "number": 21
+    },
+    {
+      "family": "unclassified",
+      "name": "pipe",
+      "number": 22
+    },
+    {
+      "family": "poll",
+      "name": "select",
+      "number": 23
+    },
+    {
+      "family": "unclassified",
+      "name": "sched_yield",
+      "number": 24
+    },
+    {
+      "family": "unclassified",
+      "name": "mremap",
+      "number": 25
+    },
+    {
+      "family": "unclassified",
+      "name": "msync",
+      "number": 26
+    },
+    {
+      "family": "unclassified",
+      "name": "mincore",
+      "number": 27
+    },
+    {
+      "family": "memory",
+      "name": "madvise",
+      "number": 28
+    },
+    {
+      "family": "unclassified",
+      "name": "shmget",
+      "number": 29
+    },
+    {
+      "family": "unclassified",
+      "name": "shmat",
+      "number": 30
+    },
+    {
+      "family": "unclassified",
+      "name": "shmctl",
+      "number": 31
+    },
+    {
+      "family": "unclassified",
+      "name": "dup",
+      "number": 32
+    },
+    {
+      "family": "unclassified",
+      "name": "dup2",
+      "number": 33
+    },
+    {
+      "family": "unclassified",
+      "name": "pause",
+      "number": 34
+    },
+    {
+      "family": "time",
+      "name": "nanosleep",
+      "number": 35
+    },
+    {
+      "family": "unclassified",
+      "name": "getitimer",
+      "number": 36
+    },
+    {
+      "family": "unclassified",
+      "name": "alarm",
+      "number": 37
+    },
+    {
+      "family": "unclassified",
+      "name": "setitimer",
+      "number": 38
+    },
+    {
+      "family": "process",
+      "name": "getpid",
+      "number": 39
+    },
+    {
+      "family": "network",
+      "name": "sendfile",
+      "number": 40
+    },
+    {
+      "family": "network",
+      "name": "socket",
+      "number": 41
+    },
+    {
+      "family": "network",
+      "name": "connect",
+      "number": 42
+    },
+    {
+      "family": "network",
+      "name": "accept",
+      "number": 43
+    },
+    {
+      "family": "network",
+      "name": "sendto",
+      "number": 44
+    },
+    {
+      "family": "network",
+      "name": "recvfrom",
+      "number": 45
+    },
+    {
+      "family": "network",
+      "name": "sendmsg",
+      "number": 46
+    },
+    {
+      "family": "network",
+      "name": "recvmsg",
+      "number": 47
+    },
+    {
+      "family": "unclassified",
+      "name": "shutdown",
+      "number": 48
+    },
+    {
+      "family": "network",
+      "name": "bind",
+      "number": 49
+    },
+    {
+      "family": "network",
+      "name": "listen",
+      "number": 50
+    },
+    {
+      "family": "unclassified",
+      "name": "getsockname",
+      "number": 51
+    },
+    {
+      "family": "unclassified",
+      "name": "getpeername",
+      "number": 52
+    },
+    {
+      "family": "network",
+      "name": "socketpair",
+      "number": 53
+    },
+    {
+      "family": "unclassified",
+      "name": "setsockopt",
+      "number": 54
+    },
+    {
+      "family": "unclassified",
+      "name": "getsockopt",
+      "number": 55
+    },
+    {
+      "family": "process",
+      "name": "clone",
+      "number": 56
+    },
+    {
+      "family": "process",
+      "name": "fork",
+      "number": 57
+    },
+    {
+      "family": "unclassified",
+      "name": "vfork",
+      "number": 58
+    },
+    {
+      "family": "process",
+      "name": "execve",
+      "number": 59
+    },
+    {
+      "family": "process",
+      "name": "exit",
+      "number": 60
+    },
+    {
+      "family": "process",
+      "name": "wait4",
+      "number": 61
+    },
+    {
+      "family": "process",
+      "name": "kill",
+      "number": 62
+    },
+    {
+      "family": "unclassified",
+      "name": "uname",
+      "number": 63
+    },
+    {
+      "family": "sync",
+      "name": "semget",
+      "number": 64
+    },
+    {
+      "family": "sync",
+      "name": "semop",
+      "number": 65
+    },
+    {
+      "family": "sync",
+      "name": "semctl",
+      "number": 66
+    },
+    {
+      "family": "unclassified",
+      "name": "shmdt",
+      "number": 67
+    },
+    {
+      "family": "unclassified",
+      "name": "msgget",
+      "number": 68
+    },
+    {
+      "family": "unclassified",
+      "name": "msgsnd",
+      "number": 69
+    },
+    {
+      "family": "unclassified",
+      "name": "msgrcv",
+      "number": 70
+    },
+    {
+      "family": "unclassified",
+      "name": "msgctl",
+      "number": 71
+    },
+    {
+      "family": "unclassified",
+      "name": "fcntl",
+      "number": 72
+    },
+    {
+      "family": "unclassified",
+      "name": "flock",
+      "number": 73
+    },
+    {
+      "family": "file",
+      "name": "fsync",
+      "number": 74
+    },
+    {
+      "family": "unclassified",
+      "name": "fdatasync",
+      "number": 75
+    },
+    {
+      "family": "unclassified",
+      "name": "truncate",
+      "number": 76
+    },
+    {
+      "family": "unclassified",
+      "name": "ftruncate",
+      "number": 77
+    },
+    {
+      "family": "file",
+      "name": "getdents",
+      "number": 78
+    },
+    {
+      "family": "unclassified",
+      "name": "getcwd",
+      "number": 79
+    },
+    {
+      "family": "unclassified",
+      "name": "chdir",
+      "number": 80
+    },
+    {
+      "family": "unclassified",
+      "name": "fchdir",
+      "number": 81
+    },
+    {
+      "family": "file",
+      "name": "rename",
+      "number": 82
+    },
+    {
+      "family": "file",
+      "name": "mkdir",
+      "number": 83
+    },
+    {
+      "family": "unclassified",
+      "name": "rmdir",
+      "number": 84
+    },
+    {
+      "family": "unclassified",
+      "name": "creat",
+      "number": 85
+    },
+    {
+      "family": "file",
+      "name": "link",
+      "number": 86
+    },
+    {
+      "family": "file",
+      "name": "unlink",
+      "number": 87
+    },
+    {
+      "family": "unclassified",
+      "name": "symlink",
+      "number": 88
+    },
+    {
+      "family": "file",
+      "name": "readlink",
+      "number": 89
+    },
+    {
+      "family": "file",
+      "name": "chmod",
+      "number": 90
+    },
+    {
+      "family": "unclassified",
+      "name": "fchmod",
+      "number": 91
+    },
+    {
+      "family": "file",
+      "name": "chown",
+      "number": 92
+    },
+    {
+      "family": "unclassified",
+      "name": "fchown",
+      "number": 93
+    },
+    {
+      "family": "unclassified",
+      "name": "lchown",
+      "number": 94
+    },
+    {
+      "family": "unclassified",
+      "name": "umask",
+      "number": 95
+    },
+    {
+      "family": "unclassified",
+      "name": "gettimeofday",
+      "number": 96
+    },
+    {
+      "family": "unclassified",
+      "name": "getrlimit",
+      "number": 97
+    },
+    {
+      "family": "unclassified",
+      "name": "getrusage",
+      "number": 98
+    },
+    {
+      "family": "unclassified",
+      "name": "sysinfo",
+      "number": 99
+    },
+    {
+      "family": "time",
+      "name": "times",
+      "number": 100
+    },
+    {
+      "family": "unclassified",
+      "name": "ptrace",
+      "number": 101
+    },
+    {
+      "family": "unclassified",
+      "name": "getuid",
+      "number": 102
+    },
+    {
+      "family": "unclassified",
+      "name": "syslog",
+      "number": 103
+    },
+    {
+      "family": "unclassified",
+      "name": "getgid",
+      "number": 104
+    },
+    {
+      "family": "unclassified",
+      "name": "setuid",
+      "number": 105
+    },
+    {
+      "family": "unclassified",
+      "name": "setgid",
+      "number": 106
+    },
+    {
+      "family": "unclassified",
+      "name": "geteuid",
+      "number": 107
+    },
+    {
+      "family": "unclassified",
+      "name": "getegid",
+      "number": 108
+    },
+    {
+      "family": "unclassified",
+      "name": "setpgid",
+      "number": 109
+    },
+    {
+      "family": "unclassified",
+      "name": "getppid",
+      "number": 110
+    },
+    {
+      "family": "unclassified",
+      "name": "getpgrp",
+      "number": 111
+    },
+    {
+      "family": "unclassified",
+      "name": "setsid",
+      "number": 112
+    },
+    {
+      "family": "unclassified",
+      "name": "setreuid",
+      "number": 113
+    },
+    {
+      "family": "unclassified",
+      "name": "setregid",
+      "number": 114
+    },
+    {
+      "family": "unclassified",
+      "name": "getgroups",
+      "number": 115
+    },
+    {
+      "family": "unclassified",
+      "name": "setgroups",
+      "number": 116
+    },
+    {
+      "family": "unclassified",
+      "name": "setresuid",
+      "number": 117
+    },
+    {
+      "family": "unclassified",
+      "name": "getresuid",
+      "number": 118
+    },
+    {
+      "family": "unclassified",
+      "name": "setresgid",
+      "number": 119
+    },
+    {
+      "family": "unclassified",
+      "name": "getresgid",
+      "number": 120
+    },
+    {
+      "family": "unclassified",
+      "name": "getpgid",
+      "number": 121
+    },
+    {
+      "family": "unclassified",
+      "name": "setfsuid",
+      "number": 122
+    },
+    {
+      "family": "unclassified",
+      "name": "setfsgid",
+      "number": 123
+    },
+    {
+      "family": "unclassified",
+      "name": "getsid",
+      "number": 124
+    },
+    {
+      "family": "unclassified",
+      "name": "capget",
+      "number": 125
+    },
+    {
+      "family": "unclassified",
+      "name": "capset",
+      "number": 126
+    },
+    {
+      "family": "unclassified",
+      "name": "rt_sigpending",
+      "number": 127
+    },
+    {
+      "family": "unclassified",
+      "name": "rt_sigtimedwait",
+      "number": 128
+    },
+    {
+      "family": "unclassified",
+      "name": "rt_sigqueueinfo",
+      "number": 129
+    },
+    {
+      "family": "unclassified",
+      "name": "rt_sigsuspend",
+      "number": 130
+    },
+    {
+      "family": "unclassified",
+      "name": "sigaltstack",
+      "number": 131
+    },
+    {
+      "family": "unclassified",
+      "name": "utime",
+      "number": 132
+    },
+    {
+      "family": "unclassified",
+      "name": "mknod",
+      "number": 133
+    },
+    {
+      "family": "unclassified",
+      "name": "uselib",
+      "number": 134
+    },
+    {
+      "family": "unclassified",
+      "name": "personality",
+      "number": 135
+    },
+    {
+      "family": "unclassified",
+      "name": "ustat",
+      "number": 136
+    },
+    {
+      "family": "file",
+      "name": "statfs",
+      "number": 137
+    },
+    {
+      "family": "unclassified",
+      "name": "fstatfs",
+      "number": 138
+    },
+    {
+      "family": "unclassified",
+      "name": "sysfs",
+      "number": 139
+    },
+    {
+      "family": "unclassified",
+      "name": "getpriority",
+      "number": 140
+    },
+    {
+      "family": "unclassified",
+      "name": "setpriority",
+      "number": 141
+    },
+    {
+      "family": "unclassified",
+      "name": "sched_setparam",
+      "number": 142
+    },
+    {
+      "family": "unclassified",
+      "name": "sched_getparam",
+      "number": 143
+    },
+    {
+      "family": "unclassified",
+      "name": "sched_setscheduler",
+      "number": 144
+    },
+    {
+      "family": "unclassified",
+      "name": "sched_getscheduler",
+      "number": 145
+    },
+    {
+      "family": "unclassified",
+      "name": "sched_get_priority_max",
+      "number": 146
+    },
+    {
+      "family": "unclassified",
+      "name": "sched_get_priority_min",
+      "number": 147
+    },
+    {
+      "family": "unclassified",
+      "name": "sched_rr_get_interval",
+      "number": 148
+    },
+    {
+      "family": "memory",
+      "name": "mlock",
+      "number": 149
+    },
+    {
+      "family": "unclassified",
+      "name": "munlock",
+      "number": 150
+    },
+    {
+      "family": "memory",
+      "name": "mlockall",
+      "number": 151
+    },
+    {
+      "family": "unclassified",
+      "name": "munlockall",
+      "number": 152
+    },
+    {
+      "family": "unclassified",
+      "name": "vhangup",
+      "number": 153
+    },
+    {
+      "family": "unclassified",
+      "name": "modify_ldt",
+      "number": 154
+    },
+    {
+      "family": "unclassified",
+      "name": "pivot_root",
+      "number": 155
+    },
+    {
+      "family": "unclassified",
+      "name": "_sysctl",
+      "number": 156
+    },
+    {
+      "family": "unclassified",
+      "name": "prctl",
+      "number": 157
+    },
+    {
+      "family": "unclassified",
+      "name": "arch_prctl",
+      "number": 158
+    },
+    {
+      "family": "unclassified",
+      "name": "adjtimex",
+      "number": 159
+    },
+    {
+      "family": "unclassified",
+      "name": "setrlimit",
+      "number": 160
+    },
+    {
+      "family": "unclassified",
+      "name": "chroot",
+      "number": 161
+    },
+    {
+      "family": "unclassified",
+      "name": "sync",
+      "number": 162
+    },
+    {
+      "family": "unclassified",
+      "name": "acct",
+      "number": 163
+    },
+    {
+      "family": "unclassified",
+      "name": "settimeofday",
+      "number": 164
+    },
+    {
+      "family": "unclassified",
+      "name": "mount",
+      "number": 165
+    },
+    {
+      "family": "unclassified",
+      "name": "umount2",
+      "number": 166
+    },
+    {
+      "family": "unclassified",
+      "name": "swapon",
+      "number": 167
+    },
+    {
+      "family": "unclassified",
+      "name": "swapoff",
+      "number": 168
+    },
+    {
+      "family": "unclassified",
+      "name": "reboot",
+      "number": 169
+    },
+    {
+      "family": "unclassified",
+      "name": "sethostname",
+      "number": 170
+    },
+    {
+      "family": "unclassified",
+      "name": "setdomainname",
+      "number": 171
+    },
+    {
+      "family": "unclassified",
+      "name": "iopl",
+      "number": 172
+    },
+    {
+      "family": "unclassified",
+      "name": "ioperm",
+      "number": 173
+    },
+    {
+      "family": "unclassified",
+      "name": "create_module",
+      "number": 174
+    },
+    {
+      "family": "unclassified",
+      "name": "init_module",
+      "number": 175
+    },
+    {
+      "family": "unclassified",
+      "name": "delete_module",
+      "number": 176
+    },
+    {
+      "family": "unclassified",
+      "name": "get_kernel_syms",
+      "number": 177
+    },
+    {
+      "family": "unclassified",
+      "name": "query_module",
+      "number": 178
+    },
+    {
+      "family": "unclassified",
+      "name": "quotactl",
+      "number": 179
+    },
+    {
+      "family": "unclassified",
+      "name": "nfsservctl",
+      "number": 180
+    },
+    {
+      "family": "unclassified",
+      "name": "getpmsg",
+      "number": 181
+    },
+    {
+      "family": "unclassified",
+      "name": "putpmsg",
+      "number": 182
+    },
+    {
+      "family": "unclassified",
+      "name": "afs_syscall",
+      "number": 183
+    },
+    {
+      "family": "unclassified",
+      "name": "tuxcall",
+      "number": 184
+    },
+    {
+      "family": "unclassified",
+      "name": "security",
+      "number": 185
+    },
+    {
+      "family": "unclassified",
+      "name": "gettid",
+      "number": 186
+    },
+    {
+      "family": "file",
+      "name": "readahead",
+      "number": 187
+    },
+    {
+      "family": "unclassified",
+      "name": "setxattr",
+      "number": 188
+    },
+    {
+      "family": "unclassified",
+      "name": "lsetxattr",
+      "number": 189
+    },
+    {
+      "family": "unclassified",
+      "name": "fsetxattr",
+      "number": 190
+    },
+    {
+      "family": "unclassified",
+      "name": "getxattr",
+      "number": 191
+    },
+    {
+      "family": "unclassified",
+      "name": "lgetxattr",
+      "number": 192
+    },
+    {
+      "family": "unclassified",
+      "name": "fgetxattr",
+      "number": 193
+    },
+    {
+      "family": "unclassified",
+      "name": "listxattr",
+      "number": 194
+    },
+    {
+      "family": "unclassified",
+      "name": "llistxattr",
+      "number": 195
+    },
+    {
+      "family": "unclassified",
+      "name": "flistxattr",
+      "number": 196
+    },
+    {
+      "family": "unclassified",
+      "name": "removexattr",
+      "number": 197
+    },
+    {
+      "family": "unclassified",
+      "name": "lremovexattr",
+      "number": 198
+    },
+    {
+      "family": "unclassified",
+      "name": "fremovexattr",
+      "number": 199
+    },
+    {
+      "family": "unclassified",
+      "name": "tkill",
+      "number": 200
+    },
+    {
+      "family": "time",
+      "name": "time",
+      "number": 201
+    },
+    {
+      "family": "sync",
+      "name": "futex",
+      "number": 202
+    },
+    {
+      "family": "unclassified",
+      "name": "sched_setaffinity",
+      "number": 203
+    },
+    {
+      "family": "unclassified",
+      "name": "sched_getaffinity",
+      "number": 204
+    },
+    {
+      "family": "unclassified",
+      "name": "set_thread_area",
+      "number": 205
+    },
+    {
+      "family": "unclassified",
+      "name": "io_setup",
+      "number": 206
+    },
+    {
+      "family": "unclassified",
+      "name": "io_destroy",
+      "number": 207
+    },
+    {
+      "family": "unclassified",
+      "name": "io_getevents",
+      "number": 208
+    },
+    {
+      "family": "unclassified",
+      "name": "io_submit",
+      "number": 209
+    },
+    {
+      "family": "unclassified",
+      "name": "io_cancel",
+      "number": 210
+    },
+    {
+      "family": "unclassified",
+      "name": "get_thread_area",
+      "number": 211
+    },
+    {
+      "family": "unclassified",
+      "name": "lookup_dcookie",
+      "number": 212
+    },
+    {
+      "family": "poll",
+      "name": "epoll_create",
+      "number": 213
+    },
+    {
+      "family": "poll",
+      "name": "epoll_ctl_old",
+      "number": 214
+    },
+    {
+      "family": "poll",
+      "name": "epoll_wait_old",
+      "number": 215
+    },
+    {
+      "family": "unclassified",
+      "name": "remap_file_pages",
+      "number": 216
+    },
+    {
+      "family": "file",
+      "name": "getdents64",
+      "number": 217
+    },
+    {
+      "family": "unclassified",
+      "name": "set_tid_address",
+      "number": 218
+    },
+    {
+      "family": "unclassified",
+      "name": "restart_syscall",
+      "number": 219
+    },
+    {
+      "family": "sync",
+      "name": "semtimedop",
+      "number": 220
+    },
+    {
+      "family": "unclassified",
+      "name": "fadvise64",
+      "number": 221
+    },
+    {
+      "family": "time",
+      "name": "timer_create",
+      "number": 222
+    },
+    {
+      "family": "time",
+      "name": "timer_settime",
+      "number": 223
+    },
+    {
+      "family": "time",
+      "name": "timer_gettime",
+      "number": 224
+    },
+    {
+      "family": "time",
+      "name": "timer_getoverrun",
+      "number": 225
+    },
+    {
+      "family": "time",
+      "name": "timer_delete",
+      "number": 226
+    },
+    {
+      "family": "time",
+      "name": "clock_settime",
+      "number": 227
+    },
+    {
+      "family": "time",
+      "name": "clock_gettime",
+      "number": 228
+    },
+    {
+      "family": "time",
+      "name": "clock_getres",
+      "number": 229
+    },
+    {
+      "family": "time",
+      "name": "clock_nanosleep",
+      "number": 230
+    },
+    {
+      "family": "process",
+      "name": "exit_group",
+      "number": 231
+    },
+    {
+      "family": "poll",
+      "name": "epoll_wait",
+      "number": 232
+    },
+    {
+      "family": "poll",
+      "name": "epoll_ctl",
+      "number": 233
+    },
+    {
+      "family": "unclassified",
+      "name": "tgkill",
+      "number": 234
+    },
+    {
+      "family": "unclassified",
+      "name": "utimes",
+      "number": 235
+    },
+    {
+      "family": "unclassified",
+      "name": "vserver",
+      "number": 236
+    },
+    {
+      "family": "unclassified",
+      "name": "mbind",
+      "number": 237
+    },
+    {
+      "family": "unclassified",
+      "name": "set_mempolicy",
+      "number": 238
+    },
+    {
+      "family": "unclassified",
+      "name": "get_mempolicy",
+      "number": 239
+    },
+    {
+      "family": "unclassified",
+      "name": "mq_open",
+      "number": 240
+    },
+    {
+      "family": "unclassified",
+      "name": "mq_unlink",
+      "number": 241
+    },
+    {
+      "family": "unclassified",
+      "name": "mq_timedsend",
+      "number": 242
+    },
+    {
+      "family": "unclassified",
+      "name": "mq_timedreceive",
+      "number": 243
+    },
+    {
+      "family": "unclassified",
+      "name": "mq_notify",
+      "number": 244
+    },
+    {
+      "family": "unclassified",
+      "name": "mq_getsetattr",
+      "number": 245
+    },
+    {
+      "family": "unclassified",
+      "name": "kexec_load",
+      "number": 246
+    },
+    {
+      "family": "process",
+      "name": "waitid",
+      "number": 247
+    },
+    {
+      "family": "unclassified",
+      "name": "add_key",
+      "number": 248
+    },
+    {
+      "family": "unclassified",
+      "name": "request_key",
+      "number": 249
+    },
+    {
+      "family": "unclassified",
+      "name": "keyctl",
+      "number": 250
+    },
+    {
+      "family": "unclassified",
+      "name": "ioprio_set",
+      "number": 251
+    },
+    {
+      "family": "unclassified",
+      "name": "ioprio_get",
+      "number": 252
+    },
+    {
+      "family": "unclassified",
+      "name": "inotify_init",
+      "number": 253
+    },
+    {
+      "family": "unclassified",
+      "name": "inotify_add_watch",
+      "number": 254
+    },
+    {
+      "family": "unclassified",
+      "name": "inotify_rm_watch",
+      "number": 255
+    },
+    {
+      "family": "unclassified",
+      "name": "migrate_pages",
+      "number": 256
+    },
+    {
+      "family": "file",
+      "name": "openat",
+      "number": 257
+    },
+    {
+      "family": "file",
+      "name": "mkdirat",
+      "number": 258
+    },
+    {
+      "family": "unclassified",
+      "name": "mknodat",
+      "number": 259
+    },
+    {
+      "family": "unclassified",
+      "name": "fchownat",
+      "number": 260
+    },
+    {
+      "family": "unclassified",
+      "name": "futimesat",
+      "number": 261
+    },
+    {
+      "family": "unclassified",
+      "name": "newfstatat",
+      "number": 262
+    },
+    {
+      "family": "file",
+      "name": "unlinkat",
+      "number": 263
+    },
+    {
+      "family": "file",
+      "name": "renameat",
+      "number": 264
+    },
+    {
+      "family": "file",
+      "name": "linkat",
+      "number": 265
+    },
+    {
+      "family": "unclassified",
+      "name": "symlinkat",
+      "number": 266
+    },
+    {
+      "family": "file",
+      "name": "readlinkat",
+      "number": 267
+    },
+    {
+      "family": "unclassified",
+      "name": "fchmodat",
+      "number": 268
+    },
+    {
+      "family": "unclassified",
+      "name": "faccessat",
+      "number": 269
+    },
+    {
+      "family": "unclassified",
+      "name": "pselect6",
+      "number": 270
+    },
+    {
+      "family": "unclassified",
+      "name": "ppoll",
+      "number": 271
+    },
+    {
+      "family": "unclassified",
+      "name": "unshare",
+      "number": 272
+    },
+    {
+      "family": "unclassified",
+      "name": "set_robust_list",
+      "number": 273
+    },
+    {
+      "family": "unclassified",
+      "name": "get_robust_list",
+      "number": 274
+    },
+    {
+      "family": "unclassified",
+      "name": "splice",
+      "number": 275
+    },
+    {
+      "family": "unclassified",
+      "name": "tee",
+      "number": 276
+    },
+    {
+      "family": "unclassified",
+      "name": "sync_file_range",
+      "number": 277
+    },
+    {
+      "family": "unclassified",
+      "name": "vmsplice",
+      "number": 278
+    },
+    {
+      "family": "unclassified",
+      "name": "move_pages",
+      "number": 279
+    },
+    {
+      "family": "unclassified",
+      "name": "utimensat",
+      "number": 280
+    },
+    {
+      "family": "poll",
+      "name": "epoll_pwait",
+      "number": 281
+    },
+    {
+      "family": "unclassified",
+      "name": "signalfd",
+      "number": 282
+    },
+    {
+      "family": "time",
+      "name": "timerfd_create",
+      "number": 283
+    },
+    {
+      "family": "sync",
+      "name": "eventfd",
+      "number": 284
+    },
+    {
+      "family": "unclassified",
+      "name": "fallocate",
+      "number": 285
+    },
+    {
+      "family": "time",
+      "name": "timerfd_settime",
+      "number": 286
+    },
+    {
+      "family": "time",
+      "name": "timerfd_gettime",
+      "number": 287
+    },
+    {
+      "family": "network",
+      "name": "accept4",
+      "number": 288
+    },
+    {
+      "family": "unclassified",
+      "name": "signalfd4",
+      "number": 289
+    },
+    {
+      "family": "sync",
+      "name": "eventfd2",
+      "number": 290
+    },
+    {
+      "family": "poll",
+      "name": "epoll_create1",
+      "number": 291
+    },
+    {
+      "family": "unclassified",
+      "name": "dup3",
+      "number": 292
+    },
+    {
+      "family": "unclassified",
+      "name": "pipe2",
+      "number": 293
+    },
+    {
+      "family": "unclassified",
+      "name": "inotify_init1",
+      "number": 294
+    },
+    {
+      "family": "unclassified",
+      "name": "preadv",
+      "number": 295
+    },
+    {
+      "family": "unclassified",
+      "name": "pwritev",
+      "number": 296
+    },
+    {
+      "family": "unclassified",
+      "name": "rt_tgsigqueueinfo",
+      "number": 297
+    },
+    {
+      "family": "unclassified",
+      "name": "perf_event_open",
+      "number": 298
+    },
+    {
+      "family": "network",
+      "name": "recvmmsg",
+      "number": 299
+    },
+    {
+      "family": "unclassified",
+      "name": "fanotify_init",
+      "number": 300
+    },
+    {
+      "family": "unclassified",
+      "name": "fanotify_mark",
+      "number": 301
+    },
+    {
+      "family": "unclassified",
+      "name": "prlimit64",
+      "number": 302
+    },
+    {
+      "family": "unclassified",
+      "name": "name_to_handle_at",
+      "number": 303
+    },
+    {
+      "family": "file",
+      "name": "open_by_handle_at",
+      "number": 304
+    },
+    {
+      "family": "time",
+      "name": "clock_adjtime",
+      "number": 305
+    },
+    {
+      "family": "unclassified",
+      "name": "syncfs",
+      "number": 306
+    },
+    {
+      "family": "network",
+      "name": "sendmmsg",
+      "number": 307
+    },
+    {
+      "family": "unclassified",
+      "name": "setns",
+      "number": 308
+    },
+    {
+      "family": "unclassified",
+      "name": "getcpu",
+      "number": 309
+    },
+    {
+      "family": "unclassified",
+      "name": "process_vm_readv",
+      "number": 310
+    },
+    {
+      "family": "unclassified",
+      "name": "process_vm_writev",
+      "number": 311
+    },
+    {
+      "family": "unclassified",
+      "name": "kcmp",
+      "number": 312
+    },
+    {
+      "family": "unclassified",
+      "name": "finit_module",
+      "number": 313
+    },
+    {
+      "family": "unclassified",
+      "name": "sched_setattr",
+      "number": 314
+    },
+    {
+      "family": "unclassified",
+      "name": "sched_getattr",
+      "number": 315
+    },
+    {
+      "family": "file",
+      "name": "renameat2",
+      "number": 316
+    },
+    {
+      "family": "unclassified",
+      "name": "seccomp",
+      "number": 317
+    },
+    {
+      "family": "unclassified",
+      "name": "getrandom",
+      "number": 318
+    },
+    {
+      "family": "unclassified",
+      "name": "memfd_create",
+      "number": 319
+    },
+    {
+      "family": "unclassified",
+      "name": "kexec_file_load",
+      "number": 320
+    },
+    {
+      "family": "unclassified",
+      "name": "bpf",
+      "number": 321
+    },
+    {
+      "family": "process",
+      "name": "execveat",
+      "number": 322
+    },
+    {
+      "family": "unclassified",
+      "name": "userfaultfd",
+      "number": 323
+    },
+    {
+      "family": "unclassified",
+      "name": "membarrier",
+      "number": 324
+    },
+    {
+      "family": "memory",
+      "name": "mlock2",
+      "number": 325
+    },
+    {
+      "family": "unclassified",
+      "name": "copy_file_range",
+      "number": 326
+    },
+    {
+      "family": "unclassified",
+      "name": "preadv2",
+      "number": 327
+    },
+    {
+      "family": "unclassified",
+      "name": "pwritev2",
+      "number": 328
+    },
+    {
+      "family": "unclassified",
+      "name": "pkey_mprotect",
+      "number": 329
+    },
+    {
+      "family": "unclassified",
+      "name": "pkey_alloc",
+      "number": 330
+    },
+    {
+      "family": "unclassified",
+      "name": "pkey_free",
+      "number": 331
+    },
+    {
+      "family": "file",
+      "name": "statx",
+      "number": 332
+    },
+    {
+      "family": "unclassified",
+      "name": "io_pgetevents",
+      "number": 333
+    },
+    {
+      "family": "unclassified",
+      "name": "rseq",
+      "number": 334
+    },
+    {
+      "family": "unclassified",
+      "name": "uretprobe",
+      "number": 335
+    },
+    {
+      "family": "unclassified",
+      "name": "pidfd_send_signal",
+      "number": 424
+    },
+    {
+      "family": "unclassified",
+      "name": "io_uring_setup",
+      "number": 425
+    },
+    {
+      "family": "unclassified",
+      "name": "io_uring_enter",
+      "number": 426
+    },
+    {
+      "family": "unclassified",
+      "name": "io_uring_register",
+      "number": 427
+    },
+    {
+      "family": "file",
+      "name": "open_tree",
+      "number": 428
+    },
+    {
+      "family": "unclassified",
+      "name": "move_mount",
+      "number": 429
+    },
+    {
+      "family": "unclassified",
+      "name": "fsopen",
+      "number": 430
+    },
+    {
+      "family": "unclassified",
+      "name": "fsconfig",
+      "number": 431
+    },
+    {
+      "family": "unclassified",
+      "name": "fsmount",
+      "number": 432
+    },
+    {
+      "family": "unclassified",
+      "name": "fspick",
+      "number": 433
+    },
+    {
+      "family": "unclassified",
+      "name": "pidfd_open",
+      "number": 434
+    },
+    {
+      "family": "process",
+      "name": "clone3",
+      "number": 435
+    },
+    {
+      "family": "unclassified",
+      "name": "close_range",
+      "number": 436
+    },
+    {
+      "family": "file",
+      "name": "openat2",
+      "number": 437
+    },
+    {
+      "family": "unclassified",
+      "name": "pidfd_getfd",
+      "number": 438
+    },
+    {
+      "family": "unclassified",
+      "name": "faccessat2",
+      "number": 439
+    },
+    {
+      "family": "unclassified",
+      "name": "process_madvise",
+      "number": 440
+    },
+    {
+      "family": "poll",
+      "name": "epoll_pwait2",
+      "number": 441
+    },
+    {
+      "family": "unclassified",
+      "name": "mount_setattr",
+      "number": 442
+    },
+    {
+      "family": "unclassified",
+      "name": "quotactl_fd",
+      "number": 443
+    },
+    {
+      "family": "unclassified",
+      "name": "landlock_create_ruleset",
+      "number": 444
+    },
+    {
+      "family": "unclassified",
+      "name": "landlock_add_rule",
+      "number": 445
+    },
+    {
+      "family": "unclassified",
+      "name": "landlock_restrict_self",
+      "number": 446
+    },
+    {
+      "family": "unclassified",
+      "name": "memfd_secret",
+      "number": 447
+    },
+    {
+      "family": "unclassified",
+      "name": "process_mrelease",
+      "number": 448
+    },
+    {
+      "family": "sync",
+      "name": "futex_waitv",
+      "number": 449
+    },
+    {
+      "family": "unclassified",
+      "name": "set_mempolicy_home_node",
+      "number": 450
+    },
+    {
+      "family": "unclassified",
+      "name": "cachestat",
+      "number": 451
+    },
+    {
+      "family": "unclassified",
+      "name": "fchmodat2",
+      "number": 452
+    },
+    {
+      "family": "unclassified",
+      "name": "map_shadow_stack",
+      "number": 453
+    },
+    {
+      "family": "sync",
+      "name": "futex_wake",
+      "number": 454
+    },
+    {
+      "family": "sync",
+      "name": "futex_wait",
+      "number": 455
+    },
+    {
+      "family": "sync",
+      "name": "futex_requeue",
+      "number": 456
+    },
+    {
+      "family": "file",
+      "name": "statmount",
+      "number": 457
+    },
+    {
+      "family": "unclassified",
+      "name": "listmount",
+      "number": 458
+    },
+    {
+      "family": "unclassified",
+      "name": "lsm_get_self_attr",
+      "number": 459
+    },
+    {
+      "family": "unclassified",
+      "name": "lsm_set_self_attr",
+      "number": 460
+    },
+    {
+      "family": "unclassified",
+      "name": "lsm_list_modules",
+      "number": 461
+    },
+    {
+      "family": "unclassified",
+      "name": "mseal",
+      "number": 462
+    }
+  ]
+}

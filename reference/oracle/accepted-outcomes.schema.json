@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://osbench.dev/schema/accepted-outcomes.v1.json",
+  "type": "object",
+  "required": ["schema_version", "benchmark_version", "reference_id", "contract", "profile", "reference_image_sha256", "payload_sha256", "outcomes", "trial_count"],
+  "properties": {
+    "schema_version": {"const": "osbench.accepted_outcomes.v1"},
+    "benchmark_version": {"type": "string"},
+    "reference_id": {"type": "string"},
+    "contract": {"const": "persistence.crash.unsynced_bounds"},
+    "profile": {"type": "string"},
+    "reference_image_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "payload_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "outcomes": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string"}},
+    "trial_count": {"type": "integer", "minimum": 2}
+  },
+  "additionalProperties": true
+}

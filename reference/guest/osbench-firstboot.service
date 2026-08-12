@@ -1,0 +1,14 @@
+[Unit]
+Description=OSBench reference inventory initialization
+After=local-fs.target
+Before=osbench-agent.service
+ConditionPathExists=!/var/lib/osbench/.firstboot-complete
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/lib/osbench/osbench-inventory.sh
+ExecStart=/usr/bin/touch /var/lib/osbench/.firstboot-complete
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,2 @@
+#!/bin/sh
+printf 'osbench-hello 0.1.0\n'

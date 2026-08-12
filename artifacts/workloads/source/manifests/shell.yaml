@@ -1,0 +1,14 @@
+schema_version: osbench.workload.v1
+name: shell
+level: posix_userspace
+description: Executable shell compatibility workload.
+command: /bin/sh -c 'printf \"z\\na\\n\" | sort | head -n1'
+contracts:
+- fd.dup2.redirection
+- pipe.basic
+- process.execve.basic
+- process.fork.basic
+- process.wait.basic
+- shell.pipeline.basic
+timeout_seconds: 60
+transport: host

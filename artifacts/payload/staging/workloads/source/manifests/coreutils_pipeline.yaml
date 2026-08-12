@@ -1,0 +1,13 @@
+schema_version: osbench.workload.v1
+name: coreutils_pipeline
+level: posix_userspace
+description: Executable coreutils_pipeline compatibility workload.
+command: /bin/sh -c 'printf \"zeta\\nalpha\\nbeta\\nalpha\\n\" | sort | uniq -c | grep alpha'
+contracts:
+- posix.utility.cat
+- posix.utility.grep
+- posix.utility.sort
+- shell.pipeline.basic
+- workload.coreutils.pipeline
+timeout_seconds: 60
+transport: host

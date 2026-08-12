@@ -1,0 +1,150 @@
+{
+  "benchmark_artifacts": {
+    "benchmark_config_sha256": "aa2d77c9542bcf913c5656e4533a19b4ff942c238965d921682c350e52d8748f",
+    "contract_corpus_sha256": "cab0d9758b413b31c56f25a83355234b39773289fd08708d6c4aa9653f334a55",
+    "contract_schema_sha256": "c9407814f6108b7e82839a9ae94bd92c91ddc746212f6e90ace3fb121e5fe679",
+    "evaluator_source_tree_sha256": "1a1a81b326aa91f4b75c1be3550dcc22af298b082ff4ec45059854ccf888a737",
+    "payload_source_tree_sha256": "577bc9d05a335d5a8e7a5ceb4660567621bf066343ca866e3fdd0d76b81128b4",
+    "qemu_config_sha256": "0f3a41c898b2a980f65098d79b31e1bf71d8876dcee2aff23ea1fd6039c65971",
+    "raw_probe_source_tree_sha256": "f0a36fd3c7ca41c900afa74273521ec4d8dbd8ff7e123f784cf500604b73500d",
+    "reference_builder_source_tree_sha256": "c01aa25e57280fdb2a63963e1521c6635c29edcc23ca8e4b439eea63d5f70a86",
+    "test_source_tree_sha256": "5e65ec5f2fb41dbadce18934b33c7a7172a96bcc78fb0ed6ce4a6f94e37f8ffc",
+    "workload_source_tree_sha256": "6dd4ae43705c70d09017f4dec6773de3bd5c2fdeb0148461c10f5194384ee454"
+  },
+  "benchmark_sources": {
+    "capability_graph_sha256": "ad45a3f02ce37b851b07fb36a4c1748991c5b8b2882840db3156cc4f4ef5291e",
+    "contract_schema_sha256": "83ac0b72091d77f0d96abd3b475a04f64fd961b43539d618b7295d9a6034ee51",
+    "contract_source_tree_sha256": "4aefc065267748c400b0250bf10d1235e10c86dab26d2fcd77159801bde41cf2",
+    "dataset_cases_sha256": "880705295fbdbdcec876120d29e2e781a90e5d6e418cf0d29c9bc1f0f05bc129",
+    "dataset_manifest_sha256": "e02602403cc54d63b9457c1d47798496c75a8f93e7c7d6b96beaa9bfb09cb922",
+    "dataset_schema_sha256": "d575dca39927e682e7f0fd252068c147e1089abcdf2d098f12004249ca87f52a",
+    "evaluator_source_tree_sha256": "b717b966bd5942f0a24dfd15bede7a61009c19503b4a788dd379aaad90905e74",
+    "results_schema_sha256": "85d78476ddb0ee4975e9fd2ea9a41b2e50a4c22209588fbd1aa087652b672c10",
+    "test_source_tree_sha256": "1976e96de28cc9a16ded2792bcfa171664665fc57f91c880b16133bb734a906e",
+    "workload_matrix_sha256": "89f3e258ceedd3caa25053cb9711e3614216a0623fb2722a1894b4b064766cd8"
+  },
+  "benchmark_version": "0.1.0",
+  "container_build_environment": {
+    "apt_security_snapshot": "20260711T090223Z",
+    "apt_snapshot": "20260711T090223Z",
+    "image": "debian:13.6-slim",
+    "index_digest": "sha256:020c0d20b9880058cbe785a9db107156c3c75c2ac944a6aa7ab59f2add76a7bd",
+    "package_manifest": "data/container-packages.tsv",
+    "package_manifest_path": "/usr/local/share/osbench/container-packages.tsv",
+    "source_tree_sha256": "b91d9c729b8c276ef2049cc08503504725aa4c33ec12a00e6e6c181e0bfa41f7"
+  },
+  "distribution": {
+    "architecture": "amd64",
+    "codename": "trixie",
+    "name": "Debian GNU/Linux",
+    "release": "13.6"
+  },
+  "offline_package_corpus": {
+    "build_script_sha256": "38aa05f302181e2fdf984681a760e4fc30ccf635064c9db8b054bb90be4ba9e0",
+    "lock_path": "workloads/packages/lock.json",
+    "lock_sha256": "5d9c3355d9a24a6d11bc8b8502350be967f1c3e2c3cb3c6e5569899d1955dbf8",
+    "packages": [
+      {
+        "architecture": "all",
+        "filename": "osbench-hello_0.1.0_all.deb",
+        "package": "osbench-hello",
+        "sha256": "43c6630c873320efecb04a6a02dd835dcdb4e854d97fb0642bdbaa0faaeef4d1",
+        "size": 1864,
+        "version": "0.1.0"
+      },
+      {
+        "architecture": "all",
+        "filename": "osbench-hello_0.2.0_all.deb",
+        "package": "osbench-hello",
+        "sha256": "7c448f17051056b35a60f35f5b7afd8197f6a33dd9afbff65d46457e91c54deb",
+        "size": 1872,
+        "version": "0.2.0"
+      }
+    ],
+    "source_date_epoch": 1700000000,
+    "source_tree_sha256": "dd10449f95085044151294f9f1b69860b00147223fad64bbb985a702767b66e8"
+  },
+  "payload_sources": {
+    "source_tree_sha256": "133e953c1406d463a6e2569c5f96cbdc7ccf7aebbf12bf3a88ae17e5a53269ae"
+  },
+  "raw_probe_sources": {
+    "build_script_sha256": "fba7fffc5021c2cbc0ecbd06059ea49a165da4dc4b49446fa0ee7f4250870ece",
+    "source_tree_sha256": "bf40bdca1ec6cd23e4b3441451834930591c85fb772c4d9c49605b573d859dba",
+    "target_architecture": "amd64"
+  },
+  "realization": {
+    "command": "osbench payload build && osbench reference build && osbench reference inventory && osbench reference export-oci && osbench reference calibrate-unsynced --trials 20 && osbench reference lock-realize",
+    "policy": "Unresolved fields remain null until measured from the pinned built artifact; they may never be guessed."
+  },
+  "reference_builder_sources": {
+    "source_tree_sha256": "ee79015b0b6eda2474b9408392e5a12cde0145bc7b7ddc8886af8bc0c8ce8f40"
+  },
+  "reference_id": "debian-13.6-amd64-osbench-v0.1",
+  "resolved_from_installed_system": {
+    "container_package_count": null,
+    "container_package_manifest_sha256": null,
+    "coreutils_version": null,
+    "firmware_packages": [],
+    "image_sha256": null,
+    "installer_grub_cfg_sha256": null,
+    "installer_initrd_sha256": null,
+    "installer_iso_sha256": null,
+    "installer_iso_size_bytes": null,
+    "kernel_package": null,
+    "kernel_version": null,
+    "libc_version": null,
+    "oci_archive_sha256": null,
+    "oci_rootfs_sha256": null,
+    "ovmf_sha256": null,
+    "package_count": null,
+    "package_manifest_sha256": null,
+    "payload_sha256": null,
+    "qemu_version": null,
+    "raw_probe_manifest_sha256": null,
+    "shell_versions": {},
+    "systemd_version": null,
+    "unsynced_outcome_calibration_outcomes": [],
+    "unsynced_outcome_calibration_path": null,
+    "unsynced_outcome_calibration_profile": null,
+    "unsynced_outcome_calibration_sha256": null,
+    "unsynced_outcome_calibration_trial_count": null,
+    "workload_fixture_manifest_sha256": null,
+    "xorriso_version": null
+  },
+  "schema_version": "osbench.reference_lock.v1",
+  "source": {
+    "checksum_source": "Debian 13.6.0 amd64 iso-dvd SHA256SUMS",
+    "checksum_url": "https://cdimage.debian.org/debian-cd/13.6.0/amd64/iso-dvd/SHA256SUMS",
+    "filename": "debian-13.6.0-amd64-DVD-1.iso",
+    "kind": "debian_dvd1_iso",
+    "selection_reason": "DVD-1 contains the installer and a broad offline package set, allowing the pinned reference to install probe and workload dependencies without a moving network mirror.",
+    "sha256": "e97736b7f49af22497c8df95e381ea5025faf3575af4b7ca6d5f40971265364e",
+    "signature_url": "https://cdimage.debian.org/debian-cd/13.6.0/amd64/iso-dvd/SHA256SUMS.sign",
+    "size_bytes": 3992977408,
+    "url": "https://cloudfront.debian.net/debian-cd/13.6.0/amd64/iso-dvd/debian-13.6.0-amd64-DVD-1.iso",
+    "verification_guide_url": "https://www.debian.org/CD/verify"
+  },
+  "status": "source_pinned_image_not_materialized",
+  "virtual_machine": {
+    "cpu_model_correctness": "max",
+    "cpu_model_performance": "host",
+    "disk_format": "qcow2",
+    "disk_virtual_size_gb": 8,
+    "firmware": "OVMF UEFI",
+    "machine": "q35",
+    "memory_mb": 2048,
+    "network_device": "virtio-net-pci",
+    "rng_device": "virtio-rng-pci",
+    "serial_device": "16550A-compatible serial",
+    "smp": 2,
+    "storage_device": "virtio-blk-pci"
+  },
+  "workload_fixture_sources": {
+    "build_script_sha256": "0ccd22411b6ab97eccd11f3754d8cf7f2292cdf0c130022aa3e4121bb6a6f8ac",
+    "dynamic_elf_source_sha256": "2f4fbc4be8a7ef571b9a5a4a5cf66024f3a4b7f239fe970cf58b7d8cd8576eb2",
+    "pthread_source_sha256": "d2bbd0e3b6cf5b0a28ef49e80ddc7245decac6b9ec6cfec3c1670ba3db74299d",
+    "source_tree_sha256": "b1f90e590a7222404281f4a07388c7525a8e66a961a547fb28702692caf70ed3",
+    "static_elf_source_sha256": "07865e243fb262407247bc5747a6b0e19e4c5dcb77b5bdf95f6e1b1fd309b112",
+    "target_architecture": "amd64"
+  }
+}

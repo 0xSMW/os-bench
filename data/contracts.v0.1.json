@@ -1,0 +1,2394 @@
+[
+  {
+    "domain": "boot",
+    "id": "boot.clean.shutdown",
+    "level": "boot",
+    "prerequisites": [
+      "boot.init.start"
+    ],
+    "transport": "serial"
+  },
+  {
+    "domain": "boot",
+    "id": "boot.firmware.uefi_entry",
+    "level": "boot",
+    "prerequisites": [],
+    "transport": "serial"
+  },
+  {
+    "domain": "boot",
+    "id": "boot.init.start",
+    "level": "boot",
+    "prerequisites": [
+      "boot.rootfs.mount"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "boot",
+    "id": "boot.kernel.entry",
+    "level": "boot",
+    "prerequisites": [
+      "boot.firmware.uefi_entry"
+    ],
+    "transport": "serial"
+  },
+  {
+    "domain": "boot",
+    "id": "boot.reboot",
+    "level": "boot",
+    "prerequisites": [
+      "boot.clean.shutdown"
+    ],
+    "transport": "serial"
+  },
+  {
+    "domain": "boot",
+    "id": "boot.rootfs.mount",
+    "level": "boot",
+    "prerequisites": [
+      "boot.kernel.entry"
+    ],
+    "transport": "serial"
+  },
+  {
+    "domain": "boot",
+    "id": "boot.serial.output",
+    "level": "boot",
+    "prerequisites": [
+      "boot.kernel.entry"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "devfs",
+    "id": "devfs.nodes",
+    "level": "linux_process_environment",
+    "prerequisites": [
+      "process.fork.basic"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "devfs",
+    "id": "devfs.random",
+    "level": "linux_process_environment",
+    "prerequisites": [
+      "process.fork.basic"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "devfs",
+    "id": "devfs.tty",
+    "level": "linux_process_environment",
+    "prerequisites": [
+      "process.fork.basic"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "distro",
+    "id": "distro.accounts.root",
+    "level": "distro",
+    "prerequisites": [
+      "linux.uname"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "distro",
+    "id": "distro.boot.target",
+    "level": "distro",
+    "prerequisites": [
+      "linux.uname"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "distro",
+    "id": "distro.dns.configuration",
+    "level": "distro",
+    "prerequisites": [
+      "linux.uname"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "distro",
+    "id": "distro.filesystem_hierarchy",
+    "level": "distro",
+    "prerequisites": [
+      "linux.uname"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "distro",
+    "id": "distro.hostname",
+    "level": "distro",
+    "prerequisites": [
+      "linux.uname"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "distro",
+    "id": "distro.locale",
+    "level": "distro",
+    "prerequisites": [
+      "linux.uname"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "distro",
+    "id": "distro.logging.journal",
+    "level": "distro",
+    "prerequisites": [
+      "linux.uname"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "distro",
+    "id": "distro.network.defaults",
+    "level": "distro",
+    "prerequisites": [
+      "linux.uname"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "distro",
+    "id": "distro.os_release",
+    "level": "distro",
+    "prerequisites": [
+      "linux.uname"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "distro",
+    "id": "distro.timezone",
+    "level": "distro",
+    "prerequisites": [
+      "linux.uname"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "elf",
+    "id": "elf.argv_env",
+    "level": "linux_primitives",
+    "prerequisites": [
+      "machine.cpu.mode_transition"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "elf",
+    "id": "elf.auxv",
+    "level": "linux_process_environment",
+    "prerequisites": [
+      "process.fork.basic"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "elf",
+    "id": "elf.dynamic_loader.basic",
+    "level": "linux_process_environment",
+    "prerequisites": [
+      "process.fork.basic"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "elf",
+    "id": "elf.interpreter.error",
+    "level": "linux_process_environment",
+    "prerequisites": [
+      "process.fork.basic"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "elf",
+    "id": "elf.static.load",
+    "level": "linux_primitives",
+    "prerequisites": [
+      "machine.cpu.mode_transition"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "elf",
+    "id": "elf.tls",
+    "level": "linux_process_environment",
+    "prerequisites": [
+      "process.fork.basic"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "poll",
+    "id": "epoll.edge_triggered",
+    "level": "linux_system",
+    "prerequisites": [
+      "shell.command.exec"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "poll",
+    "id": "epoll.fd_lifecycle",
+    "level": "linux_system",
+    "prerequisites": [
+      "shell.command.exec"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "exhaustion",
+    "id": "exhaustion.disk.cleanup",
+    "level": "kernel_subsystems",
+    "prerequisites": [
+      "process.execution"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "exhaustion",
+    "id": "exhaustion.fd.cleanup",
+    "level": "kernel_subsystems",
+    "prerequisites": [
+      "process.execution"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "exhaustion",
+    "id": "exhaustion.memory.cleanup",
+    "level": "kernel_subsystems",
+    "prerequisites": [
+      "process.execution"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "exhaustion",
+    "id": "exhaustion.process.cleanup",
+    "level": "kernel_subsystems",
+    "prerequisites": [
+      "process.execution"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "exhaustion",
+    "id": "exhaustion.socket.cleanup",
+    "level": "kernel_subsystems",
+    "prerequisites": [
+      "process.execution"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "exhaustion",
+    "id": "exhaustion.thread.cleanup",
+    "level": "kernel_subsystems",
+    "prerequisites": [
+      "process.execution"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "failure",
+    "id": "failure.interrupted_operation",
+    "level": "kernel_subsystems",
+    "prerequisites": [
+      "process.execution"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "failure",
+    "id": "failure.invalid_fd",
+    "level": "linux_primitives",
+    "prerequisites": [
+      "machine.cpu.mode_transition"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "failure",
+    "id": "failure.invalid_pointer",
+    "level": "kernel_subsystems",
+    "prerequisites": [
+      "process.execution"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "failure",
+    "id": "failure.rollback",
+    "level": "kernel_subsystems",
+    "prerequisites": [
+      "process.execution"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "fd",
+    "id": "fd.close",
+    "level": "linux_primitives",
+    "prerequisites": [
+      "machine.cpu.mode_transition"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "fd",
+    "id": "fd.close_on_exec",
+    "level": "kernel_subsystems",
+    "prerequisites": [
+      "process.execution"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "fd",
+    "id": "fd.dup",
+    "level": "linux_primitives",
+    "prerequisites": [
+      "machine.cpu.mode_transition"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "fd",
+    "id": "fd.dup2.redirection",
+    "level": "kernel_subsystems",
+    "prerequisites": [
+      "process.execution"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "fd",
+    "id": "fd.exhaustion_cleanup",
+    "level": "kernel_subsystems",
+    "prerequisites": [
+      "process.execution"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "fd",
+    "id": "fd.inherit_fork",
+    "level": "kernel_subsystems",
+    "prerequisites": [
+      "process.execution"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "fd",
+    "id": "fd.lowest_available",
+    "level": "linux_primitives",
+    "prerequisites": [
+      "machine.cpu.mode_transition"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "fd",
+    "id": "fd.shared_offset",
+    "level": "kernel_subsystems",
+    "prerequisites": [
+      "process.execution"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "fd",
+    "id": "fd.table",
+    "level": "linux_primitives",
+    "prerequisites": [
+      "machine.cpu.mode_transition"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "filesystem",
+    "id": "fs.directory.create_remove",
+    "level": "linux_primitives",
+    "prerequisites": [
+      "machine.cpu.mode_transition"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "filesystem",
+    "id": "fs.directory.iteration",
+    "level": "kernel_subsystems",
+    "prerequisites": [
+      "process.execution"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "filesystem",
+    "id": "fs.ext4.persistence",
+    "level": "distro",
+    "prerequisites": [
+      "linux.uname"
+    ],
+    "transport": "guest_agent"
+  },
+  {
+    "domain": "filesystem",
+    "id": "fs.file.append.atomicity",
+    "level": "kernel_subsystems",
+    "prerequisites": [
+      "process.execution"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "filesystem",
+    "id": "fs.file.create",
+    "level": "linux_primitives",
+    "prerequisites": [
+      "machine.cpu.mode_transition"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "filesystem",
+    "id": "fs.file.fsync",
+    "level": "kernel_subsystems",
+    "prerequisites": [
+      "process.execution"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "filesystem",
+    "id": "fs.file.hardlink",
+    "level": "kernel_subsystems",
+    "prerequisites": [
+      "process.execution"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "filesystem",
+    "id": "fs.file.open",
+    "level": "linux_primitives",
+    "prerequisites": [
+      "machine.cpu.mode_transition"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "filesystem",
+    "id": "fs.file.read.partial_eof",
+    "level": "linux_primitives",
+    "prerequisites": [
+      "machine.cpu.mode_transition"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "filesystem",
+    "id": "fs.file.rename.atomicity",
+    "level": "kernel_subsystems",
+    "prerequisites": [
+      "process.execution"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "filesystem",
+    "id": "fs.file.seek",
+    "level": "linux_primitives",
+    "prerequisites": [
+      "machine.cpu.mode_transition"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "filesystem",
+    "id": "fs.file.stat",
+    "level": "linux_primitives",
+    "prerequisites": [
+      "machine.cpu.mode_transition"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "filesystem",
+    "id": "fs.file.symlink",
+    "level": "kernel_subsystems",
+    "prerequisites": [
+      "process.execution"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "filesystem",
+    "id": "fs.file.truncate",
+    "level": "kernel_subsystems",
+    "prerequisites": [
+      "process.execution"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "filesystem",
+    "id": "fs.file.unlink_open",
+    "level": "kernel_subsystems",
+    "prerequisites": [
+      "process.execution"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "filesystem",
+    "id": "fs.file.write.basic",
+    "level": "linux_primitives",
+    "prerequisites": [
+      "machine.cpu.mode_transition"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "filesystem",
+    "id": "fs.inode.exhaustion",
+    "level": "linux_system",
+    "prerequisites": [
+      "shell.command.exec"
+    ],
+    "transport": "guest_agent"
+  },
+  {
+    "domain": "filesystem",
+    "id": "fs.mount.basic",
+    "level": "linux_system",
+    "prerequisites": [
+      "shell.command.exec"
+    ],
+    "transport": "guest_agent"
+  },
+  {
+    "domain": "filesystem",
+    "id": "fs.mount.covering",
+    "level": "linux_system",
+    "prerequisites": [
+      "shell.command.exec"
+    ],
+    "transport": "guest_agent"
+  },
+  {
+    "domain": "filesystem",
+    "id": "fs.path.absolute_relative",
+    "level": "linux_primitives",
+    "prerequisites": [
+      "machine.cpu.mode_transition"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "filesystem",
+    "id": "fs.path.dotdot",
+    "level": "kernel_subsystems",
+    "prerequisites": [
+      "process.execution"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "filesystem",
+    "id": "fs.storage.full",
+    "level": "kernel_subsystems",
+    "prerequisites": [
+      "process.execution"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "filesystem",
+    "id": "fs.vfs.cross_filesystem",
+    "level": "linux_system",
+    "prerequisites": [
+      "shell.command.exec"
+    ],
+    "transport": "guest_agent"
+  },
+  {
+    "domain": "full",
+    "id": "full.boot_login_shell",
+    "level": "full_reconstruction",
+    "prerequisites": [
+      "workload.static_elf"
+    ],
+    "transport": "guest_agent"
+  },
+  {
+    "domain": "full",
+    "id": "full.database_crash_recovery",
+    "level": "full_reconstruction",
+    "prerequisites": [
+      "workload.static_elf"
+    ],
+    "transport": "guest_agent"
+  },
+  {
+    "domain": "full",
+    "id": "full.install_serve_reboot",
+    "level": "full_reconstruction",
+    "prerequisites": [
+      "workload.static_elf"
+    ],
+    "transport": "guest_agent"
+  },
+  {
+    "domain": "full",
+    "id": "full.user_build_run",
+    "level": "full_reconstruction",
+    "prerequisites": [
+      "workload.static_elf"
+    ],
+    "transport": "guest_agent"
+  },
+  {
+    "domain": "identity",
+    "id": "identity.credential_inheritance",
+    "level": "kernel_subsystems",
+    "prerequisites": [
+      "process.execution"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "identity",
+    "id": "identity.group_lookup",
+    "level": "posix_userspace",
+    "prerequisites": [
+      "elf.dynamic_loader.basic"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "identity",
+    "id": "identity.groups",
+    "level": "kernel_subsystems",
+    "prerequisites": [
+      "process.execution"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "identity",
+    "id": "identity.uid_gid",
+    "level": "kernel_subsystems",
+    "prerequisites": [
+      "process.execution"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "identity",
+    "id": "identity.user_lookup",
+    "level": "posix_userspace",
+    "prerequisites": [
+      "elf.dynamic_loader.basic"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "io",
+    "id": "io.block_device",
+    "level": "linux_system",
+    "prerequisites": [
+      "shell.command.exec"
+    ],
+    "transport": "guest_agent"
+  },
+  {
+    "domain": "io",
+    "id": "io.dev_null_zero",
+    "level": "linux_process_environment",
+    "prerequisites": [
+      "process.fork.basic"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "io",
+    "id": "io.device_hotplug",
+    "level": "linux_system",
+    "prerequisites": [
+      "shell.command.exec"
+    ],
+    "transport": "guest_agent"
+  },
+  {
+    "domain": "io",
+    "id": "io.interrupt_completion",
+    "level": "kernel_subsystems",
+    "prerequisites": [
+      "process.execution"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "io",
+    "id": "io.ioctl",
+    "level": "linux_system",
+    "prerequisites": [
+      "shell.command.exec"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "io",
+    "id": "io.nonblocking",
+    "level": "kernel_subsystems",
+    "prerequisites": [
+      "process.execution"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "io",
+    "id": "io.random",
+    "level": "linux_system",
+    "prerequisites": [
+      "shell.command.exec"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "ipc",
+    "id": "ipc.message_queue",
+    "level": "linux_system",
+    "prerequisites": [
+      "shell.command.exec"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "ipc",
+    "id": "ipc.semaphore",
+    "level": "kernel_subsystems",
+    "prerequisites": [
+      "process.execution"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "ipc",
+    "id": "ipc.shared_memory",
+    "level": "kernel_subsystems",
+    "prerequisites": [
+      "process.execution"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "ipc",
+    "id": "ipc.unix_socket",
+    "level": "kernel_subsystems",
+    "prerequisites": [
+      "process.execution"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "linux",
+    "id": "linux.boot_parameters",
+    "level": "linux_system",
+    "prerequisites": [
+      "shell.command.exec"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "linux",
+    "id": "linux.capability.basic",
+    "level": "linux_system",
+    "prerequisites": [
+      "shell.command.exec"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "linux",
+    "id": "linux.cgroup.basic",
+    "level": "linux_system",
+    "prerequisites": [
+      "shell.command.exec"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "linux",
+    "id": "linux.hostname",
+    "level": "linux_system",
+    "prerequisites": [
+      "shell.command.exec"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "linux",
+    "id": "linux.module.inventory",
+    "level": "linux_system",
+    "prerequisites": [
+      "shell.command.exec"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "linux",
+    "id": "linux.namespace.mount",
+    "level": "linux_system",
+    "prerequisites": [
+      "shell.command.exec"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "linux",
+    "id": "linux.sysctl",
+    "level": "linux_system",
+    "prerequisites": [
+      "shell.command.exec"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "linux",
+    "id": "linux.uname",
+    "level": "linux_system",
+    "prerequisites": [
+      "shell.command.exec"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "machine",
+    "id": "machine.block.read_write",
+    "level": "machine",
+    "prerequisites": [
+      "boot.firmware.uefi_entry"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "machine",
+    "id": "machine.clock.monotonic",
+    "level": "machine",
+    "prerequisites": [
+      "boot.firmware.uefi_entry"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "machine",
+    "id": "machine.cpu.mode_transition",
+    "level": "machine",
+    "prerequisites": [
+      "boot.firmware.uefi_entry"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "machine",
+    "id": "machine.exception.divide_zero",
+    "level": "machine",
+    "prerequisites": [
+      "boot.firmware.uefi_entry"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "machine",
+    "id": "machine.interrupt.timer",
+    "level": "machine",
+    "prerequisites": [
+      "boot.firmware.uefi_entry"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "machine",
+    "id": "machine.memory.page_tables",
+    "level": "machine",
+    "prerequisites": [
+      "boot.firmware.uefi_entry"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "machine",
+    "id": "machine.rng.read",
+    "level": "machine",
+    "prerequisites": [
+      "boot.firmware.uefi_entry"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "machine",
+    "id": "machine.serial.rx_tx",
+    "level": "machine",
+    "prerequisites": [
+      "boot.firmware.uefi_entry"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "machine",
+    "id": "machine.smp.start",
+    "level": "machine",
+    "prerequisites": [
+      "boot.firmware.uefi_entry"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "machine",
+    "id": "machine.syscall.trap",
+    "level": "machine",
+    "prerequisites": [
+      "boot.firmware.uefi_entry"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "memory",
+    "id": "memory.address_space.isolation",
+    "level": "kernel_subsystems",
+    "prerequisites": [
+      "process.execution"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "memory",
+    "id": "memory.brk",
+    "level": "kernel_subsystems",
+    "prerequisites": [
+      "process.execution"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "memory",
+    "id": "memory.copy_on_write",
+    "level": "kernel_subsystems",
+    "prerequisites": [
+      "process.execution"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "memory",
+    "id": "memory.mlock",
+    "level": "linux_system",
+    "prerequisites": [
+      "shell.command.exec"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "memory",
+    "id": "memory.mmap.anonymous",
+    "level": "kernel_subsystems",
+    "prerequisites": [
+      "process.execution"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "memory",
+    "id": "memory.mmap.file",
+    "level": "kernel_subsystems",
+    "prerequisites": [
+      "process.execution"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "memory",
+    "id": "memory.mprotect",
+    "level": "kernel_subsystems",
+    "prerequisites": [
+      "process.execution"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "memory",
+    "id": "memory.munmap",
+    "level": "kernel_subsystems",
+    "prerequisites": [
+      "process.execution"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "memory",
+    "id": "memory.overcommit_failure",
+    "level": "kernel_subsystems",
+    "prerequisites": [
+      "process.execution"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "memory",
+    "id": "memory.page_fault",
+    "level": "kernel_subsystems",
+    "prerequisites": [
+      "process.execution"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "memory",
+    "id": "memory.shared_mapping",
+    "level": "kernel_subsystems",
+    "prerequisites": [
+      "process.execution"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "memory",
+    "id": "memory.stack_growth",
+    "level": "kernel_subsystems",
+    "prerequisites": [
+      "process.execution"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "network",
+    "id": "network.dns.resolve",
+    "level": "distro",
+    "prerequisites": [
+      "linux.uname"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "network",
+    "id": "network.interface.enumeration",
+    "level": "linux_system",
+    "prerequisites": [
+      "shell.command.exec"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "network",
+    "id": "network.loopback",
+    "level": "kernel_subsystems",
+    "prerequisites": [
+      "process.execution"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "network",
+    "id": "network.route.local",
+    "level": "linux_system",
+    "prerequisites": [
+      "shell.command.exec"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "package",
+    "id": "package.conffile",
+    "level": "package_ecosystem",
+    "prerequisites": [
+      "distro.os_release"
+    ],
+    "transport": "guest_agent"
+  },
+  {
+    "domain": "package",
+    "id": "package.database.query",
+    "level": "package_ecosystem",
+    "prerequisites": [
+      "distro.os_release"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "package",
+    "id": "package.deb.install",
+    "level": "package_ecosystem",
+    "prerequisites": [
+      "distro.os_release"
+    ],
+    "transport": "guest_agent"
+  },
+  {
+    "domain": "package",
+    "id": "package.deb.remove",
+    "level": "package_ecosystem",
+    "prerequisites": [
+      "distro.os_release"
+    ],
+    "transport": "guest_agent"
+  },
+  {
+    "domain": "package",
+    "id": "package.deb.upgrade",
+    "level": "package_ecosystem",
+    "prerequisites": [
+      "distro.os_release"
+    ],
+    "transport": "guest_agent"
+  },
+  {
+    "domain": "package",
+    "id": "package.dependency",
+    "level": "package_ecosystem",
+    "prerequisites": [
+      "distro.os_release"
+    ],
+    "transport": "guest_agent"
+  },
+  {
+    "domain": "package",
+    "id": "package.dpkg.status",
+    "level": "package_ecosystem",
+    "prerequisites": [
+      "distro.os_release"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "package",
+    "id": "package.maintainer.postinst",
+    "level": "package_ecosystem",
+    "prerequisites": [
+      "distro.os_release"
+    ],
+    "transport": "guest_agent"
+  },
+  {
+    "domain": "package",
+    "id": "package.maintainer.preinst",
+    "level": "package_ecosystem",
+    "prerequisites": [
+      "distro.os_release"
+    ],
+    "transport": "guest_agent"
+  },
+  {
+    "domain": "package",
+    "id": "package.offline.apt",
+    "level": "package_ecosystem",
+    "prerequisites": [
+      "distro.os_release"
+    ],
+    "transport": "guest_agent"
+  },
+  {
+    "domain": "package",
+    "id": "package.rollback_failure",
+    "level": "package_ecosystem",
+    "prerequisites": [
+      "distro.os_release"
+    ],
+    "transport": "guest_agent"
+  },
+  {
+    "domain": "package",
+    "id": "package.service.install",
+    "level": "package_ecosystem",
+    "prerequisites": [
+      "distro.os_release"
+    ],
+    "transport": "guest_agent"
+  },
+  {
+    "domain": "package",
+    "id": "package.shared_library",
+    "level": "package_ecosystem",
+    "prerequisites": [
+      "distro.os_release"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "permission",
+    "id": "permission.device_access",
+    "level": "linux_system",
+    "prerequisites": [
+      "shell.command.exec"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "permission",
+    "id": "permission.directory.search",
+    "level": "kernel_subsystems",
+    "prerequisites": [
+      "process.execution"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "permission",
+    "id": "permission.mode.rwx",
+    "level": "kernel_subsystems",
+    "prerequisites": [
+      "process.execution"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "permission",
+    "id": "permission.owner_group",
+    "level": "kernel_subsystems",
+    "prerequisites": [
+      "process.execution"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "permission",
+    "id": "permission.root_override",
+    "level": "kernel_subsystems",
+    "prerequisites": [
+      "process.execution"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "permission",
+    "id": "permission.setuid_transition",
+    "level": "linux_system",
+    "prerequisites": [
+      "shell.command.exec"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "permission",
+    "id": "permission.signal_authorization",
+    "level": "kernel_subsystems",
+    "prerequisites": [
+      "process.execution"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "permission",
+    "id": "permission.umask",
+    "level": "kernel_subsystems",
+    "prerequisites": [
+      "process.execution"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "persistence",
+    "id": "persistence.configuration.reboot",
+    "level": "distro",
+    "prerequisites": [
+      "linux.uname"
+    ],
+    "transport": "guest_agent"
+  },
+  {
+    "domain": "persistence",
+    "id": "persistence.crash.synced",
+    "level": "full_reconstruction",
+    "prerequisites": [
+      "workload.static_elf"
+    ],
+    "transport": "guest_agent"
+  },
+  {
+    "domain": "persistence",
+    "id": "persistence.crash.unsynced_bounds",
+    "level": "full_reconstruction",
+    "prerequisites": [
+      "workload.static_elf"
+    ],
+    "transport": "guest_agent"
+  },
+  {
+    "domain": "persistence",
+    "id": "persistence.file.reboot",
+    "level": "distro",
+    "prerequisites": [
+      "linux.uname"
+    ],
+    "transport": "guest_agent"
+  },
+  {
+    "domain": "persistence",
+    "id": "persistence.metadata.reboot",
+    "level": "distro",
+    "prerequisites": [
+      "linux.uname"
+    ],
+    "transport": "guest_agent"
+  },
+  {
+    "domain": "persistence",
+    "id": "persistence.package.reboot",
+    "level": "distro",
+    "prerequisites": [
+      "linux.uname"
+    ],
+    "transport": "guest_agent"
+  },
+  {
+    "domain": "persistence",
+    "id": "persistence.service.reboot",
+    "level": "distro",
+    "prerequisites": [
+      "linux.uname"
+    ],
+    "transport": "guest_agent"
+  },
+  {
+    "domain": "persistence",
+    "id": "persistence.user.reboot",
+    "level": "distro",
+    "prerequisites": [
+      "linux.uname"
+    ],
+    "transport": "guest_agent"
+  },
+  {
+    "domain": "ipc",
+    "id": "pipe.atomic_write",
+    "level": "kernel_subsystems",
+    "prerequisites": [
+      "process.execution"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "ipc",
+    "id": "pipe.basic",
+    "level": "kernel_subsystems",
+    "prerequisites": [
+      "process.execution"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "ipc",
+    "id": "pipe.blocking",
+    "level": "kernel_subsystems",
+    "prerequisites": [
+      "process.execution"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "ipc",
+    "id": "pipe.eof",
+    "level": "kernel_subsystems",
+    "prerequisites": [
+      "process.execution"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "poll",
+    "id": "poll.pipe.readiness",
+    "level": "kernel_subsystems",
+    "prerequisites": [
+      "process.execution"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "poll",
+    "id": "poll.socket.readiness",
+    "level": "kernel_subsystems",
+    "prerequisites": [
+      "process.execution"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "poll",
+    "id": "poll.timeout",
+    "level": "kernel_subsystems",
+    "prerequisites": [
+      "process.execution"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "posix",
+    "id": "posix.utility.cat",
+    "level": "posix_userspace",
+    "prerequisites": [
+      "elf.dynamic_loader.basic"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "posix",
+    "id": "posix.utility.find",
+    "level": "posix_userspace",
+    "prerequisites": [
+      "elf.dynamic_loader.basic"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "posix",
+    "id": "posix.utility.grep",
+    "level": "posix_userspace",
+    "prerequisites": [
+      "elf.dynamic_loader.basic"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "posix",
+    "id": "posix.utility.sort",
+    "level": "posix_userspace",
+    "prerequisites": [
+      "elf.dynamic_loader.basic"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "process",
+    "id": "process.clone.sharing",
+    "level": "linux_system",
+    "prerequisites": [
+      "shell.command.exec"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "process",
+    "id": "process.environment",
+    "level": "linux_primitives",
+    "prerequisites": [
+      "machine.cpu.mode_transition"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "process",
+    "id": "process.execution",
+    "level": "linux_primitives",
+    "prerequisites": [
+      "machine.cpu.mode_transition"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "process",
+    "id": "process.execve.basic",
+    "level": "kernel_subsystems",
+    "prerequisites": [
+      "process.execution"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "process",
+    "id": "process.exit.status",
+    "level": "kernel_subsystems",
+    "prerequisites": [
+      "process.execution"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "process",
+    "id": "process.fork.basic",
+    "level": "kernel_subsystems",
+    "prerequisites": [
+      "process.execution"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "process",
+    "id": "process.parent_child",
+    "level": "kernel_subsystems",
+    "prerequisites": [
+      "process.execution"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "process",
+    "id": "process.process_group",
+    "level": "kernel_subsystems",
+    "prerequisites": [
+      "process.execution"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "process",
+    "id": "process.resource_limits",
+    "level": "kernel_subsystems",
+    "prerequisites": [
+      "process.execution"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "process",
+    "id": "process.session",
+    "level": "kernel_subsystems",
+    "prerequisites": [
+      "process.execution"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "process",
+    "id": "process.wait.basic",
+    "level": "kernel_subsystems",
+    "prerequisites": [
+      "process.execution"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "process",
+    "id": "process.zombie.reap",
+    "level": "kernel_subsystems",
+    "prerequisites": [
+      "process.execution"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "procfs",
+    "id": "procfs.fd.links",
+    "level": "linux_process_environment",
+    "prerequisites": [
+      "process.fork.basic"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "procfs",
+    "id": "procfs.mount",
+    "level": "linux_process_environment",
+    "prerequisites": [
+      "process.fork.basic"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "procfs",
+    "id": "procfs.process.cmdline",
+    "level": "linux_process_environment",
+    "prerequisites": [
+      "process.fork.basic"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "procfs",
+    "id": "procfs.self.status",
+    "level": "linux_process_environment",
+    "prerequisites": [
+      "process.fork.basic"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "procfs",
+    "id": "procfs.sysctl.read_write",
+    "level": "linux_system",
+    "prerequisites": [
+      "shell.command.exec"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "scheduling",
+    "id": "scheduling.affinity",
+    "level": "linux_system",
+    "prerequisites": [
+      "shell.command.exec"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "scheduling",
+    "id": "scheduling.block_wakeup",
+    "level": "kernel_subsystems",
+    "prerequisites": [
+      "process.execution"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "scheduling",
+    "id": "scheduling.fair_progress",
+    "level": "kernel_subsystems",
+    "prerequisites": [
+      "process.execution"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "scheduling",
+    "id": "scheduling.preemption",
+    "level": "kernel_subsystems",
+    "prerequisites": [
+      "process.execution"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "scheduling",
+    "id": "scheduling.priority",
+    "level": "linux_system",
+    "prerequisites": [
+      "shell.command.exec"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "scheduling",
+    "id": "scheduling.starvation_resistance",
+    "level": "kernel_subsystems",
+    "prerequisites": [
+      "process.execution"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "security",
+    "id": "security.failure_containment",
+    "level": "full_reconstruction",
+    "prerequisites": [
+      "workload.static_elf"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "security",
+    "id": "security.file_isolation",
+    "level": "linux_system",
+    "prerequisites": [
+      "shell.command.exec"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "security",
+    "id": "security.privileged_operation",
+    "level": "linux_system",
+    "prerequisites": [
+      "shell.command.exec"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "security",
+    "id": "security.process_memory_isolation",
+    "level": "linux_system",
+    "prerequisites": [
+      "shell.command.exec"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "service",
+    "id": "service.dependencies",
+    "level": "distro",
+    "prerequisites": [
+      "linux.uname"
+    ],
+    "transport": "guest_agent"
+  },
+  {
+    "domain": "service",
+    "id": "service.enable.start",
+    "level": "distro",
+    "prerequisites": [
+      "linux.uname"
+    ],
+    "transport": "guest_agent"
+  },
+  {
+    "domain": "service",
+    "id": "service.environment",
+    "level": "distro",
+    "prerequisites": [
+      "linux.uname"
+    ],
+    "transport": "guest_agent"
+  },
+  {
+    "domain": "service",
+    "id": "service.failure_state",
+    "level": "distro",
+    "prerequisites": [
+      "linux.uname"
+    ],
+    "transport": "guest_agent"
+  },
+  {
+    "domain": "service",
+    "id": "service.lifecycle.start_stop",
+    "level": "distro",
+    "prerequisites": [
+      "linux.uname"
+    ],
+    "transport": "guest_agent"
+  },
+  {
+    "domain": "service",
+    "id": "service.logging",
+    "level": "distro",
+    "prerequisites": [
+      "linux.uname"
+    ],
+    "transport": "guest_agent"
+  },
+  {
+    "domain": "service",
+    "id": "service.manager.ready",
+    "level": "distro",
+    "prerequisites": [
+      "linux.uname"
+    ],
+    "transport": "guest_agent"
+  },
+  {
+    "domain": "service",
+    "id": "service.restart",
+    "level": "distro",
+    "prerequisites": [
+      "linux.uname"
+    ],
+    "transport": "guest_agent"
+  },
+  {
+    "domain": "shell",
+    "id": "shell.background_job",
+    "level": "posix_userspace",
+    "prerequisites": [
+      "elf.dynamic_loader.basic"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "shell",
+    "id": "shell.command.exec",
+    "level": "posix_userspace",
+    "prerequisites": [
+      "elf.dynamic_loader.basic"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "shell",
+    "id": "shell.environment",
+    "level": "posix_userspace",
+    "prerequisites": [
+      "elf.dynamic_loader.basic"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "shell",
+    "id": "shell.exit_status",
+    "level": "posix_userspace",
+    "prerequisites": [
+      "elf.dynamic_loader.basic"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "shell",
+    "id": "shell.pipeline.basic",
+    "level": "posix_userspace",
+    "prerequisites": [
+      "elf.dynamic_loader.basic"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "shell",
+    "id": "shell.quoting",
+    "level": "posix_userspace",
+    "prerequisites": [
+      "elf.dynamic_loader.basic"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "shell",
+    "id": "shell.redirection",
+    "level": "posix_userspace",
+    "prerequisites": [
+      "elf.dynamic_loader.basic"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "shell",
+    "id": "shell.working_directory",
+    "level": "posix_userspace",
+    "prerequisites": [
+      "elf.dynamic_loader.basic"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "signal",
+    "id": "signal.default_action",
+    "level": "kernel_subsystems",
+    "prerequisites": [
+      "process.execution"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "signal",
+    "id": "signal.delivery",
+    "level": "kernel_subsystems",
+    "prerequisites": [
+      "process.execution"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "signal",
+    "id": "signal.handler.return",
+    "level": "kernel_subsystems",
+    "prerequisites": [
+      "process.execution"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "signal",
+    "id": "signal.interrupt_syscall",
+    "level": "kernel_subsystems",
+    "prerequisites": [
+      "process.execution"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "signal",
+    "id": "signal.mask",
+    "level": "kernel_subsystems",
+    "prerequisites": [
+      "process.execution"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "signal",
+    "id": "signal.pending",
+    "level": "kernel_subsystems",
+    "prerequisites": [
+      "process.execution"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "signal",
+    "id": "signal.process_group",
+    "level": "kernel_subsystems",
+    "prerequisites": [
+      "process.execution"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "signal",
+    "id": "signal.timer",
+    "level": "kernel_subsystems",
+    "prerequisites": [
+      "process.execution"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "socket",
+    "id": "socket.error",
+    "level": "kernel_subsystems",
+    "prerequisites": [
+      "process.execution"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "socket",
+    "id": "socket.shutdown",
+    "level": "kernel_subsystems",
+    "prerequisites": [
+      "process.execution"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "socket",
+    "id": "socket.tcp.listen_accept",
+    "level": "kernel_subsystems",
+    "prerequisites": [
+      "process.execution"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "socket",
+    "id": "socket.tcp.loopback",
+    "level": "kernel_subsystems",
+    "prerequisites": [
+      "process.execution"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "socket",
+    "id": "socket.tcp.stream_semantics",
+    "level": "kernel_subsystems",
+    "prerequisites": [
+      "process.execution"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "socket",
+    "id": "socket.udp.loopback",
+    "level": "kernel_subsystems",
+    "prerequisites": [
+      "process.execution"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "socket",
+    "id": "socket.unix.stream",
+    "level": "kernel_subsystems",
+    "prerequisites": [
+      "process.execution"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "sync",
+    "id": "sync.atomic.basic",
+    "level": "kernel_subsystems",
+    "prerequisites": [
+      "process.execution"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "sync",
+    "id": "sync.barrier",
+    "level": "linux_process_environment",
+    "prerequisites": [
+      "process.fork.basic"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "sync",
+    "id": "sync.condition",
+    "level": "linux_process_environment",
+    "prerequisites": [
+      "process.fork.basic"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "sync",
+    "id": "sync.futex.wait_wake",
+    "level": "linux_system",
+    "prerequisites": [
+      "shell.command.exec"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "sync",
+    "id": "sync.mutex.exclusion",
+    "level": "kernel_subsystems",
+    "prerequisites": [
+      "process.execution"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "sync",
+    "id": "sync.priority_inversion",
+    "level": "kernel_subsystems",
+    "prerequisites": [
+      "process.execution"
+    ],
+    "transport": "guest_agent"
+  },
+  {
+    "domain": "sync",
+    "id": "sync.rwlock",
+    "level": "linux_process_environment",
+    "prerequisites": [
+      "process.fork.basic"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "sync",
+    "id": "sync.semaphore",
+    "level": "kernel_subsystems",
+    "prerequisites": [
+      "process.execution"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "sysfs",
+    "id": "sysfs.device_tree",
+    "level": "linux_system",
+    "prerequisites": [
+      "shell.command.exec"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "sysfs",
+    "id": "sysfs.mount",
+    "level": "linux_process_environment",
+    "prerequisites": [
+      "process.fork.basic"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "thread",
+    "id": "thread.blocking_isolation",
+    "level": "kernel_subsystems",
+    "prerequisites": [
+      "process.execution"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "thread",
+    "id": "thread.create_join",
+    "level": "kernel_subsystems",
+    "prerequisites": [
+      "process.execution"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "thread",
+    "id": "thread.exit",
+    "level": "kernel_subsystems",
+    "prerequisites": [
+      "process.execution"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "thread",
+    "id": "thread.fork_semantics",
+    "level": "linux_process_environment",
+    "prerequisites": [
+      "process.fork.basic"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "thread",
+    "id": "thread.shared_fd",
+    "level": "kernel_subsystems",
+    "prerequisites": [
+      "process.execution"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "thread",
+    "id": "thread.tls",
+    "level": "linux_process_environment",
+    "prerequisites": [
+      "process.fork.basic"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "time",
+    "id": "time.clock.monotonic",
+    "level": "kernel_subsystems",
+    "prerequisites": [
+      "process.execution"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "time",
+    "id": "time.clock.realtime",
+    "level": "kernel_subsystems",
+    "prerequisites": [
+      "process.execution"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "time",
+    "id": "time.interval_timer",
+    "level": "kernel_subsystems",
+    "prerequisites": [
+      "process.execution"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "time",
+    "id": "time.nanosleep",
+    "level": "kernel_subsystems",
+    "prerequisites": [
+      "process.execution"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "time",
+    "id": "time.timeout.poll",
+    "level": "kernel_subsystems",
+    "prerequisites": [
+      "process.execution"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "time",
+    "id": "time.timerfd",
+    "level": "linux_system",
+    "prerequisites": [
+      "shell.command.exec"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "tty",
+    "id": "tty.basic_io",
+    "level": "kernel_subsystems",
+    "prerequisites": [
+      "process.execution"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "tty",
+    "id": "tty.canonical_mode",
+    "level": "linux_process_environment",
+    "prerequisites": [
+      "process.fork.basic"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "tty",
+    "id": "tty.echo",
+    "level": "linux_process_environment",
+    "prerequisites": [
+      "process.fork.basic"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "tty",
+    "id": "tty.job_control",
+    "level": "posix_userspace",
+    "prerequisites": [
+      "elf.dynamic_loader.basic"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "tty",
+    "id": "tty.pty",
+    "level": "linux_process_environment",
+    "prerequisites": [
+      "process.fork.basic"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "tty",
+    "id": "tty.signal_control_chars",
+    "level": "linux_process_environment",
+    "prerequisites": [
+      "process.fork.basic"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "workload",
+    "id": "workload.c.compile_link_run",
+    "level": "real_workloads",
+    "prerequisites": [
+      "package.dpkg.status"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "workload",
+    "id": "workload.compression.roundtrip",
+    "level": "real_workloads",
+    "prerequisites": [
+      "package.dpkg.status"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "workload",
+    "id": "workload.coreutils.pipeline",
+    "level": "real_workloads",
+    "prerequisites": [
+      "package.dpkg.status"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "workload",
+    "id": "workload.dns.lookup",
+    "level": "real_workloads",
+    "prerequisites": [
+      "package.dpkg.status"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "workload",
+    "id": "workload.dynamic_elf",
+    "level": "real_workloads",
+    "prerequisites": [
+      "package.dpkg.status"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "workload",
+    "id": "workload.git.repository",
+    "level": "real_workloads",
+    "prerequisites": [
+      "package.dpkg.status"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "workload",
+    "id": "workload.http.server_client",
+    "level": "real_workloads",
+    "prerequisites": [
+      "package.dpkg.status"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "workload",
+    "id": "workload.package.install",
+    "level": "real_workloads",
+    "prerequisites": [
+      "package.dpkg.status"
+    ],
+    "transport": "guest_agent"
+  },
+  {
+    "domain": "workload",
+    "id": "workload.pthread.program",
+    "level": "real_workloads",
+    "prerequisites": [
+      "package.dpkg.status"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "workload",
+    "id": "workload.python.basic",
+    "level": "real_workloads",
+    "prerequisites": [
+      "package.dpkg.status"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "workload",
+    "id": "workload.service.start",
+    "level": "real_workloads",
+    "prerequisites": [
+      "package.dpkg.status"
+    ],
+    "transport": "guest_agent"
+  },
+  {
+    "domain": "workload",
+    "id": "workload.shell.script",
+    "level": "real_workloads",
+    "prerequisites": [
+      "package.dpkg.status"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "workload",
+    "id": "workload.sqlite.transaction",
+    "level": "real_workloads",
+    "prerequisites": [
+      "package.dpkg.status"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "workload",
+    "id": "workload.ssh.loopback",
+    "level": "real_workloads",
+    "prerequisites": [
+      "package.dpkg.status"
+    ],
+    "transport": "guest_agent"
+  },
+  {
+    "domain": "workload",
+    "id": "workload.static_elf",
+    "level": "real_workloads",
+    "prerequisites": [
+      "package.dpkg.status"
+    ],
+    "transport": "host"
+  },
+  {
+    "domain": "workload",
+    "id": "workload.tcp.client_server",
+    "level": "real_workloads",
+    "prerequisites": [
+      "package.dpkg.status"
+    ],
+    "transport": "host"
+  }
+]

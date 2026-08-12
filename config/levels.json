@@ -1,0 +1,15 @@
+{
+  "levels": [
+    "boot",
+    "machine",
+    "linux_primitives",
+    "kernel_subsystems",
+    "linux_process_environment",
+    "posix_userspace",
+    "linux_system",
+    "distro",
+    "package_ecosystem",
+    "real_workloads",
+    "full_reconstruction"
+  ]
+}

@@ -1,0 +1,14 @@
+schema_version: osbench.workload.v1
+name: sqlite
+level: real_workloads
+description: Executable sqlite compatibility workload.
+command: python3 -c 'import sqlite3,tempfile,os;p=tempfile.mktemp();c=sqlite3.connect(p);c.execute(\"create table t(x)\");c.execute(\"insert into t values (1)\");c.commit();print(c.execute(\"select x from t\").fetchone()[0]);c.close();os.unlink(p)'
+contracts:
+- fs.file.fsync
+- fs.file.open
+- fs.file.rename.atomicity
+- fs.file.write.basic
+- memory.mmap.file
+- workload.sqlite.transaction
+timeout_seconds: 60
+transport: host

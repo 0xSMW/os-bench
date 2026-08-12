@@ -1,0 +1,12 @@
+schema_version: osbench.workload.v1
+name: dynamic_elf
+level: real_workloads
+description: Executable dynamic_elf compatibility workload.
+command: /var/lib/osbench/workloads/dynamic-elf alpha beta
+contracts:
+- elf.argv_env
+- elf.auxv
+- elf.dynamic_loader.basic
+- workload.dynamic_elf
+timeout_seconds: 60
+transport: host

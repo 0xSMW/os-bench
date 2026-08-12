@@ -1,0 +1,6 @@
+[Unit]
+Description=OSBench package fixture
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/osbench-hello
+RemainAfterExit=yes

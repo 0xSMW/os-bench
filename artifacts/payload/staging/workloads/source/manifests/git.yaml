@@ -1,0 +1,12 @@
+schema_version: osbench.workload.v1
+name: git
+level: real_workloads
+description: Executable git compatibility workload.
+command: /bin/sh -c 'd=$(mktemp -d); git init -q "$d"; echo x > "$d/f"; git -C "$d" add f; git -C "$d" status --porcelain; rm -rf "$d"'
+contracts:
+- fs.directory.create_remove
+- fs.file.rename.atomicity
+- fs.file.write.basic
+- workload.git.repository
+timeout_seconds: 60
+transport: host

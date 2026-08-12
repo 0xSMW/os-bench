@@ -1,0 +1,106 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://osbench.dev/schema/contract.v1.json",
+  "title": "OSBench Contract v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version", "id", "title", "domain", "level", "abstraction",
+    "operation", "description", "prerequisites", "sources", "observables",
+    "normalization", "equivalence", "invariants", "error_conditions",
+    "case_dimensions", "orthogonal_with", "fault_injection", "generator",
+    "timeouts", "transport", "tags"
+  ],
+  "properties": {
+    "schema_version": {"const": "osbench.contract.v1"},
+    "id": {"type": "string", "pattern": "^[a-z][a-z0-9_]*(\\.[a-z0-9_]+)+$", "maxLength": 120},
+    "title": {"type": "string", "minLength": 3, "maxLength": 160},
+    "domain": {"type": "string", "pattern": "^[a-z][a-z0-9_]*$"},
+    "level": {
+      "enum": [
+        "boot", "machine", "linux_primitives", "kernel_subsystems",
+        "linux_process_environment", "posix_userspace", "linux_system",
+        "distro", "package_ecosystem", "real_workloads", "full_reconstruction"
+      ]
+    },
+    "abstraction": {"type": "string", "minLength": 1, "maxLength": 80},
+    "operation": {"type": "string", "minLength": 1, "maxLength": 100},
+    "description": {"type": "string", "minLength": 20},
+    "prerequisites": {
+      "type": "array", "items": {"type": "string", "pattern": "^[a-z][a-z0-9_]*(\\.[a-z0-9_]+)+$"}, "uniqueItems": true
+    },
+    "sources": {
+      "type": "array", "minItems": 1,
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["type", "reference"],
+        "properties": {
+          "type": {"enum": ["posix", "linux", "debian", "debian_oracle", "kernelbench", "kselftest", "ltp", "syzkaller", "autopkgtest", "book", "implementation_source", "empirical"]},
+          "reference": {"type": "string", "minLength": 3},
+          "probe": {"type": "string"},
+          "license": {"type": "string"},
+          "notes": {"type": "string"}
+        }
+      }
+    },
+    "observables": {
+      "type": "array", "minItems": 1, "uniqueItems": true,
+      "items": {"enum": [
+        "boot_log", "serial_output", "syscall_return", "errno", "stdout", "stderr", "exit_code", "signal",
+        "filesystem_state", "file_contents", "metadata", "permissions", "links", "process_tree", "fd_state",
+        "memory_state", "socket_behavior", "packet_trace", "service_state", "mount_state", "package_state",
+        "persistent_state", "timing", "resource_usage", "identity", "environment", "device_state"
+      ]}
+    },
+    "normalization": {
+      "type": "array", "uniqueItems": true,
+      "items": {"enum": ["pid", "ppid", "tid", "timestamps", "temporary_paths", "inode", "ephemeral_port", "addresses", "directory_order", "scheduler_order", "host_metadata", "none"]}
+    },
+    "equivalence": {
+      "type": "object", "additionalProperties": false, "required": ["type"],
+      "properties": {
+        "type": {"enum": ["exact", "semantic", "set", "multiset", "range", "relation", "partial_order"]},
+        "comparator": {"type": "string"},
+        "tolerance": {"type": "number", "minimum": 0},
+        "notes": {"type": "string"}
+      }
+    },
+    "invariants": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 5}},
+    "error_conditions": {"type": "array", "items": {"type": "string", "minLength": 3}},
+    "state_transitions": {"type": "array", "items": {"type": "string", "minLength": 3}},
+    "cleanup_invariants": {"type": "array", "items": {"type": "string", "minLength": 3}},
+    "resource_invariants": {"type": "array", "items": {"type": "string", "minLength": 3}},
+    "legal_nondeterminism": {"type": "array", "items": {"type": "string", "minLength": 3}},
+    "case_dimensions": {
+      "type": "array", "minItems": 1, "uniqueItems": true,
+      "items": {"enum": ["primitive", "boundary", "state_transition", "composition", "concurrency", "isolation", "failure", "persistence", "exhaustion", "workload", "performance"]}
+    },
+    "orthogonal_with": {
+      "type": "array", "items": {"type": "string", "pattern": "^[a-z][a-z0-9_]*(\\.[a-z0-9_]+)+$"}, "uniqueItems": true
+    },
+    "fault_injection": {
+      "type": "array", "uniqueItems": true,
+      "items": {"enum": ["invalid_argument", "invalid_pointer", "resource_exhaustion", "interrupted_operation", "process_termination", "power_loss", "disk_full", "inode_exhaustion", "network_loss", "permission_denied", "corrupt_input", "timeout", "none"]}
+    },
+    "generator": {
+      "type": "object", "additionalProperties": false,
+      "required": ["implementation", "parameters"],
+      "properties": {
+        "implementation": {"type": "string", "pattern": "^[a-zA-Z_][a-zA-Z0-9_.]*$"},
+        "version": {"type": "string"},
+        "parameters": {"type": "object"},
+        "probe": {"type": ["string", "null"]},
+        "cases_per_contract": {"type": "integer", "minimum": 1, "maximum": 1000}
+      }
+    },
+    "timeouts": {
+      "type": "object", "additionalProperties": false, "required": ["case_seconds"],
+      "properties": {"case_seconds": {"type": "number", "exclusiveMinimum": 0}, "boot_seconds": {"type": "number", "exclusiveMinimum": 0}}
+    },
+    "transport": {"enum": ["none", "serial", "raw_syscall", "guest_agent", "shell", "ssh", "host"]},
+    "workloads": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "difficulty": {"enum": ["foundational", "basic", "intermediate", "advanced", "macro"]},
+    "status": {"enum": ["draft", "reviewed", "accepted"]},
+    "tags": {"type": "array", "minItems": 1, "items": {"type": "string", "pattern": "^[a-z0-9_-]+$"}, "uniqueItems": true}
+  }
+}

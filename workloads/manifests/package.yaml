@@ -1,0 +1,10 @@
+schema_version: osbench.workload.v1
+name: package
+level: package_ecosystem
+description: Executable package compatibility workload.
+command: dpkg-query -W base-files
+contracts:
+- package.database.query
+- package.dpkg.status
+timeout_seconds: 60
+transport: host

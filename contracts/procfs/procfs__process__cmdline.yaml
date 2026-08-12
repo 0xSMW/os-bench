@@ -1,0 +1,87 @@
+schema_version: osbench.contract.v1
+id: procfs.process.cmdline
+title: Procfs Process Cmdline
+domain: procfs
+level: linux_process_environment
+abstraction: procfs
+operation: process.cmdline
+description: Measures the externally observable Linux-compatible semantics of process cmdline for the
+  procfs abstraction, including successful execution, errors, state changes, cleanup, composition, contention,
+  and behavior under bounded resource pressure.
+prerequisites:
+- procfs.mount
+- exhaustion.disk.cleanup
+sources:
+- type: linux
+  reference: Linux ABI documentation and man-pages
+- type: book
+  reference: Modern Operating Systems, 5th ed., relevant subsystem and design chapters
+observables:
+- syscall_return
+- errno
+- stdout
+- stderr
+- exit_code
+normalization:
+- none
+equivalence:
+  type: semantic
+  comparator: osbench.comparators.compare
+invariants:
+- The operation produces the same externally visible state relation as the pinned Debian reference.
+- Successful completion preserves all unrelated process, filesystem, memory, device, and credential state.
+- Repeated execution with the same initial state and seed remains within the Contract's declared equivalence
+  relation.
+error_conditions:
+- Invalid arguments return the reference error without committing forbidden partial state.
+- Insufficient permissions or resources fail with reference-compatible authorization and cleanup behavior.
+state_transitions:
+- initial -> operation in progress -> completed or rejected
+- failure -> resources released -> known-good follow-up operation succeeds
+cleanup_invariants:
+- All evaluator-created resources are released or remain only when persistence is part of the Contract.
+- A failed operation does not accumulate leaked descriptors, processes, memory, locks, sockets, or package
+  state.
+resource_invariants:
+- Resource ownership and accounting match the observable reference relation.
+- Exhaustion is bounded and leaves the system able to execute a known-good follow-up operation.
+legal_nondeterminism:
+- Opaque identifiers and scheduling order may differ only when explicitly normalized.
+case_dimensions:
+- primitive
+- boundary
+- state_transition
+- composition
+- concurrency
+- isolation
+- failure
+- persistence
+- exhaustion
+- workload
+- performance
+orthogonal_with:
+- procfs.self.status
+- thread.tls
+fault_injection:
+- interrupted_operation
+- invalid_argument
+- resource_exhaustion
+generator:
+  implementation: generators.common.contract_case
+  version: '1'
+  parameters:
+    contract_id: procfs.process.cmdline
+  probe: generic
+  cases_per_contract: 10
+timeouts:
+  case_seconds: 20
+  boot_seconds: 240
+transport: host
+workloads: []
+difficulty: intermediate
+status: accepted
+tags:
+- behavioral
+- linux
+- linux_process_environment
+- procfs

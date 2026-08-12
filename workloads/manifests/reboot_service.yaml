@@ -1,0 +1,12 @@
+schema_version: osbench.workload.v1
+name: reboot_service
+level: full_reconstruction
+description: Executable reboot_service compatibility workload.
+command: /bin/true
+contracts:
+- full.install_serve_reboot
+- package.deb.install
+- persistence.service.reboot
+- service.enable.start
+timeout_seconds: 60
+transport: guest_agent

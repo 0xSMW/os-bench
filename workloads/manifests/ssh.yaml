@@ -1,0 +1,13 @@
+schema_version: osbench.workload.v1
+name: ssh
+level: real_workloads
+description: Executable ssh compatibility workload.
+command: /var/lib/osbench/workloads/fixtures/ssh_loopback.sh
+contracts:
+- permission.setuid_transition
+- service.lifecycle.start_stop
+- socket.tcp.stream_semantics
+- tty.pty
+- workload.ssh.loopback
+timeout_seconds: 60
+transport: guest_agent

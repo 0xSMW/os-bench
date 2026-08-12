@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.venv/
+*.egg-info/
+artifacts/reference/*.qcow2
+artifacts/reference/*.iso
+artifacts/reference/*.tar
+artifacts/reference/oci-layout/blobs/
+artifacts/oracle/
+artifacts/runs/
+results/*.json
+!results/.gitkeep
+.cache/
+.DS_Store

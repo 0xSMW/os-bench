@@ -1,0 +1,39 @@
+name: reference-oracle
+on:
+  workflow_dispatch:
+
+jobs:
+  build-and-validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+      - run: docker compose build
+      - run: docker compose run --rm osbench reference lock-sources --check
+      - run: docker compose run --rm osbench reference preflight
+      - run: docker compose run --rm osbench payload build
+      - run: docker compose run --rm osbench reference build
+      - run: docker compose run --rm osbench reference inventory
+      - run: docker compose run --rm osbench reference export-oci
+      - name: Calibrate accepted unsynced-write crash outcomes on the pinned oracle
+        run: >-
+          docker compose run --rm osbench reference calibrate-unsynced
+          --trials 20
+      - run: docker compose run --rm osbench reference lock-realize
+      - name: Verify the realized lock against every materialized artifact
+        run: docker compose run --rm osbench reference preflight --verify-hashes --strict
+      - run: docker compose run --rm -e OSBENCH_REFERENCE_MODE=qemu osbench oracle selftest
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: osbench-reference-validation
+          path: |
+            artifacts/reference/lock.realized.json
+            artifacts/reference/inventory/
+            artifacts/reference/installer/manifest.json
+            artifacts/reference/first-boot.json
+            artifacts/reference/oci-layout/osbench-manifest.json
+            artifacts/reference/*.log
+            artifacts/runs/
+            reference/oracle/unsynced_outcomes.*.json
+            results/oracle-selftest.json

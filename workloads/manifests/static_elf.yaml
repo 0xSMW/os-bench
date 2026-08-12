@@ -1,0 +1,12 @@
+schema_version: osbench.workload.v1
+name: static_elf
+level: real_workloads
+description: Executable static_elf compatibility workload.
+command: /var/lib/osbench/workloads/static-elf
+contracts:
+- elf.static.load
+- fs.file.write.basic
+- process.execution
+- workload.static_elf
+timeout_seconds: 60
+transport: host

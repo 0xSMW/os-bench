@@ -1,0 +1,8 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: osbench-hello
+Source: https://example.invalid/osbench
+
+Files: *
+Copyright: 2026 OSBench contributors
+License: MIT
+ Permission is hereby granted, free of charge, to any person obtaining a copy.

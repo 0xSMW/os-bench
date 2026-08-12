@@ -1,0 +1,12 @@
+schema_version: osbench.workload.v1
+name: http
+level: real_workloads
+description: Executable http compatibility workload.
+command: python3 /var/lib/osbench/workloads/fixtures/http_loopback.py
+contracts:
+- poll.socket.readiness
+- socket.tcp.loopback
+- thread.create_join
+- workload.http.server_client
+timeout_seconds: 60
+transport: host

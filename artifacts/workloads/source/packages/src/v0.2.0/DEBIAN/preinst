@@ -1,0 +1,5 @@
+#!/bin/sh
+set -eu
+mkdir -p /var/lib/osbench-hello
+printf '%s\n' "preinst:$1" >> /var/lib/osbench-hello/maintainer.log
+exit 0

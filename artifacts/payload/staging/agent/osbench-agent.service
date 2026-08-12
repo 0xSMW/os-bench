@@ -1,0 +1,16 @@
+[Unit]
+Description=OSBench serial evaluator agent
+After=multi-user.target osbench-firstboot.service
+Conflicts=serial-getty@ttyS0.service
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 -u /usr/local/lib/osbench/osbench_agent.py
+Restart=always
+RestartSec=1
+StandardInput=null
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

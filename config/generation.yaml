@@ -1,0 +1,17 @@
+profiles:
+  public:
+    reveal_parameters: true
+    include_performance: true
+  hidden:
+    reveal_parameters: false
+    include_performance: true
+randomized_fields:
+  - filenames
+  - path_depth
+  - byte_counts
+  - process_counts
+  - thread_counts
+  - ports
+  - timeouts
+  - resource_limits
+  - schedules

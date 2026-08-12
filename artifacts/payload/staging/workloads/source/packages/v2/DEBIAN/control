@@ -1,0 +1,7 @@
+Package: osbench-hello
+Version: 0.2.0
+Section: utils
+Priority: optional
+Architecture: all
+Maintainer: OSBench <noreply@example.invalid>
+Description: deterministic OSBench package fixture 0.2.0

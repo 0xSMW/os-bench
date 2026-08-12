@@ -1,0 +1,13 @@
+{
+  "schema_version": "osbench.accepted_outcomes.v1",
+  "benchmark_version": "0.1.0",
+  "reference_id": "debian-13.6-amd64-osbench-v0.1",
+  "contract": "persistence.crash.unsynced_bounds",
+  "profile": "macos_tcg",
+  "trial_count": 0,
+  "reference_image_sha256": null,
+  "payload_sha256": null,
+  "outcomes": [],
+  "counts": {},
+  "trials": []
+}

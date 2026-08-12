@@ -1,0 +1,10 @@
+AMD64_SYSCALL_FAMILIES={
+ "process":["clone","clone3","fork","vfork","execve","exit","wait4","getpid"],
+ "filesystem":["openat","close","read","write","lseek","newfstatat","mkdirat","unlinkat","renameat2","linkat","symlinkat","fsync"],
+ "memory":["brk","mmap","mprotect","munmap","mremap","mlock","madvise"],
+ "signal":["rt_sigaction","rt_sigprocmask","rt_sigreturn","kill","tgkill"],
+ "ipc":["pipe2","futex","eventfd2","shmget","semget","msgget"],
+ "network":["socket","bind","listen","accept4","connect","sendto","recvfrom","shutdown"],
+ "polling":["poll","ppoll","select","pselect6","epoll_create1","epoll_ctl","epoll_wait"],
+ "time":["clock_gettime","nanosleep","timerfd_create","timerfd_settime"],
+}

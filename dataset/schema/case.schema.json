@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://osbench.dev/schema/case.v1.json",
+  "title": "OSBench Case v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version", "benchmark_version", "case_id", "contract", "domain", "level",
+    "family", "case_family", "difficulty", "seed", "prerequisites", "transport",
+    "generator", "setup", "stimulus", "expected", "comparison", "resource_limits",
+    "timeout_seconds", "cleanup", "provenance"
+  ],
+  "properties": {
+    "schema_version": {"const": "osbench.case.v1"},
+    "benchmark_version": {"type": "string"},
+    "case_id": {"type": "string", "pattern": "^[a-z][a-z0-9_.]+:[a-f0-9]{16}$"},
+    "contract": {"type": "string"},
+    "domain": {"type": "string"},
+    "level": {"type": "string"},
+    "family": {"type": "string"},
+    "case_family": {"type": "string"},
+    "difficulty": {"type": "string"},
+    "seed": {"type": "integer", "minimum": 0},
+    "prerequisites": {"type": "array", "items": {"type": "string"}},
+    "transport": {"type": "string"},
+    "generator": {"type": "object"},
+    "setup": {"type": "object"},
+    "stimulus": {"type": "object"},
+    "expected": {"type": "object"},
+    "comparison": {"type": "object"},
+    "resource_limits": {"type": "object"},
+    "timeout_seconds": {"type": "number", "exclusiveMinimum": 0},
+    "cleanup": {"type": "array"},
+    "provenance": {"type": "array"}
+  }
+}

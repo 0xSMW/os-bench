@@ -1,0 +1,11 @@
+schema_version: osbench.workload.v1
+name: dns
+level: real_workloads
+description: Executable dns compatibility workload.
+command: getent ahostsv4 localhost
+contracts:
+- distro.dns.configuration
+- network.dns.resolve
+- workload.dns.lookup
+timeout_seconds: 60
+transport: host

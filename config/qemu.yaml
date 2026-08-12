@@ -1,0 +1,40 @@
+default_profile: macos_tcg
+profiles:
+  macos_tcg:
+    accelerator: tcg
+    machine: q35
+    cpu: max
+    memory_mb: 2048
+    smp: 2
+    boot_timeout_seconds: 180
+    case_timeout_seconds: 30
+    firmware_code:
+      - /usr/share/OVMF/OVMF_CODE_4M.fd
+      - /usr/share/OVMF/OVMF_CODE.fd
+    firmware_vars:
+      - /usr/share/OVMF/OVMF_VARS_4M.fd
+      - /usr/share/OVMF/OVMF_VARS.fd
+    devices:
+      - virtio-blk-pci
+      - virtio-net-pci
+      - virtio-rng-pci
+      - isa-serial
+  linux_kvm:
+    accelerator: kvm
+    machine: q35
+    cpu: host
+    memory_mb: 2048
+    smp: 2
+    boot_timeout_seconds: 90
+    case_timeout_seconds: 20
+    firmware_code:
+      - /usr/share/OVMF/OVMF_CODE_4M.fd
+      - /usr/share/OVMF/OVMF_CODE.fd
+    firmware_vars:
+      - /usr/share/OVMF/OVMF_VARS_4M.fd
+      - /usr/share/OVMF/OVMF_VARS.fd
+    devices:
+      - virtio-blk-pci
+      - virtio-net-pci
+      - virtio-rng-pci
+      - isa-serial

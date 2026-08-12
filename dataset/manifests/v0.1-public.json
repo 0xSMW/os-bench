@@ -1,0 +1,26 @@
+{
+  "benchmark_version": "0.1.0",
+  "case_count": 2660,
+  "cases_per_contract": 10,
+  "cases_sha256": "02c7edbdc233dfdb98e900fe67e0c0c61b015262b861d36bb8e4ec819f91f7d1",
+  "contract_corpus_sha256": "cab0d9758b413b31c56f25a83355234b39773289fd08708d6c4aa9653f334a55",
+  "contract_count": 266,
+  "dataset_sha256": "746dc3fddce2853eeab1dd5597cac25d1da1f2aa7e60d717ed054dacb6598e98",
+  "family_counts": {
+    "boundary": 401,
+    "composition": 402,
+    "concurrency": 187,
+    "exhaustion": 265,
+    "failure": 357,
+    "isolation": 36,
+    "performance": 73,
+    "persistence": 78,
+    "primitive": 446,
+    "state_transition": 323,
+    "workload": 92
+  },
+  "path": "dataset/public/v0.1/cases.jsonl",
+  "profile": "public",
+  "schema_version": "osbench.dataset_manifest.v1",
+  "seed": 1
+}

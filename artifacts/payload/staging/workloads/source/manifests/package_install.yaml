@@ -1,0 +1,13 @@
+schema_version: osbench.workload.v1
+name: package_install
+level: package_ecosystem
+description: Executable package_install compatibility workload.
+command: dpkg-deb --info /var/lib/osbench/packages/osbench-hello_0.1.0_all.deb
+contracts:
+- package.deb.install
+- package.deb.remove
+- package.maintainer.postinst
+- package.maintainer.preinst
+- workload.package.install
+timeout_seconds: 60
+transport: guest_agent

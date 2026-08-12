@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": true,
+  "properties": {
+    "benchmark_version": {
+      "type": "string"
+    },
+    "cases": {
+      "type": "array"
+    },
+    "reference_id": {
+      "type": "string"
+    },
+    "run_id": {
+      "type": "string"
+    },
+    "schema_version": {
+      "const": "osbench.results.v1"
+    },
+    "scores": {
+      "type": "object"
+    },
+    "selection": {
+      "type": "object"
+    },
+    "unsupported": {
+      "type": "array"
+    }
+  },
+  "required": [
+    "schema_version",
+    "benchmark_version",
+    "reference_id",
+    "run_id",
+    "selection",
+    "scores",
+    "cases",
+    "unsupported"
+  ],
+  "title": "OSBench result v1",
+  "type": "object"
+}

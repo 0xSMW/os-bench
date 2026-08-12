@@ -1,0 +1,13 @@
+schema_version: osbench.workload.v1
+name: compiler
+level: real_workloads
+description: Executable compiler compatibility workload.
+command: /bin/sh -c 'd=$(mktemp -d); printf "#include <stdio.h>\nint main(){puts(\"ok\");}" > "$d/a.c"; cc "$d/a.c" -o "$d/a"; "$d/a"; rm -rf "$d"'
+contracts:
+- elf.dynamic_loader.basic
+- fs.file.write.basic
+- memory.mmap.file
+- process.execve.basic
+- workload.c.compile_link_run
+timeout_seconds: 60
+transport: host

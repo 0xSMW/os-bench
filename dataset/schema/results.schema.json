@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://osbench.dev/schema/results.v1.json",
+  "title": "OSBench Results v1",
+  "type": "object",
+  "required": [
+    "schema_version", "benchmark_version", "reference_id", "run_id", "host",
+    "reference_target", "candidate_target", "selection", "scores", "cases",
+    "contracts", "unsupported", "trajectory"
+  ],
+  "properties": {
+    "schema_version": {"const": "osbench.results.v1"},
+    "benchmark_version": {"type": "string"},
+    "reference_id": {"type": "string"},
+    "run_id": {"type": "string"},
+    "started_at_unix": {"type": "integer"},
+    "host": {"type": "object"},
+    "reference_target": {"type": "string"},
+    "candidate_target": {"type": "string"},
+    "selection": {"type": "object"},
+    "scores": {"type": "object"},
+    "cases": {"type": "array", "items": {"type": "object"}},
+    "contracts": {"type": "object"},
+    "unsupported": {"type": "array", "items": {"type": "object"}},
+    "trajectory": {"type": "object"},
+    "raw_observations": {},
+    "progress": {"type": "object"},
+    "merged_from": {"type": "array"}
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://osbench.dev/schema/case.v1.json",
+  "title": "OSBench generated case v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version", "benchmark_version", "case_id", "contract", "generator_version",
+    "profile", "seed", "index", "domain", "level", "difficulty", "family",
+    "prerequisites", "generator", "setup", "stimulus", "expected", "resource_limits",
+    "timeout_seconds", "cleanup", "provenance"
+  ],
+  "properties": {
+    "schema_version": {"const": "osbench.case.v1"},
+    "benchmark_version": {"type": "string"},
+    "case_id": {"type": "string", "pattern": "^[a-z][a-z0-9_.]*:[0-9a-f]{16}$"},
+    "contract": {"type": "string", "pattern": "^[a-z][a-z0-9_]*(\\.[a-z0-9_]+)+$"},
+    "generator_version": {"type": "string"},
+    "profile": {"type": "string"},
+    "seed": {"type": "integer", "minimum": 0},
+    "index": {"type": "integer", "minimum": 0},
+    "domain": {"type": "string"},
+    "level": {"type": "string"},
+    "difficulty": {"type": "string"},
+    "family": {"type": "string"},
+    "prerequisites": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "generator": {
+      "type": "object",
+      "required": ["implementation", "probe", "parameters"],
+      "additionalProperties": false,
+      "properties": {
+        "implementation": {"type": "string"},
+        "probe": {"type": ["string", "null"]},
+        "parameters": {"type": "object"}
+      }
+    },
+    "setup": {"type": "object"},
+    "stimulus": {"type": "object"},
+    "expected": {"type": "object"},
+    "resource_limits": {"type": "object"},
+    "timeout_seconds": {"type": "number", "exclusiveMinimum": 0},
+    "cleanup": {"type": "array", "items": {"type": "string"}},
+    "provenance": {"type": "array", "items": {"type": "object"}}
+  }
+}

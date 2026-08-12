@@ -1,0 +1,8 @@
+.git
+.venv
+__pycache__
+.pytest_cache
+artifacts/reference
+artifacts/oracle
+results/*.json
+*.zip

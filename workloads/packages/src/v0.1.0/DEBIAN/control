@@ -1,0 +1,10 @@
+Package: osbench-hello
+Version: 0.1.0
+Section: utils
+Priority: optional
+Architecture: all
+Maintainer: OSBench contributors <osbench@example.invalid>
+Depends: dash
+Description: deterministic offline OSBench package fixture
+ A tiny package used to evaluate dpkg installation, maintainer scripts,
+ conffile handling, service installation, removal, and upgrades.

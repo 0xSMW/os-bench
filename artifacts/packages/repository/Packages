@@ -1,0 +1,23 @@
+Package: osbench-hello
+Version: 0.1.0
+Section: utils
+Priority: optional
+Architecture: all
+Maintainer: OSBench <osbench@local>
+Depends: coreutils
+Description: deterministic OSBench package lifecycle fixture
+Filename: osbench-hello_0.1.0_all.deb
+Size: 1264
+SHA256: 0bfd83de73469884c0eabed8246d4c29bd33a4153652afa8e6df785a120bdead
+
+Package: osbench-hello
+Version: 0.2.0
+Section: utils
+Priority: optional
+Architecture: all
+Maintainer: OSBench <osbench@local>
+Depends: coreutils
+Description: deterministic OSBench package lifecycle fixture
+Filename: osbench-hello_0.2.0_all.deb
+Size: 1264
+SHA256: ac414158d7544e16cf37aaa1b09e3f89f3c2ff963e4b0d8f83b0ea4164683637

@@ -1,0 +1,12 @@
+schema_version: osbench.workload.v1
+name: tcp
+level: real_workloads
+description: Executable tcp compatibility workload.
+command: python3 /var/lib/osbench/workloads/fixtures/tcp_loopback.py
+contracts:
+- poll.socket.readiness
+- process.fork.basic
+- socket.tcp.stream_semantics
+- workload.tcp.client_server
+timeout_seconds: 60
+transport: host
